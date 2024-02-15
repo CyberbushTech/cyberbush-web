@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.sass";
+import { Lato, Poppins } from "next/font/google";
+import "./globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const lato = Lato({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const poppins = Poppins({
+  weight: "700",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Cyberbush",
   icons: {
-    icon: ['/icon.png'],
-    apple: ['/icon-apple.png'],
-    shortcut: ['/icon-apple.png'],
-  }
+    icon: ["/icon.png"],
+    apple: ["/icon-apple.png"],
+    shortcut: ["/icon-apple.png"],
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

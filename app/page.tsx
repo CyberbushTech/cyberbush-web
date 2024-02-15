@@ -1,21 +1,37 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+"use client";
+import { Container } from "react-bootstrap";
 import { NextPage } from "next";
+import TopNavigation from "./components/common/top-navigation/top-navigation";
+import HomeActionBanner from "./components/home/home-action-banner/home-action-banner";
+import HomeAircraftSection from "./components/home/home-aircraft-section/home-aircraft-section";
+import HomeInfraSection from "./components/home/home-infra-section/home-infra-section";
+import HomeSkyscoutSection from "./components/home/home-skyscout-section/home-skyscout-section";
+import { delay, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+import Footer from "./components/common/footer/footer";
 
 const Home: NextPage = () => {
+  const actionBannerRef = useRef<HTMLDivElement>(null);
+  const isActionBannerInView = useInView(actionBannerRef, {
+    amount: "all",
+  });
+  useEffect(() => {
+    if (isActionBannerInView) {
+      delay((overshoot) => {
+        console.log(isActionBannerInView);
+        actionBannerRef.current?.scrollBy({ top: 100 });
+      }, 300);
+    }
+  }, [isActionBannerInView]);
+
   return (
-    <Container>
-      <Row>
-        <Col>
-          <h1>React Bootstrap NextJS Tutorial</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-            aliquid quia optio odit nihil voluptatibus soluta labore earum
-            nostrum doloremque. Sequi laboriosam dicta praesentium, sit
-            aspernatur non molestiae voluptates beatae.
-          </p>
-          <Button>My Button</Button>
-        </Col>
-      </Row>
+    <Container className="bg-secondary" fluid>
+      <TopNavigation inverted={isActionBannerInView} />
+      <HomeActionBanner innerRef={actionBannerRef} />
+      <HomeAircraftSection />
+      <HomeInfraSection />
+      <HomeSkyscoutSection />
+      <Footer />
     </Container>
   );
 };

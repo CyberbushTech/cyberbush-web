@@ -1,0 +1,135 @@
+$font-size-base: 1.2rem;
+$primary: #b60404;
+$secondary: #536169;
+$light: #536169;
+$dark: #1c2023;
+
+$navbar-padding-y: 1rem * 0.8;
+$navbar-light-color: #e9e9e9;
+$navbar-light-active-color: #ffffff;
+$navbar-light-hover-color: #c7c7c7;
+$navbar-light-icon-color: #ffffff;
+$navbar-light-toggler-border-color: none;
+$navbar-light-toggler-border-widht: none;
+$navbar-toggler-focus-width: 0;
+$body-bg: $secondary;
+
+$font-family-base: '__Lato_b8262e';
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.scss";
+
+html {
+	scroll-snap-type: y proximity;
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+	font-family: '__Poppins_0f2b3c';
+}
+
+.container-fluid {
+	padding: 0
+}
+
+.dimmed-video {
+	opacity: 0.5;
+}
+
+.dimmed-video-2 {
+	opacity: 0.8;
+}
+
+.scroll-snap-center {
+	scroll-snap-align: center;
+}
+
+.scroll-snap-start {
+	scroll-snap-align: start;
+}
+
+.scroll-snap-end {
+	scroll-snap-align: end;
+}
+
+.navbar-collapse.collapse.show, .navbar-collapse.collapsing {
+	background-color: #fff;
+	margin-top: 1rem;
+
+	.nav-link {
+		color: #000;
+		padding-left: 1.5rem;
+	}
+
+	.mobile-menu-container {
+		padding-bottom: 1.2rem;
+
+		.topline {
+			margin-bottom: 0.8rem;
+			min-height: 0.4rem;
+			background-color: $primary;
+		}
+	}
+}
+
+.difference {
+	mix-blend-mode: difference;
+}
+
+.home-infra-banner {
+	.features {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.column {
+		background-color: #e2e9ed;
+	}
+}
+
+.action-button {
+	color: #fff;
+	border-color: #fff;
+}
+
+.home-hero {
+	max-width: 50rem;
+}
+
+.nav-inverted {
+	background-color: #536169;
+	transition: all .2s ease-in;
+}
+
+.nav-regular {
+	transition: all .2s ease-in;
+}
+
+.footer {
+	.icons {
+		color: #93a7b3;
+		display: flex;
+		flex-direction: column;
+
+		.icon {
+			vertical-align: -0.3rem;
+			i {
+					font-size: 1.3rem;
+			}
+		}
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.nav-link { 
+		color: #e9e9e9;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+// $navbar-light-color: #e9e9e9;
+// $navbar-light-active-color: #ffffff;
+// $navbar-light-hover-color: #c7c7c7;

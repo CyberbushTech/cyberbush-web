@@ -1,24 +1,16 @@
 "use client";
-import { Container, Row, Image, Col, Nav, NavLink } from "react-bootstrap";
+import { Container, Image, Nav, NavLink } from "react-bootstrap";
 import HomeBanner from "../home/home-banner";
-import IconItem from "./icon-item";
 import Link from "next/link";
+import global from "../../globals";
 
 export default function HomeAircraftSection() {
-  const menu = [
-    { title: "Fortuna", id: "fortuna" },
-    { title: "Condor", id: "condor" },
-    { title: "Beetle", id: "beetle" },
-    { title: "Technology", id: "ecosystem" },
-    { title: "Company", id: "company" },
-  ];
-
   return (
     <HomeBanner background="dark text-white footer scroll-snap-end">
       <Container className={`p-4 small`} fluid>
         <Container className="d-flex flex-column justify-content-center align-items-center ps-2 pe-2 flex-wrap">
           <Nav className="menu pb-3 d-flex justify-content-center align-items-center">
-            {menu.map((item) => (
+            {global.menu.map((item) => (
               <NavLink key={item.title} href={item.id}>
                 {item.title}
               </NavLink>

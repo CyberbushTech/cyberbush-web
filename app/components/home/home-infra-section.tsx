@@ -21,12 +21,12 @@ export default function HomeInfraSection() {
   ];
   return (
     <HomeBanner background="white" className="home-infra-banner">
-      <Container className={`ps-3 pe-3`} fluid>
-        <Container className="ps-2 pe-2" fluid>
+      <Container className={`ps-3 pe-3`}>
+        <Container className="ps-2 pe-2">
           <Row className="d-flex align-items-stretch">
             <Col md className="pt-4 ps-4 mb-3 column">
               <HomeBlockHeader
-                title="The Beetle Port"
+                title="Beetle Ports"
                 description="Despite the fact that our airplanes do not require any special infrastructure, we develop vertiports for convenient takeoff, landing, charging and boarding.	"
               />
               <div className="features pb-4">
@@ -42,7 +42,7 @@ export default function HomeInfraSection() {
             </Col>
             <Col md className="pt-4 ps-4 mb-3 column">
               <HomeBlockHeader
-                title="Software and Operations"
+                title="Software and Apps"
                 description="Ready-made solution for aircrafts operation, monitoring and control providing all necessary infrastructure and operational support for most use cases."
               />
               <div className="features pb-4">

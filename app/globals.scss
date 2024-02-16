@@ -84,7 +84,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 		}
 
 		color: #eaeaea;
-		font-size: 0.875em;
 	}
 
 	.inverted {
@@ -94,11 +93,9 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 .navbar-collapse.collapse.show,
 .navbar-collapse.collapsing {
-	background-color: #fff;
 
 	.nav-link {
-		color: #000;
-		padding-left: 1.5rem;
+		padding-left: 1.0rem;
 	}
 
 	.link {
@@ -108,7 +105,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 	.mobile-menu-container {
 		padding-bottom: 1.5rem;
-		box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
 		.topline {
 			margin-bottom: 0.8rem;

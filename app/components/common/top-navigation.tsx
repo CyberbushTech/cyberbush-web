@@ -4,32 +4,34 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import global from "../../globals";
+import { useState } from "react";
 
 export default function TopNavigation({
   inverted,
 }: Readonly<{
   inverted: boolean;
 }>) {
+  const [isOpen, setIsOpen] = useState(false);
+  var predefinedNavbarClass = inverted ? "nav-regular" : "nav-inverted";
+  var navbarClass = isOpen ? "nav-inverted" : predefinedNavbarClass;
   return (
-    <Navbar
-      expand="lg"
-      className={`${
-        inverted ? "nav-regular" : "nav-inverted"
-      } fixed-top top-navigation`}
-    >
-      <Container fluid>
-        <Navbar.Brand href="/" className="ms-4 me-5 mb-1 brand">
+    <Navbar expand="lg" className={`${navbarClass} fixed-top top-navigation`}>
+      <Container>
+        <Navbar.Brand href="/" className="ms-3 mb-1 brand">
           <Image
             src="images/logo.svg"
             width="170"
             height="20"
+            loading="eager"
             alt={"Cyberbush"}
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-2" />
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          onClick={() => setIsOpen(!isOpen)}
+        />
         <Navbar.Collapse className="float-end">
           <div className="mobile-menu-container ms-auto">
-            <div className="topline"></div>
             <Nav>
               {global.menu.map((item) => (
                 <Nav.Link

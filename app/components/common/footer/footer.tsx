@@ -2,96 +2,52 @@
 import { Container, Row, Image, Col, Nav, NavLink } from "react-bootstrap";
 import HomeBanner from "../../home/home-banner/home-banner";
 import IconItem from "../icon-item/icon-item";
+import Link from "next/link";
 
 export default function HomeAircraftSection() {
-  const produceMenu = [
+  const menu = [
     { title: "Fortuna", id: "fortuna" },
     { title: "Condor", id: "condor" },
     { title: "Beetle", id: "beetle" },
     { title: "Ecosystem", id: "ecosystem" },
-  ];
-
-  const companyMenu = [
-    { title: "About Us", id: "fortuna" },
-    { title: "Founders", id: "condor" },
-    { title: "History", id: "beetle" },
-    { title: "Legal", id: "ecosystem" },
+    { title: "Company", id: "company" },
   ];
 
   return (
-    <HomeBanner background="dark text-white footer scroll-snap-end pt-3">
+    <HomeBanner background="dark text-white footer scroll-snap-end">
       <Container className={`p-4`} fluid>
-        <Container className="ps-2 pe-2">
-          <Row className="gx-5 ps-2 pe-2">
-            <Col>
-              <Row>
-                <Col className="pb-4">
-                  <h5>Products</h5>
-                  <Nav className="menu">
-                    {produceMenu.map((item) => (
-                      <NavLink key={item.title} href={item.id}>
-                        {item.title}
-                      </NavLink>
-                    ))}
-                  </Nav>
-                </Col>
-                <Col className="pb-4">
-                  <h5>Company</h5>
-                  <Nav className="menu">
-                    {companyMenu.map((item) => (
-                      <NavLink key={item.title} href={item.id}>
-                        {item.title}
-                      </NavLink>
-                    ))}
-                  </Nav>
-                </Col>
-              </Row>
-            </Col>
-            <Col md>
-              <Row>
-                <Col>
-                  <div className="image pb-3">
-                    <Image
-                      src="images/logo-red.svg"
-                      width="200"
-                      height="50"
-                      alt="Cyberbush"
-                    />
-                  </div>
-                </Col>
-              </Row>
-              <Row>
-                <Col md>
-                  <div className="icons pb-3">
-                    <IconItem
-                      className="icon"
-                      icon="phone"
-                      text="+971502567503"
-                    />
-                    <IconItem
-                      className="icon"
-                      icon="envelope"
-                      text="ask@cyberbush.tech"
-                    />
-                    <IconItem
-                      className="icon"
-                      icon="linkedin"
-                      text="linked.in/cyberbush"
-                    />
-                  </div>
-                </Col>
-                <Col md>
-                  <div className="info pb-3">
-                    <p>
-                      UAE, Dubai, Dubai Silicon Oasis
-                      <br />
-                      IFZA Properties
-                    </p>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
+        <Container className="d-flex flex-column justify-content-center align-items-center ps-2 pe-2 flex-wrap">
+          <Nav className="menu pb-4 d-flex justify-content-center align-items-center">
+            {menu.map((item) => (
+              <NavLink key={item.title} href={item.id}>
+                {item.title}
+              </NavLink>
+            ))}
+          </Nav>
+          <Container className="small">
+            <div className="image pb-1">
+              <Image
+                src="images/logo-red.svg"
+                width="140"
+                height="50"
+                alt="Cyberbush"
+              />
+            </div>
+            <div className="contacts">
+              <p>
+                +971502567503 | ask@cyberbush.tech | linked.in/cyberbush
+                <br />
+                UAE, Dubai, Dubai Silicon Oasis, IFZA Properties
+              </p>
+            </div>
+            <div className="terms small">
+              <Link href="#">Privacy Policy</Link> |{" "}
+              <Link href="#">Legal Information</Link> |{" "}
+              <Link href="#">Terms of Use</Link>
+              <br />
+              Copyright © 2024 CYBERBUSH FZCO.
+            </div>
+          </Container>
         </Container>
       </Container>
     </HomeBanner>

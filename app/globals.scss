@@ -105,7 +105,9 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 .footer {
-	.icons {
+	text-align: center;
+	
+	.contacts {
 		color: #93a7b3;
 		display: flex;
 		flex-direction: column;
@@ -118,15 +120,21 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 		}
 	}
 
-	.menu {
-		display: flex;
-		flex-direction: column;
+		.info {
+			max-width: 20rem;
+		}
+
+	.nav {
+		.nav-link { 
+			color: #e9e9e9;
+		}
 	}
 
-	.nav-link { 
-		color: #e9e9e9;
-		padding: 0;
-		margin: 0;
+	.terms {
+		color: #93a7b3;
+		a {
+			color: #b5cedd;
+		}
 	}
 }
 

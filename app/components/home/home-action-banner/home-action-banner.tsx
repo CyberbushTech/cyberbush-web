@@ -23,6 +23,7 @@ export default function HomeActionBanner({
             autoPlay
             muted
             loop
+            playsInline
             className="dimmed-video vh-100 vw-100 object-fit-cover scroll-snap-start"
           >
             <source src="video/draft.mp4" type="video/mp4" />

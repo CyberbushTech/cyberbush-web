@@ -13,6 +13,7 @@ export default function HomeSkyscoutSection() {
             autoPlay
             muted
             loop
+            playsInline
             className="dimmed-video-2 vh-100 vw-100 object-fit-cover"
           >
             <source src="video/clouds.mp4" type="video/mp4" />

@@ -18,7 +18,7 @@ export default function HomeActionBanner({
         transition={{ duration: 2 }}
         exit={{ opacity: 0 }}
       >
-        <Container className="vh-100" fluid ref={innerRef}>
+        <Container className="vh-100" fluid>
           <video
             autoPlay
             muted
@@ -41,7 +41,9 @@ export default function HomeActionBanner({
           transition={{ type: "spring", duration: 1 }}
           exit={{ opacity: 0 }}
         >
-          <h1>Building The New Way of Moving</h1>
+          <h1 id="main-title-hero" ref={innerRef}>
+            Building The New Way of Moving
+          </h1>
           <p className="pb-3">
             The first available line of fully autonomous AI-controlled
             aircrafts.

@@ -4,7 +4,7 @@ $secondary: #536169;
 $light: #536169;
 $dark: #1c2023;
 
-$navbar-padding-y: 1rem * 0.8;
+$navbar-padding-y: 1rem * 0.3;
 $navbar-light-color: #e9e9e9;
 $navbar-light-active-color: #ffffff;
 $navbar-light-hover-color: #c7c7c7;
@@ -49,7 +49,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 .navbar-collapse.collapse.show, .navbar-collapse.collapsing {
 	background-color: #fff;
-	margin-top: 1rem;
 
 	.nav-link {
 		color: #000;
@@ -89,6 +88,21 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 .home-hero {
 	max-width: 50rem;
+}
+
+.top-navigation {
+	.link {
+		&:last-child {
+			margin-right: 1.1rem !important;
+		}
+
+		color: #eaeaea;
+		font-size: 0.875em;
+	}
+
+	.inverted {
+		background-color: #536169;
+	}
 }
 
 .nav-inverted {
@@ -132,6 +146,21 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 			color: #b5cedd;
 		}
 	}
+}
+
+.icon-item {
+	font-size: 2rem;
+	padding-right: 0.6rem;
+	vertical-align: -0.3rem;
+}
+
+.navbar-toggler-icon {
+	height: 26px;
+	width: 31px;
+}
+
+.fullscreen-loader {
+	z-index: 10000;
 }
 
 // $navbar-light-color: #e9e9e9;

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato, Poppins } from "next/font/google";
 import "./globals.scss";
+import FullscreenLoader from "./components/common/fullscreen-loader";
 
 const lato = Lato({
   weight: "400",

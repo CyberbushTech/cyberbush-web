@@ -1,7 +1,7 @@
 "use client";
 import { Container, Row, Image, Col, Nav, NavLink } from "react-bootstrap";
-import HomeBanner from "../../home/home-banner/home-banner";
-import IconItem from "../icon-item/icon-item";
+import HomeBanner from "../home/home-banner";
+import IconItem from "./icon-item";
 import Link from "next/link";
 
 export default function HomeAircraftSection() {
@@ -15,7 +15,7 @@ export default function HomeAircraftSection() {
 
   return (
     <HomeBanner background="dark text-white footer scroll-snap-end">
-      <Container className={`p-4`} fluid>
+      <Container className={`p-4 small`} fluid>
         <Container className="d-flex flex-column justify-content-center align-items-center ps-2 pe-2 flex-wrap">
           <Nav className="menu pb-4 d-flex justify-content-center align-items-center">
             {menu.map((item) => (

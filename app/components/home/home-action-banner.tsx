@@ -1,6 +1,6 @@
 "use client";
 import Container from "react-bootstrap/Container";
-import HomeBanner from "../home-banner/home-banner";
+import HomeBanner from "./home-banner";
 import { Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { RefObject } from "react";

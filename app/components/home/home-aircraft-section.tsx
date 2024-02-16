@@ -1,8 +1,8 @@
 "use client";
-import HomeBanner from "../home-banner/home-banner";
-import HomeAircraftBanner from "../home-aircraft-banner/home-aircraft-banner";
+import HomeBanner from "./home-banner";
+import HomeAircraftBanner from "./home-aircraft-banner";
 import { Container, Row } from "react-bootstrap";
-import HomeBlockHeader from "../home-block-header/home-block-header";
+import HomeBlockHeader from "./home-block-header";
 
 export default function HomeAircraftSection() {
   return (

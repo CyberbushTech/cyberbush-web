@@ -1,8 +1,8 @@
 "use client";
-import HomeBanner from "../home-banner/home-banner";
+import HomeBanner from "./home-banner";
 import { Col, Container, Row } from "react-bootstrap";
-import HomeBlockHeader from "../home-block-header/home-block-header";
-import IconItem from "../../common/icon-item/icon-item";
+import HomeBlockHeader from "./home-block-header";
+import IconItem from "../common/icon-item";
 
 export default function HomeInfraSection() {
   const portItems = [

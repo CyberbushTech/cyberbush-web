@@ -1,5 +1,4 @@
 "use client";
-import styles from "./styles.module.scss";
 export default function IconItem({
   className,
   icon,
@@ -12,7 +11,7 @@ export default function IconItem({
   return (
     <span className={className ? className : ""}>
       &nbsp;
-      <i className={`${styles.icon} bi-${icon}`}></i>
+      <i className={`icon-item bi-${icon}`}></i>
       {text}
     </span>
   );

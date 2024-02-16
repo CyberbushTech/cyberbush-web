@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Lato, Poppins } from "next/font/google";
 import "./globals.scss";
-import FullscreenLoader from "./components/common/fullscreen-loader";
+import { Analytics } from "@vercel/analytics/react";
 
 const lato = Lato({
   weight: "400",
@@ -31,7 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

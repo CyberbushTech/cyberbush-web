@@ -9,7 +9,7 @@ export default function HomeAircraftSection() {
     { title: "Fortuna", id: "fortuna" },
     { title: "Condor", id: "condor" },
     { title: "Beetle", id: "beetle" },
-    { title: "Ecosystem", id: "ecosystem" },
+    { title: "Technology", id: "ecosystem" },
     { title: "Company", id: "company" },
   ];
 

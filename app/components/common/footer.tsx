@@ -17,7 +17,7 @@ export default function HomeAircraftSection() {
     <HomeBanner background="dark text-white footer scroll-snap-end">
       <Container className={`p-4 small`} fluid>
         <Container className="d-flex flex-column justify-content-center align-items-center ps-2 pe-2 flex-wrap">
-          <Nav className="menu pb-4 d-flex justify-content-center align-items-center">
+          <Nav className="menu pb-3 d-flex justify-content-center align-items-center">
             {menu.map((item) => (
               <NavLink key={item.title} href={item.id}>
                 {item.title}

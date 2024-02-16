@@ -6,7 +6,6 @@ import HomeActionBanner from "./components/home/home-action-banner";
 import HomeAircraftSection from "./components/home/home-aircraft-section";
 import HomeInfraSection from "./components/home/home-infra-section";
 import HomeSkyscoutSection from "./components/home/home-skyscout-section";
-import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Footer from "./components/common/footer";
 

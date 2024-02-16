@@ -18,7 +18,7 @@ export default function TopNavigation({
       } fixed-top top-navigation`}
     >
       <Container fluid>
-        <Navbar.Brand href="/" className="ms-4 me-5 mb-1">
+        <Navbar.Brand href="/" className="ms-4 me-5 mb-1 brand">
           <Image
             src="images/logo.svg"
             width="170"
@@ -36,7 +36,7 @@ export default function TopNavigation({
                   key={item.id}
                   id={item.id}
                   href={item.id}
-                  className={`link me-2 small`}
+                  className={`link me-2`}
                 >
                   {item.title}
                 </Nav.Link>

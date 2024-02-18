@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import global from "../../globals";
 import { useState } from "react";
+import { Sling as Hamburger } from "hamburger-react";
 
 export default function TopNavigation({
   inverted,
@@ -16,7 +17,7 @@ export default function TopNavigation({
   var navbarClass = isOpen ? "nav-inverted" : predefinedNavbarClass;
   return (
     <Navbar expand="lg" className={`${navbarClass} fixed-top top-navigation`}>
-      <Container>
+      <Container className="top-navigation-container">
         <Navbar.Brand href="/" className="ms-3 mb-1 brand">
           <Image
             src="images/logo.svg"
@@ -26,11 +27,10 @@ export default function TopNavigation({
             alt={"Cyberbush"}
           />
         </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          onClick={() => setIsOpen(!isOpen)}
-        />
-        <Navbar.Collapse className="float-end">
+        <div className="hamburger">
+          <Hamburger onToggle={setIsOpen} color="white" size={26} />
+        </div>
+        <Navbar.Collapse className={`float-end ${isOpen ? "show" : ""}`}>
           <div className="mobile-menu-container ms-auto">
             <Nav>
               {global.menu.map((item) => (

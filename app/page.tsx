@@ -28,7 +28,6 @@ const Home: NextPage = () => {
       <TopNavigation inverted={!isActionBannerInView} />
       <HomeActionBanner innerRef={actionBannerRef} />
       <HomeAircraftSection />
-      <HomeInfraSection />
       <HomeSkyscoutSection />
       <Footer />
     </Container>

@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-snap-y pathname">
+    <html lang="en" className="scroll-snap-y">
       <body>
         {children}
         <Analytics />

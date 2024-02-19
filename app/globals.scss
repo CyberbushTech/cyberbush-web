@@ -293,3 +293,82 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 	opacity: 0.8;
 	transition: all 0.2s 0.2s ease-in-out;
 }
+
+.page-fortuna {
+	.head-image {
+		width: 100%;
+	}
+
+	h1.head {
+		font-size: 5.1rem;
+	}
+
+	@include media-breakpoint-down(md) { 
+		h1.head {
+			font-size: 4.0rem;
+		}
+	}
+
+	@include media-breakpoint-down(sm) { 
+		h1.head {
+			font-size: 3.1rem;
+		}
+
+		.head-title-block {
+			max-width: 80%;
+		}
+	}
+}
+
+.page-beetle {
+	.head-image {
+		width: 100%;
+	}
+
+	h1.head {
+		font-size: 5.1rem;
+	}
+
+	@include media-breakpoint-down(md) { 
+		h1.head {
+			font-size: 4.0rem;
+		}
+	}
+
+	@include media-breakpoint-down(sm) { 
+		h1.head {
+			font-size: 3.1rem;
+		}
+
+		.head-title-block {
+			max-width: 80%;
+		}
+	}
+}
+
+.page-condor {
+	.head-image {
+		width: 100%;
+	}
+
+	h1.head {
+		font-size: 5.1rem;
+	}
+
+	@include media-breakpoint-down(md) { 
+		h1.head {
+			font-size: 4.0rem;
+		}
+	}
+
+	@include media-breakpoint-down(sm) { 
+		h1.head {
+			font-size: 3.1rem;
+		}
+
+		.head-title-block {
+			max-width: 90%;
+		}
+	}
+}
+

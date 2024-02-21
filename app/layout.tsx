@@ -4,7 +4,7 @@ import "./globals.scss";
 import { Analytics } from "@vercel/analytics/react";
 
 const lato = Lato({
-  weight: "400",
+  weight: ["100", "300", "400", "700", "900"],
   subsets: ["latin"],
   display: "swap",
 });

@@ -1,18 +1,17 @@
 "use client";
 export default function IconItem({
+  children,
   className,
   icon,
-  text,
 }: Readonly<{
+  children?: React.ReactNode;
   className?: string;
   icon: string;
-  text: string;
 }>) {
   return (
-    <span className={className ? className : ""}>
-      &nbsp;
-      <i className={`icon-item bi-${icon}`}></i>
-      {text}
-    </span>
+    <div className={`icon-item ${className ? className : ""}`}>
+      <div className={`icon bi-${icon}`}></div>
+      <div className="body">{children}</div>
+    </div>
   );
 }

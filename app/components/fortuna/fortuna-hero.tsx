@@ -1,9 +1,10 @@
 "use client";
 import { Container, Image } from "react-bootstrap";
+import ScrollMore from "../common/scroll-more";
 
 export default function FortunaHero() {
   return (
-    <Container className="bg-dark hero scroll-snap-start" fluid>
+    <Container className="bg-dark hero" fluid>
       <Container
         className="d-flex flex-column vh-100 justify-content-center align-items-center text-center pb-5"
         fluid
@@ -20,6 +21,7 @@ export default function FortunaHero() {
           <div className="lead">PREMIUM SPORT AI-CONTROLLED JET FLIGHT</div>
           <h1 className="head">FORTUNA</h1>
         </Container>
+        <ScrollMore textColor="secondary">Scroll For More</ScrollMore>
       </Container>
     </Container>
   );

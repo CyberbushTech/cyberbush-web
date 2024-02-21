@@ -13,14 +13,15 @@ $navbar-light-toggler-border-color: none;
 $navbar-light-toggler-border-widht: none;
 $navbar-toggler-focus-width: 0;
 $body-bg: $secondary;
+$table-bg: white;
 
-$font-family-base: '__Lato_b8262e';
+$font-family-base: '__Lato_6d65e1';
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.scss";
 
 .scroll-snap-y {
-	scroll-snap-type: y mandatory;
+	scroll-snap-type: y proximity;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -72,6 +73,10 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 .home-hero {
+	max-width: 50rem;
+}
+
+.section-header {
 	max-width: 50rem;
 }
 
@@ -172,9 +177,25 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 .icon-item {
-	font-size: 2rem;
-	padding-right: 0.6rem;
-	vertical-align: -0.3rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	.icon {
+		font-size: 2rem;
+		padding-right: 0.6rem;
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+	}
+
+	.body {
+		display: block;
+		max-height: 3.6em;
+		text-overflow: ellipsis;
+		word-wrap: break-word;
+		overflow: hidden;
+	}
 }
 
 .navbar-toggler-icon {
@@ -369,6 +390,124 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 		.head-title-block {
 			max-width: 90%;
 		}
+	}
+}
+
+.spec-block {
+	width: 33.33%;	
+	border-radius: 0.3rem;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+	border: 0.1rem solid black;
+
+	.image {
+		background-image: url("../public/images/fortuna/blueprints/engines.png");
+		background-size: cover;
+		width: 100%;
+		aspect-ratio: 4/3;
+
+		&.image-engines {
+			background-image: url("../public/images/fortuna/blueprints/engines.png");
+		}
+
+		&.image-seats {
+			background-image: url("../public/images/fortuna/blueprints/seats.png");
+		}
+
+		&.image-bottom {
+			background-image: url("../public/images/fortuna/blueprints/bottom.png");
+		}
+
+		&.image-take-off {
+			background-image: url("../public/images/fortuna/blueprints/take-off.png");
+		}
+
+		&.image-top-part {
+			background-image: url("../public/images/fortuna/blueprints/top-part.png");
+		}
+
+		&.image-controller {
+			background-image: url("../public/images/fortuna/blueprints/controller.png");
+		}
+	}
+
+	.title-container {
+		border-top: 0.1rem solid black;
+		color: $black;
+	}
+}
+
+.blueprint-image {
+	width: 100%;
+}
+
+@include media-breakpoint-only(md) {
+	.spec-block {
+		.title-container {
+			.icon-item .body {
+				display: flex;
+				min-height: 4.6rem;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(md) { 
+	.specs-row  {
+		flex-direction: column !important;
+		width: 100%;
+
+		.spec-block {
+			width: 100%;
+		}
+	}
+}
+
+.specs {
+	th {
+		min-width: 10rem;
+	}
+
+	td {
+		min-width: 15rem;
+		text-align: right;
+	}
+
+	table {
+		min-width: 30%;
+	}
+}
+
+@include media-breakpoint-down(lg) { 
+	.specs {
+		flex-direction: column !important;
+		gap: 0 !important;
+
+		table {
+			margin-bottom: 0;
+			tr {
+				display: flex;
+			}
+			th {
+				min-width: 50%;
+				max-width: 50%;
+			}
+			td {
+				min-width: 50%;
+				max-width: 50%;
+			}
+		}
+	}
+}
+
+.blueprint {
+	text-align: center;
+	img {
+		max-height: 30rem;
 	}
 }
 

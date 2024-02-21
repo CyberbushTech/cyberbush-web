@@ -31,12 +31,9 @@ export default function HomeInfraSection() {
               />
               <div className="features pb-4">
                 {portItems.map((item) => (
-                  <IconItem
-                    className="item"
-                    key={item.text}
-                    text={item.text}
-                    icon={item.icon}
-                  />
+                  <IconItem className="item" key={item.text} icon={item.icon}>
+                    {item.text}
+                  </IconItem>
                 ))}
               </div>
             </Col>
@@ -47,12 +44,9 @@ export default function HomeInfraSection() {
               />
               <div className="features pb-4">
                 {softwareItems.map((item) => (
-                  <IconItem
-                    className="item"
-                    key={item.text}
-                    text={item.text}
-                    icon={item.icon}
-                  />
+                  <IconItem className="item" key={item.text} icon={item.icon}>
+                    {item.text}/
+                  </IconItem>
                 ))}
               </div>
             </Col>

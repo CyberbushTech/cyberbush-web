@@ -4,6 +4,7 @@ import HomeBanner from "./home-banner";
 import { Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { RefObject } from "react";
+import ScrollMore from "../common/scroll-more";
 
 export default function HomeActionBanner({
   innerRef,
@@ -70,6 +71,7 @@ export default function HomeActionBanner({
             </div>
           </motion.div>
         </motion.div>
+        <ScrollMore textColor="secondary">Scroll For More</ScrollMore>
       </Container>
     </HomeBanner>
   );

@@ -1,8 +1,7 @@
 "use client";
 import HomeBanner from "./home-banner";
 import HomeAircraftBanner from "./home-aircraft-banner";
-import { Button, Container, Row } from "react-bootstrap";
-import HomeBlockHeader from "./home-block-header";
+import { Container } from "react-bootstrap";
 
 export default function HomeAircraftSection() {
   return (
@@ -27,17 +26,17 @@ export default function HomeAircraftSection() {
               <HomeAircraftBanner
                 title="Fortuna"
                 lead="Premium Jet Flight"
-                link="/"
+                link="/fortuna"
               />
               <HomeAircraftBanner
                 title="Beetle One"
                 lead="Passenger Multicopter"
-                link="/"
+                link="/beetle"
               />
               <HomeAircraftBanner
                 title="Condor One"
                 lead="Passenger Convertiplane"
-                link="/"
+                link="/condor"
               />
             </div>
           </Container>

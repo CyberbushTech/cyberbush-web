@@ -1,22 +1,19 @@
 "use client";
 import { Container, Image, Table } from "react-bootstrap";
 
-export default function FortunaBlueprintSection() {
+export default function CondorBlueprintSection() {
   return (
-    <Container
-      className="scroll-snap-start bg-white d-flex flex-column pt-3"
-      fluid
-    >
+    <Container className="scroll-snap-start bg-white d-flex flex-column" fluid>
       <Container className="d-flex flex-column justify-content-center align-items-center">
         <div className="pt-5 ps-5 pe-5 section-header text-center">
           <div className="lead">DETAILED SPECIFICATION</div>
-          <h2>FORTUNA JET FLIGHT</h2>
+          <h2>CONDOR ONE eVTOL</h2>
         </div>
       </Container>
-      <Container className="d-flex flex-column justify-content-center pb-5 pt-3">
+      <Container className="d-flex flex-column justify-content-center pb-5">
         <div className="blueprint">
           <Image
-            src="images/fortuna/Fortuna-Perspective-Blueprint.jpg"
+            src="images/Condor/Condor-Perspective-Blueprint.png"
             className="object-fit-contain blueprint-image"
             loading="eager"
             alt={"Cyberbush"}
@@ -26,52 +23,40 @@ export default function FortunaBlueprintSection() {
           <Table>
             <tbody>
               <tr>
-                <th>Height</th>
-                <td>1500 mm</td>
+                <th>Height</th> <td>2090 mm</td>
               </tr>
               <tr>
-                <th>Width</th>
-                <td>2000 mm</td>
+                <th>Width</th> <td>10000 mm</td>
               </tr>
               <tr>
-                <th>Length</th>
-                <td>5000 mm</td>
+                <th>Length</th> <td>7165 mm</td>
               </tr>
               <tr>
-                <th>Weight</th>
-                <td>600 Kg</td>
+                <th>Weight</th> <td>600 Kg</td>
               </tr>
               <tr>
-                <th>Range</th>
-                <td>300 Km</td>
+                <th>Range</th> <td>150 Km</td>
               </tr>
               <tr>
-                <th>Engines</th>
-                <td>8 jet engines</td>
+                <th>Engines</th> <td>16 Electric VTOL 1 Electric Sustainer</td>
               </tr>
               <tr>
-                <th>Payload</th>
-                <td>120 Kg</td>
+                <th>Payload</th> <td>120 Kg</td>
               </tr>
               <tr>
-                <th>Passengers</th>
-                <td>1</td>
+                <th>Passengers</th> <td>1 or 2</td>
               </tr>
               <tr>
-                <th>Flight</th>
-                <td>Time 25 min</td>
+                <th>Flight Time</th> <td>2 h</td>
               </tr>
               <tr>
-                <th>Propulsion</th>
-                <td>Kerosene</td>
+                <th>Propulsion</th> <td>Electric or HPS</td>
               </tr>
               <tr>
-                <th>Speed</th>
-                <td>750 km/h</td>
+                <th>Speed</th> <td>120 km/h</td>{" "}
               </tr>
               <tr>
-                <th>Flight Altitude</th>
-                <td>3000 m</td>
+                <th>Flight Altitude</th> <td>3000 m</td>
               </tr>
             </tbody>
           </Table>
@@ -83,11 +68,11 @@ export default function FortunaBlueprintSection() {
               </tr>
               <tr>
                 <th>Flight Control</th>
-                <td>AI with manual correction</td>
+                <td>AI, fully automatic</td>
               </tr>
               <tr>
                 <th>Controls</th>
-                <td>Touchscreen and controller</td>
+                <td>Touchscreen</td>
               </tr>
               <tr>
                 <th>Passenger Safety</th>
@@ -106,8 +91,8 @@ export default function FortunaBlueprintSection() {
                 <td>Customizable</td>
               </tr>
               <tr>
-                <th>Body Base </th>
-                <td>Aluminium</td>
+                <th>Body Base</th>
+                <td>Aircraft Aluminium</td>
               </tr>
               <tr>
                 <th>Bodywork</th>
@@ -117,7 +102,6 @@ export default function FortunaBlueprintSection() {
                 <th>Interior</th>
                 <td>Customizable</td>
               </tr>
-
               <tr>
                 <th>Flight Monitoring</th>
                 <td>Realtime</td>

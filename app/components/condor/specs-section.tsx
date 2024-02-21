@@ -2,39 +2,39 @@
 import { Container } from "react-bootstrap";
 import ParamBlock from "../common/param-block";
 
-export default function FortunaSpecsSection() {
+export default function CondorSpecsSection() {
   const items = [
     {
-      text: "8 Jet Engines with Thrust Vector Control",
-      image: "fortuna-engines",
-      icon: "slash-circle",
-    },
-    {
-      text: "750 Km/h Ground Speed",
-      image: "fortuna-bottom",
-      icon: "speedometer",
-    },
-    {
-      text: "120 Kg of Payload, Single Passenger",
-      image: "fortuna-seats",
+      text: "120 Kg of Payload, Single or Two Passenger",
+      image: "condor-seats",
       icon: "people",
+    },
+    {
+      text: "Full Flight Automation",
+      image: "condor-top-part",
+      icon: "robot",
+    },
+    {
+      text: "Safety System",
+      image: "beetle-parachute",
+      icon: "life-preserver",
     },
   ];
 
   const items2 = [
     {
-      text: "AI Controlled with Manual Route Correction",
-      image: "fortuna-controller",
-      icon: "robot",
+      text: "Effective traction motor",
+      image: "condor-motor",
+      icon: "slash-circle",
     },
     {
-      text: "300 km Range, 25 min of flight",
-      image: "fortuna-top-part",
+      text: "150 km Range Electric",
+      image: "condor-bottom",
       icon: "stopwatch",
     },
     {
       text: "Vertical Takeoff and Landing",
-      image: "fortuna-take-off",
+      image: "condor-engines",
       icon: "h-circle",
     },
   ];
@@ -42,12 +42,12 @@ export default function FortunaSpecsSection() {
     <Container className="scroll-snap-start p-4 bg-white" fluid>
       <Container className="d-flex flex-column justify-content-center align-items-center">
         <div className="p-5 section-header text-center">
-          <div className="lead">FORTUNA</div>
+          <div className="lead">CONDOR ONE</div>
           <h2>KEY FEATURES</h2>
           <p className="pb-3">
-            The unique flying machine for transportation and entertainment.
-            Controlled by AI, but will allow for prescriptive flight adjustments
-            by the user providing more fun and impressions.
+            Fully AI-controlled electric passenger aircraft for comfortable
+            medium-range flights. It can be used in urban, suburban and
+            intercity areas.
           </p>
         </div>
       </Container>

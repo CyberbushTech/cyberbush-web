@@ -13,7 +13,7 @@ export default function CondorBlueprintSection() {
       <Container className="d-flex flex-column justify-content-center pb-5">
         <div className="blueprint">
           <Image
-            src="images/Condor/Condor-Perspective-Blueprint.png"
+            src="images/condor/blueprints/perspective.png"
             className="object-fit-contain blueprint-image"
             loading="eager"
             alt={"Cyberbush"}

@@ -16,7 +16,7 @@ export default function FortunaBlueprintSection() {
       <Container className="d-flex flex-column justify-content-center pb-5 pt-3">
         <div className="blueprint">
           <Image
-            src="images/fortuna/Fortuna-Perspective-Blueprint.jpg"
+            src="images/fortuna/blueprints/perspective.jpg"
             className="object-fit-contain blueprint-image"
             loading="eager"
             alt={"Cyberbush"}

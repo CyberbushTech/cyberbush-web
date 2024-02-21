@@ -13,7 +13,7 @@ export default function BeetleBlueprintSection() {
       <Container className="d-flex flex-column justify-content-center pb-5 pt-3">
         <div className="blueprint">
           <Image
-            src="images/beetle/Beetle-Perspective-Blueprint.png"
+            src="images/beetle/blueprints/perspective.png"
             className="object-fit-contain blueprint-image"
             loading="eager"
             alt={"Cyberbush"}

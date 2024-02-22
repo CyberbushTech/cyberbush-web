@@ -22,7 +22,10 @@ export default function HomeActionBanner() {
             playsInline
             className="dimmed-video vh-100 vw-100 object-fit-cover scroll-snap-start"
           >
-            <source src="video/draft.mp4" type="video/mp4" />
+            <source
+              src="https://n7h6rncncjn4ongd.public.blob.vercel-storage.com/video/draft-Ig2XAapGCUj2gqCAlQJYUarZubOZW9.mp4"
+              type="video/mp4"
+            />
           </video>
         </Container>
       </motion.div>

@@ -15,7 +15,10 @@ export default function HomeSkyscoutSection() {
             playsInline
             className="dimmed-video-2 vh-100 vw-100 object-fit-cover"
           >
-            <source src="video/clouds.mp4" type="video/mp4" />
+            <source
+              src="https://n7h6rncncjn4ongd.public.blob.vercel-storage.com/video/clouds-W7INUedRDyrNA5l6zQujQTqBQzdOBL.mp4"
+              type="video/mp4"
+            />
           </video>
         </Container>
         <Container

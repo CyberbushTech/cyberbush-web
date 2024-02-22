@@ -12,7 +12,7 @@ export default function CondorCarouselSection() {
 
   return (
     <Container
-      className="scroll-snap-start vw-100 vh-100 bg-dark d-flex flex-column justify-content-center align-items-center text-center"
+      className="scroll-snap-start vw-100 vh-100 bg-dark d-flex flex-column justify-content-center align-items-center text-center pb-5"
       fluid
     >
       <ImageCarousel images={images} />

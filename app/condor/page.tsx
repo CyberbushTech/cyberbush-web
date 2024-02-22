@@ -11,15 +11,17 @@ import HomeSkyscoutSection from "../components/home/home-skyscout-section";
 
 const CondorPage: NextPage = () => {
   return (
-    <Container className="page-condor bg-secondary" fluid>
-      <TopNavigation inverted={false} />
-      <CondorHero />
-      <CondorSpecsSection />
-      <CondorBlueprintSection />
-      <CondorCarouselSection />
-      <HomeSkyscoutSection />
-      <Footer />
-    </Container>
+    <div className="page-container">
+      <Container className="page-condor bg-secondary" fluid>
+        <TopNavigation inverted={false} />
+        <CondorHero />
+        <CondorSpecsSection />
+        <CondorBlueprintSection />
+        <CondorCarouselSection />
+        <HomeSkyscoutSection />
+        <Footer />
+      </Container>
+    </div>
   );
 };
 export default CondorPage;

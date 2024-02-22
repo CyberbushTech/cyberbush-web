@@ -39,8 +39,8 @@ export default function FortunaSpecsSection() {
     },
   ];
   return (
-    <Container className="scroll-snap-start p-4 bg-white" fluid>
-      <Container className="d-flex flex-column justify-content-center align-items-center">
+    <Container className="p-4 bg-white" fluid>
+      <Container className="d-flex flex-column justify-content-center align-items-center scroll-snap-start">
         <div className="p-5 section-header text-center">
           <div className="lead">FORTUNA</div>
           <h2>KEY FEATURES</h2>

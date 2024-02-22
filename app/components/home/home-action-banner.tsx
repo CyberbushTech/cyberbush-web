@@ -3,14 +3,9 @@ import Container from "react-bootstrap/Container";
 import HomeBanner from "./home-banner";
 import { Button } from "react-bootstrap";
 import { motion } from "framer-motion";
-import { RefObject } from "react";
 import ScrollMore from "../common/scroll-more";
 
-export default function HomeActionBanner({
-  innerRef,
-}: Readonly<{
-  innerRef: RefObject<HTMLDivElement>;
-}>) {
+export default function HomeActionBanner() {
   return (
     <HomeBanner background="dark text-white">
       <motion.div
@@ -42,9 +37,7 @@ export default function HomeActionBanner({
           transition={{ type: "spring", duration: 1 }}
           exit={{ opacity: 0 }}
         >
-          <h1 id="main-title-hero" ref={innerRef}>
-            Building The New Way of Moving
-          </h1>
+          <h1 id="main-title-hero">Building The New Way of Moving</h1>
           <p className="pb-3">
             The first available line of fully autonomous AI-controlled
             aircrafts.

@@ -20,8 +20,32 @@ $font-family-base: '__Lato_6d65e1';
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.scss";
 
-.scroll-snap-y {
+/* width */
+::-webkit-scrollbar {
+	display: none;
+}
+
+.page-container {
+	overflow: scroll;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+html {
+	overflow: hidden;
+}
+
+.scroll-snap-pro {
+	scroll-snap-type: y proximity;
+	-webkit-overflow-scrolling: touch;
+}
+
+.scroll-snap-man {
 	scroll-snap-type: y mandatory;
+	-webkit-overflow-scrolling: touch;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {

@@ -4,13 +4,11 @@ import { NextPage } from "next";
 import TopNavigation from "./components/common/top-navigation";
 import HomeActionBanner from "./components/home/home-action-banner";
 import HomeAircraftSection from "./components/home/home-aircraft-section";
-import HomeInfraSection from "./components/home/home-infra-section";
 import HomeSkyscoutSection from "./components/home/home-skyscout-section";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "./components/common/footer";
 
 const Home: NextPage = () => {
-  const actionBannerRef = useRef<HTMLDivElement>(null);
   const [isActionBannerInView, setIsActionBannerInView] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -24,13 +22,15 @@ const Home: NextPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isActionBannerInView]);
   return (
-    <Container className="bg-secondary" fluid>
-      <TopNavigation inverted={!isActionBannerInView} />
-      <HomeActionBanner innerRef={actionBannerRef} />
-      <HomeAircraftSection />
-      <HomeSkyscoutSection />
-      <Footer />
-    </Container>
+    <div className="page-container scroll-snap-man">
+      <Container className="bg-secondary" fluid>
+        <TopNavigation inverted={!isActionBannerInView} />
+        <HomeActionBanner />
+        <HomeAircraftSection />
+        <HomeSkyscoutSection />
+        <Footer />
+      </Container>
+    </div>
   );
 };
 export default Home;

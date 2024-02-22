@@ -31,10 +31,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-snap-y">
+    <html lang="en">
       <body>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

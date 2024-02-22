@@ -11,15 +11,17 @@ import HomeSkyscoutSection from "../components/home/home-skyscout-section";
 
 const FortunaPage: NextPage = () => {
   return (
-    <Container className="page-fortuna bg-secondary" fluid>
-      <TopNavigation inverted={false} />
-      <FortunaHero />
-      <FortunaSpecsSection />
-      <FortunaBlueprintSection />
-      <FortunaCarouselSection />
-      <HomeSkyscoutSection />
-      <Footer />
-    </Container>
+    <div className="page-container">
+      <Container className="page-fortuna bg-secondary" fluid>
+        <TopNavigation inverted={false} />
+        <FortunaHero />
+        <FortunaSpecsSection />
+        <FortunaBlueprintSection />
+        <FortunaCarouselSection />
+        <HomeSkyscoutSection />
+        <Footer />
+      </Container>
+    </div>
   );
 };
 export default FortunaPage;

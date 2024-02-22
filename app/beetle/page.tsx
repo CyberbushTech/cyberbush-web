@@ -7,17 +7,21 @@ import BeetleHero from "../components/beetle/beetle-hero";
 import BeetleSpecsSection from "../components/beetle/specs-section";
 import BeetleBlueprintSection from "../components/beetle/blueprint-section";
 import BeetleCarouselSection from "../components/beetle/carousel-section";
+import HomeSkyscoutSection from "../components/home/home-skyscout-section";
 
 const BeetlePage: NextPage = () => {
   return (
-    <Container className="page-beetle bg-secondary" fluid>
-      <TopNavigation inverted={false} />
-      <BeetleHero />
-      <BeetleSpecsSection />
-      <BeetleBlueprintSection />
-      <BeetleCarouselSection />
-      <Footer />
-    </Container>
+    <div className="page-container">
+      <Container className="page-beetle bg-secondary" fluid>
+        <TopNavigation inverted={false} />
+        <BeetleHero />
+        <BeetleSpecsSection />
+        <BeetleBlueprintSection />
+        <BeetleCarouselSection />
+        <HomeSkyscoutSection />
+        <Footer />
+      </Container>
+    </div>
   );
 };
 export default BeetlePage;

@@ -1,6 +1,6 @@
 "use client";
 
-import { Carousel, Image } from "react-bootstrap";
+import { Carousel, Container, Image } from "react-bootstrap";
 
 export default function ImageCarousel({
   className,
@@ -10,15 +10,17 @@ export default function ImageCarousel({
   images: string[];
 }>) {
   return (
-    <Carousel>
+    <Carousel className="w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center pb-5">
       {images.map((image) => (
         <Carousel.Item key={image} className="bg-dark">
-          <Image
-            src={image}
-            className="object-fit-scale vh-100 vw-100"
-            loading="eager"
-            alt={"Cyberbush"}
-          />
+          <Container>
+            <Image
+              src={image}
+              className="w-100 align-self-center"
+              loading="eager"
+              alt={"Cyberbush"}
+            />
+          </Container>
         </Carousel.Item>
       ))}
     </Carousel>

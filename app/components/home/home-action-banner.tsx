@@ -4,6 +4,7 @@ import HomeBanner from "./home-banner";
 import { Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import ScrollMore from "../common/scroll-more";
+import Link from "next/link";
 
 export default function HomeActionBanner() {
   return (
@@ -57,13 +58,13 @@ export default function HomeActionBanner() {
             <div
               className={`d-flex flex-column gap-1 justify-content-center align-items-center`}
             >
-              <Button
-                className="action-button"
-                variant="outline-primary"
-                size="lg"
+              <Link
+                className="action-button btn btn-outline-primary btn-lg"
+                href="#aircrafts"
+                scroll={true}
               >
                 Find Out More
-              </Button>
+              </Link>
             </div>
           </motion.div>
         </motion.div>

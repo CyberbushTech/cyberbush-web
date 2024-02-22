@@ -9,7 +9,7 @@ export default function HomeAircraftSection() {
       background="secondary"
       className="home-aircrafts-banner text-white vh-100 scroll-snap-start"
     >
-      <Container className="pt-4 pb-4">
+      <Container id="aircrafts" className="pt-4 pb-4">
         <Container
           className="d-flex flex-column vh-100 wv-100 align-items-center text-center pt-5"
           fluid

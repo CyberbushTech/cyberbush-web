@@ -290,7 +290,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 	.home-aircraft-block {
 		display: flex;
-		flex-direction: row-reverse;
 		align-items: center;
 		min-width: auto;
 		
@@ -314,9 +313,17 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 	.home-aircraft-block {
 		min-width: auto;
-		
+		width: 100%;
+		flex-direction: row-reverse;
+		align-items: left;
+		justify-content: left;
+
 		.lead {
 			font-size: 1rem;
+		}
+
+		h4 {
+			text-align: right;
 		}
 	}
 }

@@ -36,7 +36,7 @@ export default function CondorHero() {
             <h1 className="head">CONDOR ONE</h1>
           </motion.div>
         </Container>
-        <ScrollMore textColor="secondary">Scroll For More</ScrollMore>
+        <ScrollMore textColor="white">Scroll For More</ScrollMore>
       </Container>
     </Container>
   );

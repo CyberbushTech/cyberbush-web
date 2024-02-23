@@ -42,7 +42,7 @@ export default function HomeSkyscoutSection() {
                 variant="outline-primary"
                 size="lg"
               >
-                Inquire Now
+                Coming Soon
               </Button>
             </div>
           </Container>

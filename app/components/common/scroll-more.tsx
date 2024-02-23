@@ -11,7 +11,9 @@ export default function ScrollMore({
   textColor: string;
 }>) {
   return (
-    <Container className={`p-5 text-${textColor} position-absolute bottom-0`}>
+    <Container
+      className={`scroll-more p-5 text-${textColor} position-absolute bottom-0`}
+    >
       <motion.div
         className="ms-4 me-4"
         initial={{ opacity: 0, y: 20 }}

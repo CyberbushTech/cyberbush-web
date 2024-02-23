@@ -68,7 +68,7 @@ export default function HomeActionBanner() {
             </div>
           </motion.div>
         </motion.div>
-        <ScrollMore textColor="secondary">Scroll For More</ScrollMore>
+        <ScrollMore textColor="white">Scroll For More</ScrollMore>
       </Container>
     </HomeBanner>
   );

@@ -39,7 +39,7 @@ export default function BeetleHero() {
             <h1 className="head">BEETLE ONE</h1>
           </motion.div>
         </Container>
-        <ScrollMore textColor="secondary">Scroll For More</ScrollMore>
+        <ScrollMore textColor="white">Scroll For More</ScrollMore>
       </Container>
     </Container>
   );

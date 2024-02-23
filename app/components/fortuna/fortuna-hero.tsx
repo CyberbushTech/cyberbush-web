@@ -40,7 +40,7 @@ export default function FortunaHero() {
             <h1 className="head">FORTUNA</h1>
           </Container>
         </motion.div>
-        <ScrollMore textColor="secondary">Scroll For More</ScrollMore>
+        <ScrollMore textColor="white">Scroll For More</ScrollMore>
       </Container>
     </Container>
   );

@@ -35,7 +35,7 @@ export default function BeetleBlueprintSection() {
                 <th>Weight</th> <td>500 Kg</td>
               </tr>
               <tr>
-                <th>Range</th> <td>15 Km</td>
+                <th>Range</th> <td>35 Km</td>
               </tr>
               <tr>
                 <th>Engines</th> <td>16 Electric VTOL</td>
@@ -53,7 +53,7 @@ export default function BeetleBlueprintSection() {
                 <th>Propulsion</th> <td>Electric or HPS</td>
               </tr>
               <tr>
-                <th>Speed</th> <td>40 km/h</td>{" "}
+                <th>Speed</th> <td>70 km/h</td>{" "}
               </tr>
               <tr>
                 <th>Flight Altitude</th> <td>3000 m</td>

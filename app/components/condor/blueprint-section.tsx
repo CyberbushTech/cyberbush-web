@@ -35,7 +35,7 @@ export default function CondorBlueprintSection() {
                 <th>Weight</th> <td>600 Kg</td>
               </tr>
               <tr>
-                <th>Range</th> <td>150 Km</td>
+                <th>Range</th> <td>320 Km</td>
               </tr>
               <tr>
                 <th>Engines</th> <td>16 Electric VTOL 1 Electric Sustainer</td>
@@ -53,7 +53,7 @@ export default function CondorBlueprintSection() {
                 <th>Propulsion</th> <td>Electric or HPS</td>
               </tr>
               <tr>
-                <th>Speed</th> <td>120 km/h</td>{" "}
+                <th>Speed</th> <td>180 km/h</td>
               </tr>
               <tr>
                 <th>Flight Altitude</th> <td>3000 m</td>

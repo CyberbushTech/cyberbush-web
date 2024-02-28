@@ -28,7 +28,7 @@ export default function CondorSpecsSection() {
       icon: "slash-circle",
     },
     {
-      text: "150 km Range Electric",
+      text: "320 km Range Electric",
       image: "condor-bottom",
       icon: "stopwatch",
     },

@@ -41,7 +41,7 @@ export default function HomeActionBanner() {
           transition={{ type: "spring", duration: 1 }}
           exit={{ opacity: 0 }}
         >
-          <h1 id="main-title-hero">Building The New Way of Moving</h1>
+          <h1 id="main-title-hero">BUILDING THE NEW WAY OF MOVING</h1>
           <p className="pb-3">
             The first available line of fully autonomous AI-controlled
             aircrafts.

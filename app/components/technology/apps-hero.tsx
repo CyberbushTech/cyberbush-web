@@ -1,6 +1,6 @@
 "use client";
 import { Container, Image, Row } from "react-bootstrap";
-import AppIcon from "../common/app-icon";
+import AppIcon from "./app-icon";
 
 export default function AppsTechnologyHero() {
   return (

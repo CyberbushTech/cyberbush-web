@@ -1,6 +1,6 @@
 "use client";
 import { Container } from "react-bootstrap";
-import AIIcon from "../common/ai-icon";
+import AIIcon from "./ai-icon";
 
 export default function AITechnologyHero() {
   return (

@@ -5,7 +5,7 @@ export default function SafetyTechnologyHero() {
   return (
     <Container
       id="safety"
-      className="safety-section d-flex flex-column justify-content-center align-items-center text-center text-white p-4 pb-5 bg-dark"
+      className="safety-section d-flex flex-column justify-content-center align-items-center text-center p-4 pb-5 bg-white"
       fluid
     >
       <div className="p-5 section-header text-center">
@@ -17,32 +17,35 @@ export default function SafetyTechnologyHero() {
         </p>
       </div>
       <Container className="ai-container pb-5 d-flex flex-row gap-3 justify-content-center align-items-center flex-wrap">
-        <div className="safety-item monitoring">
+        <div className="safety-item monitoring text-white">
           <div className="head-image"></div>
           <div className="title">
             <div className="heading">AI-SUPPORTED MONITORING AND CONTROL</div>
             <div className="description">
-              Flight telemetry data realtime analysis and storage
+              Flight telemetry data realtime analysis, storage and transmission
+              via permenent McWill connection
             </div>
           </div>
         </div>
 
-        <div className="safety-item escape">
+        <div className="safety-item escape text-white">
           <div className="head-image"></div>
           <div className="title">
             <div className="heading">UNIQUE PASSENGER ESCAPING SYSTEM</div>
             <div className="description">
-              Civil version of 5th generation jet fighter’s catapult seat
+              Civil version of 5th gen jet fighter’s catapult seat saving
+              passengers in emergency cases
             </div>
           </div>
         </div>
 
-        <div className="safety-item parachute">
+        <div className="safety-item parachute text-white">
           <div className="head-image"></div>
           <div className="title">
             <div className="heading">ALL-AIRCRAFT PARACHUTE SYSTEM</div>
             <div className="description">
-              Soft landing of aircraft preserving safety on the ground
+              Soft landing of aircraft preserving safety for passengers and
+              ground infrastructure
             </div>
           </div>
         </div>

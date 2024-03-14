@@ -26,7 +26,7 @@ export default function HomeSkyscoutSection() {
           fluid
         >
           <Container className="home-hero">
-            <h1>Sky Scout Development Program</h1>
+            <h1>SKY SCOUT DEVELOPMENT PROGRAM</h1>
             <p className="pb-3">
               Allowing enthusiasts to be involved in a new industry at an early
               stage bringing the true customer development to live.

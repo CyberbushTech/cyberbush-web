@@ -819,9 +819,15 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 .blockchain-scroll {
     position: relative;
     display: flex;
-    width: 700px;
+		width: 700px;
     overflow: hidden;
     mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent)
+}
+
+@include media-breakpoint-down(md) {
+	.blockchain-scroll {
+		width: 360px;
+	}
 }
 
 .blockchain-scroll div {
@@ -864,21 +870,16 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 		border-radius: var(--bs-border-radius);
 }
 
-.blockchain-scroll div span:hover {
-    background: #3fd2f9;
-    cursor: pointer;
-}
-
 .blockchain-scroll.slow {
-	--time:40s;
+	--time:50s;
 }
 
 .blockchain-scroll.medium {
-	--time:30s;
+	--time:40s;
 }
 
 .blockchain-scroll.fast {
-	--time:10s;
+	--time:30s;
 }
 
 .imgBox div {

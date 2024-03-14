@@ -33,6 +33,12 @@ export default function BlockchainTechnologyHero() {
       { icon: "clock", title: "Communication Sessions" },
       { icon: "clock", title: "Propellers Runtime" },
       { icon: "clock", title: "Parts Certification" },
+      { icon: "clock", title: "Payments" },
+      { icon: "clock", title: "Charge Time" },
+      { icon: "clock", title: "Measurements" },
+      { icon: "clock", title: "Insite Temperature" },
+      { icon: "clock", title: "Components Conditions" },
+      { icon: "clock", title: "Operator" },
     ],
   ];
   return (

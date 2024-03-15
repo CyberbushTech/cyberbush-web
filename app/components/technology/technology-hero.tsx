@@ -71,19 +71,19 @@ export default function TechnologyHero() {
                 >
                   Safety
                 </Link>
-                {/* <Link
-                  className="action-button btn btn-outline-primary btn-lg"
-                  href="#control"
-                  scroll={true}
-                >
-                  Flight Control
-                </Link> */}
                 <Link
                   className="action-button btn btn-outline-primary btn-lg"
                   href="#blockchain"
                   scroll={true}
                 >
                   Blockchain
+                </Link>
+                <Link
+                  className="action-button btn btn-outline-primary btn-lg"
+                  href="#control"
+                  scroll={true}
+                >
+                  Flight Control
                 </Link>
                 {/* <Link
                   className="action-button btn btn-outline-primary btn-lg"

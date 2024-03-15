@@ -630,6 +630,15 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 	}
 }
 
+.safety-section {
+	width: 100%;
+	min-height: 40rem;
+	background-image: url("../public/images/technology/safety.jpg");
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .safety-item {
 	max-width: 25rem;
 	min-width: 25rem;
@@ -646,8 +655,9 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 	.title {
 		padding: 1rem;
-		background-color: rgba($color: #000000, $alpha: 0.4);
+		background-color: rgba($color: #ffffff, $alpha: 0.4);
 		min-height:7rem;
+		color: black;
 
 		.heading {
 			font-weight: bold;
@@ -809,7 +819,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 .blockchain-section {
 	width: 100%;
-	min-height: 40rem;
 	background-image: url("../public/images/technology/blockchain.jpg");
 	background-position: 50% 0;
 	background-repeat: no-repeat;
@@ -891,4 +900,42 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 .imgBox img {
     max-width: 100px;
     scale: 0.8;
+}
+
+.control-section {
+	width: 100%;
+	min-height: 40rem;
+	background-image: url("../public/images/technology/control.jpg");
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.control-icon-item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 1rem;
+	border-radius: var(--bs-border-radius-lg);
+	max-width: 25rem;
+	min-width: 25rem;
+	min-height: 7rem;
+	background-color: rgba($color: #ffffff, $alpha: 0.2);
+
+	.icon {
+		font-size: 2.5rem;
+		padding-right: 1rem;
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+	}
+
+	.body {
+		display: block;
+		text-overflow: ellipsis;
+		word-wrap: break-word;
+		overflow: hidden;
+
+		text-align: left;
+	}
 }

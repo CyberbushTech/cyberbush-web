@@ -20,9 +20,9 @@ const TechnologyPage: NextPage = () => {
         <TechnologyHero />
         <AITechnologyHero />
         <SafetyTechnologyHero />
+        <ControlTechnologyHero />
         <BlockchainTechnologyHero />
-        {/* <ControlTechnologyHero />
-        <PortsTechnologyHero /> */}
+        {/* <PortsTechnologyHero /> */}
         <AppsTechnologyHero />
         <HomeSkyscoutSection />
         <Footer />

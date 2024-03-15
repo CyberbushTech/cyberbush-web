@@ -85,19 +85,19 @@ export default function TechnologyHero() {
                 >
                   Flight Control
                 </Link>
-                {/* <Link
-                  className="action-button btn btn-outline-primary btn-lg"
-                  href="#ports"
-                  scroll={true}
-                >
-                  Vertiports
-                </Link> */}
                 <Link
                   className="action-button btn btn-outline-primary btn-lg"
                   href="#apps"
                   scroll={true}
                 >
                   Apps
+                </Link>
+                <Link
+                  className="action-button btn btn-outline-primary btn-lg"
+                  href="#ports"
+                  scroll={true}
+                >
+                  Vertiports
                 </Link>
               </div>
             </motion.div>

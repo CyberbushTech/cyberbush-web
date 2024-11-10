@@ -1007,3 +1007,121 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 		min-width: 100%;
 	}
 }
+
+.invest-section {
+	background-image: url("../public/images/clouds-bg.jpg");
+	background-size: cover;
+}
+
+.video-block {
+	width: 33.33%;	
+	border-radius: 0.3rem;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+	border: 0.1rem solid black;
+
+	.image {
+		background-size: cover;
+		width: 100%;
+		aspect-ratio: 4/3;
+
+		&.image-fortuna-engines {
+			background-image: url("../public/images/fortuna/blueprints/engines.png");
+		}
+
+		&.image-fortuna-seats {
+			background-image: url("../public/images/fortuna/blueprints/seats.png");
+		}
+
+		&.image-fortuna-bottom {
+			background-image: url("../public/images/fortuna/blueprints/bottom.png");
+		}
+
+		&.image-fortuna-take-off {
+			background-image: url("../public/images/fortuna/blueprints/take-off.png");
+		}
+
+		&.image-fortuna-top-part {
+			background-image: url("../public/images/fortuna/blueprints/top-part.png");
+		}
+
+		&.image-fortuna-controller {
+			background-image: url("../public/images/fortuna/blueprints/controller.png");
+		}
+
+		&.image-condor-motor {
+			background-image: url("../public/images/condor/blueprints/motor.png");
+		}
+
+		&.image-condor-bottom {
+			background-image: url("../public/images/condor/blueprints/bottom.png");
+		}
+
+		&.image-condor-engines {
+			background-image: url("../public/images/condor/blueprints/engines.png");
+		}
+
+		&.image-condor-top-part {
+			background-image: url("../public/images/condor/blueprints/top-part.png");
+		}
+
+		&.image-condor-seats {
+			background-image: url("../public/images/condor/blueprints/seats.png");
+		}
+
+		&.image-beetle-seats {
+			background-image: url("../public/images/beetle/blueprints/seats.png");
+		}
+
+		&.image-beetle-bottom {
+			background-image: url("../public/images/beetle/blueprints/bottom.png");
+		}
+
+		&.image-beetle-top {
+			background-image: url("../public/images/beetle/blueprints/top.png");
+		}
+
+		&.image-beetle-parachute {
+			background-image: url("../public/images/beetle/blueprints/parachute.png");
+		}
+
+		&.image-beetle-take-off {
+			background-image: url("../public/images/beetle/blueprints/take-off.png");
+		}
+
+		&.image-beetle-top-part {
+			background-image: url("../public/images/beetle/blueprints/top-part.png");
+		}
+	}
+
+	.title-container {
+		border-top: 0.1rem solid black;
+		color: $black;
+	}
+}
+
+@include media-breakpoint-only(md) {
+	.video-block {
+		.title-container {
+			.icon-item .body {
+				display: flex;
+				min-height: 4.6rem;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(md) { 
+	.specs-row  {
+		flex-direction: column !important;
+		width: 100%;
+
+		.video-block {
+			width: 100%;
+		}
+	}
+}

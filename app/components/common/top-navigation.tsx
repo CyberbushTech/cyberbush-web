@@ -20,7 +20,7 @@ export default function TopNavigation({
       <Container className="top-navigation-container">
         <Navbar.Brand href="/" className="ms-3 mb-1 brand">
           <Image
-            src="images/logo.svg"
+            src="/images/logo.svg"
             width="170"
             height="20"
             loading="eager"

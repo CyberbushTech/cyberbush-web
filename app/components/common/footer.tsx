@@ -19,7 +19,7 @@ export default function HomeAircraftSection() {
           <Container className="small">
             <div className="image pb-1">
               <Image
-                src="images/logo-red.svg"
+                src="/images/logo-red.svg"
                 width="140"
                 height="50"
                 alt="Cyberbush"

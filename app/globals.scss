@@ -15,7 +15,7 @@ $navbar-toggler-focus-width: 0;
 $body-bg: $secondary;
 $table-bg: white;
 
-$font-family-base: '__Lato_6d65e1';
+$font-family-base: 'Lato';
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.scss";
@@ -50,7 +50,7 @@ html {
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-	font-family: '__Poppins_0f2b3c';
+	font-family: 'Poppins';
 }
 
 .container-fluid {
@@ -324,6 +324,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 		h4 {
 			text-align: right;
+			padding-left: 0.8rem;
 		}
 	}
 }

@@ -6,8 +6,10 @@ import Link from "next/link";
 
 export default function InvestPresentationHero({
   link,
+  videoLink,
 }: Readonly<{
   link: string;
+  videoLink: string;
 }>) {
   return (
     <Container
@@ -46,7 +48,7 @@ export default function InvestPresentationHero({
           </Link>
           <Link
             className="action-button btn btn-outline-primary btn-lg m-2"
-            href={link}
+            href={videoLink}
             target="_new"
             scroll={true}
           >

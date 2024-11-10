@@ -16,7 +16,9 @@ export default async function InvestPage({
     // Full
     {
       id: "1c108201-9605-4d02-937a-8c5daf21c831",
-      presentation: "/files/Cyberbush-Pitch-Deck-v8.pdf",
+      presentation:
+        "https://drive.google.com/file/d/1rSO2esbxo-dzZwpj5WahugcsODZLljtH/view?usp=share_link",
+      video: "https://vimeo.com/cyberbush/presentation-10-2024",
       items: [
         {
           text: "Cyberbush Beetle in Bahrain",
@@ -48,7 +50,10 @@ export default async function InvestPage({
     <div className="page-container">
       <Container className="page-invest bg-secondary" fluid>
         <TopNavigation inverted={false} />
-        <InvestPresentationHero link={foundConfig?.presentation ?? ""} />
+        <InvestPresentationHero
+          link={foundConfig?.presentation ?? ""}
+          videoLink={foundConfig?.video ?? ""}
+        />
         <Footer />
       </Container>
     </div>

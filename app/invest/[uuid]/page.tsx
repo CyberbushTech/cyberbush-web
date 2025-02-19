@@ -18,22 +18,22 @@ export default async function InvestPage({
       id: "1c108201-9605-4d02-937a-8c5daf21c831",
       presentation:
         "https://drive.google.com/file/d/1rSO2esbxo-dzZwpj5WahugcsODZLljtH/view?usp=share_link",
-      video: "https://vimeo.com/cyberbush/presentation-10-2024",
       items: [
         {
-          text: "Cyberbush Beetle in Bahrain",
-          image: "/images/thumbnails/1.jpg",
-          link: "https://vimeo.com/cyberbush/bahrain",
+          title: "Presentation Video",
+          link: "https://vimeo.com/cyberbush/presentation-10-2024",
         },
         {
-          text: "BK-140",
-          image: "/images/thumbnails/1.jpg",
-          link: "https://vimeo.com/cyberbush/bk1409-en",
+          title: "Cyberbush Beetle in Dubai",
+          link: "https://vimeo.com/cyberbush/dubai",
         },
         {
-          text: "BK-300",
-          image: "/images/thumbnails/1.jpg",
-          link: "https://vimeo.com/cyberbush/bk-300",
+          title: "BK-140 Video",
+          link: "https://vimeo.com/cyberbush/bk140",
+        },
+        {
+          title: "BK-300 Video",
+          link: "https://vimeo.com/cyberbush/bk-300-en",
         },
       ],
     },
@@ -51,8 +51,8 @@ export default async function InvestPage({
       <Container className="page-invest bg-secondary" fluid>
         <TopNavigation inverted={false} />
         <InvestPresentationHero
-          link={foundConfig?.presentation ?? ""}
-          videoLink={foundConfig?.video ?? ""}
+          presentationLink={foundConfig?.presentation ?? ""}
+          videos={foundConfig.items}
         />
         <Footer />
       </Container>

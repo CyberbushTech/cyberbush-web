@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function InvestPresentationHero({
-  link,
-  videoLink,
+  presentationLink,
+  videos,
 }: Readonly<{
-  link: string;
-  videoLink: string;
+  presentationLink: string;
+  videos: { title: string; link: string }[];
 }>) {
   return (
     <Container
@@ -21,7 +21,7 @@ export default function InvestPresentationHero({
         fluid
       >
         <Container></Container>
-        <Container className="head-title-block mt-3 ms-4 me-4 text-white">
+        <Container className="head-title-block mt-3 ms-4 me-4 text-white d-flex flex-column m-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -40,22 +40,24 @@ export default function InvestPresentationHero({
         >
           <Link
             className="action-button btn btn-outline-primary btn-lg m-2"
-            href={link}
+            href={presentationLink}
             target="_new"
             scroll={true}
           >
             Download Pitch Deck Presentation
           </Link>
-          <Link
-            className="action-button btn btn-outline-primary btn-lg m-2"
-            href={videoLink}
-            target="_new"
-            scroll={true}
-          >
-            Watch The Video
-          </Link>
+          {videos.map((item) => (
+            <Link
+              key={item.title}
+              className="d-flex action-button btn btn-outline-primary btn-lg m-2 flex-column"
+              href={item.link}
+              target="_new"
+              scroll={true}
+            >
+              {item.title}
+            </Link>
+          ))}
         </motion.div>
-        <ScrollMore textColor="white">Scroll For More</ScrollMore>
       </Container>
     </Container>
   );

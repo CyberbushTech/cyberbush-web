@@ -6,15 +6,13 @@ const dictionaries = {
 };
 
 const getDictionary = (locale: "en" | "ru") => dictionaries[locale].dict;
-const getCurrentLocale = (hostname: string) => {
+const getCurrentLocale = () => {
+  const hostname =
+    typeof window !== "undefined" ? window.location.hostname : "cyberbush.tech";
   if (hostname === "localhost") {
     return "ru";
   }
   return hostname.endsWith(".ru") ? "ru" : "en";
 };
 
-export const getLocalizations = () => {
-  const hostname =
-    typeof window !== "undefined" ? window.location.hostname : "cyberbush.tech";
-  return getDictionary(hostname.endsWith("ru") ? "ru" : "en");
-};
+export const getLocalizations = () => getDictionary(getCurrentLocale());

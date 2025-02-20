@@ -1,7 +1,7 @@
 import { Container, Image } from "react-bootstrap";
 import ScrollMore from "../common/scroll-more";
 import { motion } from "framer-motion";
-import { getLocalizations } from "@/app/dictionaries/dictionaries";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function BeetleHero() {
   const dict = getLocalizations();

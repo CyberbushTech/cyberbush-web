@@ -2,8 +2,10 @@
 import { Container, Image } from "react-bootstrap";
 import ScrollMore from "../common/scroll-more";
 import { motion } from "framer-motion";
+import { getLocalizations } from "@/app/dictionaries/dictionaries";
 
 export default function BeetleHero() {
+  const dict = getLocalizations();
   return (
     <Container
       className="scroll-snap-start bg-dark hero scroll-snap-start"
@@ -24,7 +26,7 @@ export default function BeetleHero() {
               src="images/beetle-right.jpg"
               className="head-image content-fit-cover"
               loading="eager"
-              alt={"Cyberbush"}
+              alt={dict.beetleHero.imageAlt}
             />
           </motion.div>
         </Container>
@@ -35,11 +37,13 @@ export default function BeetleHero() {
             transition={{ type: "spring", duration: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="lead">PASSENGER AI-CONTROLLED MULTICOPTER</div>
-            <h1 className="head">BEETLE ONE</h1>
+            <div className="lead">{dict.beetleHero.leadText}</div>
+            <h1 className="head">{dict.beetleHero.headTitle}</h1>
           </motion.div>
         </Container>
-        <ScrollMore textColor="white">Scroll For More</ScrollMore>
+        <ScrollMore textColor="white">
+          {dict.beetleHero.scrollMoreText}
+        </ScrollMore>
       </Container>
     </Container>
   );

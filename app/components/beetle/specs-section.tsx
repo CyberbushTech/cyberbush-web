@@ -1,21 +1,23 @@
 "use client";
 import { Container } from "react-bootstrap";
 import ParamBlock from "../common/param-block";
+import { getLocalizations } from "@/app/dictionaries/dictionaries";
 
 export default function BeetleSpecsSection() {
+  const dict = getLocalizations();
   const items = [
     {
-      text: "120 Kg of Payload, Single or Two Passenger",
+      text: dict.specsSection.items[0].text,
       image: "beetle-seats",
       icon: "people",
     },
     {
-      text: "Full Flight Automation",
+      text: dict.specsSection.items[1].text,
       image: "beetle-top-part",
       icon: "robot",
     },
     {
-      text: "Safety System",
+      text: dict.specsSection.items[2].text,
       image: "beetle-parachute",
       icon: "life-preserver",
     },
@@ -23,17 +25,17 @@ export default function BeetleSpecsSection() {
 
   const items2 = [
     {
-      text: "16 Electric Motors",
+      text: dict.specsSection.items2[0].text,
       image: "beetle-top",
       icon: "slash-circle",
     },
     {
-      text: "150 km Range on HPS",
+      text: dict.specsSection.items2[1].text,
       image: "beetle-bottom",
       icon: "stopwatch",
     },
     {
-      text: "Vertical Takeoff and Landing",
+      text: dict.specsSection.items2[2].text,
       image: "beetle-take-off",
       icon: "h-circle",
     },
@@ -42,13 +44,9 @@ export default function BeetleSpecsSection() {
     <Container className="scroll-snap-start p-4 bg-white" fluid>
       <Container className="d-flex flex-column justify-content-center align-items-center">
         <div className="p-5 section-header text-center">
-          <div className="lead">BEETLE ONE</div>
-          <h2>KEY FEATURES</h2>
-          <p className="pb-3">
-            Fully AI-controlled electric passenger aircraft for comfortable
-            short-range flights. It can be used in urban and suburban areas
-            providing new transportation experience.
-          </p>
+          <div className="lead">{dict.specsSection.headerLead}</div>
+          <h2>{dict.specsSection.headerTitle}</h2>
+          <p className="pb-3">{dict.specsSection.description}</p>
         </div>
       </Container>
       <Container className="specs-row d-flex flex-row align-items-center text-center gap-5 pb-5">

@@ -2,8 +2,11 @@
 import { Container, Image } from "react-bootstrap";
 import ScrollMore from "../common/scroll-more";
 import { motion } from "framer-motion";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function CondorHero() {
+  const { condorHero } = getLocalizations();
+
   return (
     <Container className="scroll-snap-start bg-dark hero" fluid>
       <Container
@@ -21,7 +24,7 @@ export default function CondorHero() {
               src="images/condor-top.jpg"
               className="head-image content-fit-cover"
               loading="eager"
-              alt={"Cyberbush"}
+              alt={condorHero.imageAlt}
             />
           </motion.div>
         </Container>
@@ -32,11 +35,11 @@ export default function CondorHero() {
             transition={{ type: "spring", duration: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="lead">PASSENGER AI-CONTROLLED CONVERTIPLANE</div>
-            <h1 className="head">CONDOR ONE</h1>
+            <div className="lead">{condorHero.leadText}</div>
+            <h1 className="head">{condorHero.headTitle}</h1>
           </motion.div>
         </Container>
-        <ScrollMore textColor="white">Scroll For More</ScrollMore>
+        <ScrollMore textColor="white">{condorHero.scrollMoreText}</ScrollMore>
       </Container>
     </Container>
   );

@@ -1,21 +1,23 @@
 "use client";
 import { Container } from "react-bootstrap";
 import ParamBlock from "../common/param-block";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function FortunaSpecsSection() {
+  const { fortunaSpecsSection } = getLocalizations();
   const items = [
     {
-      text: "8 Jet Engines with Thrust Vector Control",
+      text: fortunaSpecsSection.items[0].text,
       image: "fortuna-engines",
       icon: "slash-circle",
     },
     {
-      text: "750 Km/h Ground Speed",
+      text: fortunaSpecsSection.items[1].text,
       image: "fortuna-bottom",
       icon: "speedometer",
     },
     {
-      text: "120 Kg of Payload, Single Passenger",
+      text: fortunaSpecsSection.items[2].text,
       image: "fortuna-seats",
       icon: "people",
     },
@@ -23,17 +25,17 @@ export default function FortunaSpecsSection() {
 
   const items2 = [
     {
-      text: "AI Controlled with Manual Route Correction",
+      text: fortunaSpecsSection.items2[0].text,
       image: "fortuna-controller",
       icon: "robot",
     },
     {
-      text: "300 km Range, 25 min of flight",
+      text: fortunaSpecsSection.items2[1].text,
       image: "fortuna-top-part",
       icon: "stopwatch",
     },
     {
-      text: "Vertical Takeoff and Landing",
+      text: fortunaSpecsSection.items2[2].text,
       image: "fortuna-take-off",
       icon: "h-circle",
     },
@@ -42,13 +44,9 @@ export default function FortunaSpecsSection() {
     <Container className="p-4 bg-white" fluid>
       <Container className="d-flex flex-column justify-content-center align-items-center scroll-snap-start">
         <div className="p-5 section-header text-center">
-          <div className="lead">FORTUNA</div>
-          <h2>KEY FEATURES</h2>
-          <p className="pb-3">
-            The unique flying machine for transportation and entertainment.
-            Controlled by AI, but will allow for prescriptive flight adjustments
-            by the user providing more fun and impressions.
-          </p>
+          <div className="lead">{fortunaSpecsSection.headerLead}</div>
+          <h2>{fortunaSpecsSection.headerTitle}</h2>
+          <p className="pb-3">{fortunaSpecsSection.description}</p>
         </div>
       </Container>
       <Container className="specs-row d-flex flex-row align-items-center text-center gap-5 pb-5">

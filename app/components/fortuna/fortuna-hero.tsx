@@ -2,8 +2,10 @@
 import { Container, Image } from "react-bootstrap";
 import ScrollMore from "../common/scroll-more";
 import { motion } from "framer-motion";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function FortunaHero() {
+  const { fortunaHero } = getLocalizations();
   return (
     <Container
       id="fortuna-hero"
@@ -25,7 +27,7 @@ export default function FortunaHero() {
               src="images/fortuna-right.jpg"
               className="head-image content-fit-cover"
               loading="eager"
-              alt={"Cyberbush"}
+              alt={fortunaHero.imageAlt}
             />
           </motion.div>
         </Container>
@@ -36,11 +38,11 @@ export default function FortunaHero() {
           exit={{ opacity: 0 }}
         >
           <Container className="head-title-block pt-3 ps-4 pe-4 text-white">
-            <div className="lead">PREMIUM SPORT AI-CONTROLLED JET FLIGHT</div>
-            <h1 className="head">FORTUNA</h1>
+            <div className="lead">{fortunaHero.leadText}</div>
+            <h1 className="head">{fortunaHero.headTitle}</h1>
           </Container>
         </motion.div>
-        <ScrollMore textColor="white">Scroll For More</ScrollMore>
+        <ScrollMore textColor="white">{fortunaHero.scrollMoreText}</ScrollMore>
       </Container>
     </Container>
   );

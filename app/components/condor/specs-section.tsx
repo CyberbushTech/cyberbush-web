@@ -1,21 +1,23 @@
 "use client";
 import { Container } from "react-bootstrap";
 import ParamBlock from "../common/param-block";
+import { getLocalizations } from "@/app/dictionaries/dictionaries";
 
 export default function CondorSpecsSection() {
+  const dict = getLocalizations();
   const items = [
     {
-      text: "120 Kg of Payload, Single or Two Passenger",
+      text: dict.condorSpecsSection.items[0].text,
       image: "condor-seats",
       icon: "people",
     },
     {
-      text: "Full Flight Automation",
+      text: dict.condorSpecsSection.items[1].text,
       image: "condor-top-part",
       icon: "robot",
     },
     {
-      text: "Safety System",
+      text: dict.condorSpecsSection.items[2].text,
       image: "beetle-parachute",
       icon: "life-preserver",
     },
@@ -23,17 +25,17 @@ export default function CondorSpecsSection() {
 
   const items2 = [
     {
-      text: "Effective traction motor",
+      text: dict.condorSpecsSection.items2[0].text,
       image: "condor-motor",
       icon: "slash-circle",
     },
     {
-      text: "320 km Range Electric",
+      text: dict.condorSpecsSection.items2[1].text,
       image: "condor-bottom",
       icon: "stopwatch",
     },
     {
-      text: "Vertical Takeoff and Landing",
+      text: dict.condorSpecsSection.items2[2].text,
       image: "condor-engines",
       icon: "h-circle",
     },
@@ -42,13 +44,9 @@ export default function CondorSpecsSection() {
     <Container className="scroll-snap-start p-4 bg-white" fluid>
       <Container className="d-flex flex-column justify-content-center align-items-center">
         <div className="p-5 section-header text-center">
-          <div className="lead">CONDOR ONE</div>
-          <h2>KEY FEATURES</h2>
-          <p className="pb-3">
-            Fully AI-controlled electric passenger aircraft for comfortable
-            medium-range flights. It can be used in urban, suburban and
-            intercity areas.
-          </p>
+          <div className="lead">{dict.specsSection.headerLead}</div>
+          <h2>{dict.specsSection.headerTitle}</h2>
+          <p className="pb-3">{dict.specsSection.description}</p>
         </div>
       </Container>
       <Container className="specs-row d-flex flex-row align-items-center text-center gap-5 pb-5">

@@ -5,7 +5,8 @@ const dictionaries = {
 
 const getDictionary = (locale: "en" | "ru") => dictionaries[locale].dict;
 const getCurrentLocale = () => {
-  const hostname = window.location.hostname;
+  const hostname =
+    window != undefined ? window.location.hostname : "cyberbush.tech";
   if (hostname === "localhost") {
     return "ru";
   }

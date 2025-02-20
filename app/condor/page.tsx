@@ -1,4 +1,3 @@
-"use client";
 import { Container } from "react-bootstrap";
 import { NextPage } from "next";
 import TopNavigation from "../components/common/top-navigation";

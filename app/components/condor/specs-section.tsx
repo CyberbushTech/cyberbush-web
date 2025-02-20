@@ -1,4 +1,3 @@
-"use client";
 import { Container } from "react-bootstrap";
 import ParamBlock from "../common/param-block";
 import { getLocalizations } from "@/app/dictionaries/dictionaries";

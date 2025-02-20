@@ -1,4 +1,3 @@
-"use client";
 import { Container, Image } from "react-bootstrap";
 import ScrollMore from "../common/scroll-more";
 import { motion } from "framer-motion";

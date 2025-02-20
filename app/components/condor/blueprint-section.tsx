@@ -1,4 +1,3 @@
-"use client";
 import { Container, Image, Table } from "react-bootstrap";
 import { getLocalizations } from "../../dictionaries/dictionaries";
 

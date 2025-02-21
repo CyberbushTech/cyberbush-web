@@ -2,12 +2,12 @@ export const dict = {
   beetleHero: {
     imageAlt: "Кибербуш",
     leadText: "ПАССАЖИРСКИЙ МУЛЬТИКОПТЕР С ИИ УПРАВЛЕНИЕМ",
-    headTitle: "БИТЛ ОДИН",
+    headTitle: "BEETLE ONE",
     scrollMoreText: "Прокрутите для подробностей",
   },
   blueprintSection: {
     sectionHeaderLead: "ПОДРОБНАЯ СПЕЦИФИКАЦИЯ",
-    sectionHeaderTitle: "МУЛЬТИКОПТЕР БИТЛ ОДИН",
+    sectionHeaderTitle: "МУЛЬТИКОПТЕР BEETLE ONE",
     imageAlt: "Кибербуш",
     specs: {
       height: "Высота",
@@ -68,7 +68,7 @@ export const dict = {
     },
   },
   specsSection: {
-    headerLead: "БИТЛ ОДИН",
+    headerLead: "BEETLE ONE",
     headerTitle: "КЛЮЧЕВЫЕ ОСОБЕННОСТИ",
     description:
       "Полностью управляемый ИИ электрический пассажирский самолет для комфортных коротких перелетов. Может использоваться в городских и пригородных районах, предоставляя новый опыт транспортировки.",
@@ -85,13 +85,12 @@ export const dict = {
   },
   condorHero: {
     imageAlt: "Кибербуш",
-    leadText: "ПАССАЖИРСКИЙ САМОЛЕТ С ИИ УПРАВЛЕНИЕМ",
-    headTitle: "КОНДОР ОДИН",
+    leadText: "ПАССАЖИРСКИЙ КОНВЕРТОПЛАН С ИИ УПРАВЛЕНИЕМ",
+    headTitle: "CONDOR ONE",
     scrollMoreText: "Прокрутите для подробностей",
   },
-
   condorSpecsSection: {
-    headerLead: "КОНДОР ОДИН",
+    headerLead: "CONDOR ONE",
     headerTitle: "КЛЮЧЕВЫЕ ОСОБЕННОСТИ",
     description:
       "Полностью управляемый ИИ электрический пассажирский самолет для комфортных средних перелетов. Может использоваться в городских, пригородных и междугородних районах.",
@@ -107,9 +106,9 @@ export const dict = {
     ],
   },
   fortunaHero: {
-    imageAlt: "Кибербуш",
-    leadText: "ПРЕМИАЛЬНЫЙ СПОРТИВНЫЙ РЕАКТИВНЫЙ САМОЛЕТ С ИИ УПРАВЛЕНИЕМ",
-    headTitle: "ФОРТУНА",
+    imageAlt: "Cyberbush",
+    leadText: "СПОРТИВНЫЙ РЕАКТИВНЫЙ ЛЕТАТЕЛЬНЫЙ АППАРАТ С ИИ УПРАВЛЕНИЕМ",
+    headTitle: "FORTUNA",
     scrollMoreText: "Прокрутите для подробностей",
   },
   fortunaBlueprintSection: {
@@ -376,5 +375,70 @@ export const dict = {
           "Реактивный полет - это персональное летательное средство, которое может использовать специально построенный вертопорт.",
       },
     ],
+  },
+  homeActionBanner: {
+    mainTitle: "СОЗДАЕМ НОВЫЙ СПОСОБ ПЕРЕДВИЖЕНИЯ",
+    description:
+      "Первая доступная линейка полностью автономных летательных аппаратов с ИИ управлением. Мы строим полную экосистему от автоматизированных аэропортов до мобильных приложений и управления полетами.",
+    findOutMore: "Узнать больше",
+    scrollMoreText: "Прокрутите для подробностей",
+  },
+  homeAircraftBanner: {
+    mainTitle: "Потрясающие Летающие",
+  },
+  homeAircraftSection: {
+    mainTitle: "Потрясающие Летающие Машины",
+    description:
+      "Наша цель - транспортная революция на пороге новой технологической эры, создание совершенно новой транспортной отрасли. Полный спектр летательных аппаратов с ИИ управлением для городских сценариев использования.",
+    aircrafts: [
+      {
+        title: "FORTUNA",
+        lead: "Реактивный для развлечений",
+        link: "/fortuna",
+      },
+      {
+        title: "BEETLE ONE",
+        lead: "Пассажирский мультикоптер",
+        link: "/beetle",
+      },
+      {
+        title: "CONDOR ONE",
+        lead: "Пассажирский конвертоплан",
+        link: "/condor",
+      },
+    ],
+  },
+  homeSkyscoutSection: {
+    mainTitle: "ПРОГРАММА ПИОНЕРОВ НЕБА",
+    description:
+      "Позволяет энтузиастам участвовать в новой отрасли на ранней стадии, привнося настоящую разработку продукта для клиентов. Возможность получить эксклюзивный ранний доступ к летательным аппаратам со значительной скидкой в 50% от розничной цены.",
+    leadText: "Будьте первыми, кто полетит.",
+    buttonText: "Скоро",
+  },
+  menu: [
+    { title: "Fortuna", id: "fortuna" },
+    { title: "Condor", id: "condor" },
+    { title: "Beetle", id: "beetle" },
+    { title: "Технологии", id: "technology" },
+  ],
+  footer: {
+    menu: [
+      { title: "Начало", id: "#home" },
+      { title: "О нас", id: "#about" },
+      { title: "Services", id: "#services" },
+      { title: "Contact", id: "#contact" },
+    ],
+    contacts: {
+      phone: "+971502567503",
+      email: "ask@cyberbush.tech",
+      linkedin: "linked.in/cyberbush",
+      address: 'ООО "Киберавиатор", Москва.',
+    },
+    terms: {
+      privacyPolicy: "Политика конфиденциальности",
+      legalInformation: "Юридическая информация",
+      termsOfUse: "Условия использования",
+    },
+    copyright: "Copyright © 2024 CYBERBUSH FZCO.",
   },
 };

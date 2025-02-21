@@ -5,8 +5,11 @@ import { Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import ScrollMore from "../common/scroll-more";
 import Link from "next/link";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function HomeActionBanner() {
+  const dict = getLocalizations();
+
   return (
     <HomeBanner background="dark text-white">
       <motion.div
@@ -41,14 +44,8 @@ export default function HomeActionBanner() {
           transition={{ type: "spring", duration: 1 }}
           exit={{ opacity: 0 }}
         >
-          <h1 id="main-title-hero">BUILDING THE NEW WAY OF MOVING</h1>
-          <p className="pb-3">
-            The first available line of fully autonomous AI-controlled
-            aircrafts.
-            <br />
-            We are building a complete ecosystem from automated airports to
-            mobile applications and flight control.
-          </p>
+          <h1 id="main-title-hero">{dict.homeActionBanner.mainTitle}</h1>
+          <p className="pb-3">{dict.homeActionBanner.description}</p>
           <motion.div
             initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: -10 }}
@@ -63,12 +60,14 @@ export default function HomeActionBanner() {
                 href="#aircrafts"
                 scroll={true}
               >
-                Find Out More
+                {dict.homeActionBanner.findOutMore}
               </Link>
             </div>
           </motion.div>
         </motion.div>
-        <ScrollMore textColor="white">Scroll For More</ScrollMore>
+        <ScrollMore textColor="white">
+          {dict.homeActionBanner.scrollMoreText}
+        </ScrollMore>
       </Container>
     </HomeBanner>
   );

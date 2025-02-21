@@ -400,4 +400,63 @@ export const dict = {
       },
     ],
   },
+  homeActionBanner: {
+    mainTitle: "BUILDING THE NEW WAY OF MOVING",
+    description:
+      "The first available line of fully autonomous AI-controlled aircrafts. We are building a complete ecosystem from automated airports to mobile applications and flight control.",
+    findOutMore: "Find Out More",
+    scrollMoreText: "Scroll For More",
+  },
+  homeAircraftBanner: {
+    mainTitle: "Terrific Flying",
+  },
+  homeAircraftSection: {
+    mainTitle: "Terrific Flying Machines",
+    description:
+      "Our goal is a transportation revolution on the cusp of a new technological era, creating an entirely new transportation industry. Full range of AI-controlled aircrafts for in-city use-cases.",
+    aircrafts: [
+      {
+        title: "Fortuna",
+        lead: "Premium Jet Flight",
+        link: "/fortuna",
+      },
+      {
+        title: "Beetle One",
+        lead: "Passenger Multicopter",
+        link: "/beetle",
+      },
+      {
+        title: "Condor One",
+        lead: "Passenger Convertiplane",
+        link: "/condor",
+      },
+    ],
+  },
+  homeSkyscoutSection: {
+    mainTitle: "SKY SCOUT DEVELOPMENT PROGRAM",
+    description:
+      "Allowing enthusiasts to be involved in a new industry at an early stage bringing the true customer development to live. An opportunity to get exclusive early access to aircraft at a significant 50% retail discount.",
+    leadText: "Be the first to fly.",
+    buttonText: "Coming Soon",
+  },
+  menu: [
+    { title: "Fortuna", id: "fortuna" },
+    { title: "Condor", id: "condor" },
+    { title: "Beetle", id: "beetle" },
+    { title: "Technology", id: "technology" },
+  ],
+  footer: {
+    contacts: {
+      phone: "+971502567503",
+      email: "ask@cyberbush.tech",
+      linkedin: "linked.in/cyberbush",
+      address: "UAE, Dubai, Dubai Silicon Oasis, IFZA Properties",
+    },
+    terms: {
+      privacyPolicy: "Privacy Policy",
+      legalInformation: "Legal Information",
+      termsOfUse: "Terms of Use",
+    },
+    copyright: "Copyright © 2024 CYBERBUSH FZCO.",
+  },
 };

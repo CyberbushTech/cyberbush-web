@@ -6,12 +6,14 @@ import Navbar from "react-bootstrap/Navbar";
 import global from "../../globals";
 import { useState } from "react";
 import { Sling as Hamburger } from "hamburger-react";
+import { getLocalizations } from "@/app/dictionaries/dictionaries";
 
 export default function TopNavigation({
   inverted,
 }: Readonly<{
   inverted: boolean;
 }>) {
+  const dict = getLocalizations();
   const [isOpen, setIsOpen] = useState(false);
   var predefinedNavbarClass = inverted ? "nav-regular" : "nav-inverted";
   var navbarClass = isOpen ? "nav-inverted" : predefinedNavbarClass;
@@ -34,7 +36,7 @@ export default function TopNavigation({
         <Navbar.Collapse className={`float-end ${isOpen ? "show" : ""}`}>
           <div className="mobile-menu-container ms-auto">
             <Nav>
-              {global.menu.map((item) => (
+              {dict.menu.map((item: any) => (
                 <Nav.Link
                   key={item.id}
                   id={item.id}

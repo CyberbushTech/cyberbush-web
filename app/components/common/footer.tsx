@@ -2,15 +2,17 @@
 import { Container, Image, Nav, NavLink } from "react-bootstrap";
 import HomeBanner from "../home/home-banner";
 import Link from "next/link";
-import global from "../../globals";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function HomeAircraftSection() {
+  const dict = getLocalizations();
+
   return (
     <HomeBanner background="scroll-snap-end dark text-white footer">
       <Container className={`p-4 small`} fluid>
         <Container className="d-flex flex-column justify-content-center align-items-center ps-2 pe-2 flex-wrap">
           <Nav className="menu pb-3 d-flex justify-content-center align-items-center">
-            {global.menu.map((item) => (
+            {dict.menu.map((item: any) => (
               <NavLink key={item.title} href={item.id}>
                 {item.title}
               </NavLink>
@@ -27,17 +29,18 @@ export default function HomeAircraftSection() {
             </div>
             <div className="contacts">
               <p>
-                +971502567503 | ask@cyberbush.tech | linked.in/cyberbush
+                {dict.footer.contacts.phone} | {dict.footer.contacts.email} |{" "}
+                {dict.footer.contacts.linkedin}
                 <br />
-                UAE, Dubai, Dubai Silicon Oasis, IFZA Properties
+                {dict.footer.contacts.address}
               </p>
             </div>
             <div className="terms small">
-              <Link href="#">Privacy Policy</Link> |{" "}
-              <Link href="#">Legal Information</Link> |{" "}
-              <Link href="#">Terms of Use</Link>
+              <Link href="#">{dict.footer.terms.privacyPolicy}</Link> |{" "}
+              <Link href="#">{dict.footer.terms.legalInformation}</Link> |{" "}
+              <Link href="#">{dict.footer.terms.termsOfUse}</Link>
               <br />
-              Copyright © 2024 CYBERBUSH FZCO.
+              {dict.footer.copyright}
             </div>
           </Container>
         </Container>

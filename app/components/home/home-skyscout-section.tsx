@@ -2,8 +2,11 @@
 import Container from "react-bootstrap/Container";
 import HomeBanner from "./home-banner";
 import { Button } from "react-bootstrap";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function HomeSkyscoutSection() {
+  const dict = getLocalizations();
+
   return (
     <HomeBanner background="secondary" className="text-white scroll-snap-start">
       <div className="position-relative">
@@ -26,14 +29,9 @@ export default function HomeSkyscoutSection() {
           fluid
         >
           <Container className="home-hero">
-            <h1>SKY SCOUT DEVELOPMENT PROGRAM</h1>
-            <p className="pb-3">
-              Allowing enthusiasts to be involved in a new industry at an early
-              stage bringing the true customer development to live.
-              An&nbsp;opportunity to get exclusive early access to aircraft at a
-              significant 50% retail discount.
-            </p>
-            <p className="lead">Be the first to fly.</p>
+            <h1>{dict.homeSkyscoutSection.mainTitle}</h1>
+            <p className="pb-3">{dict.homeSkyscoutSection.description}</p>
+            <p className="lead">{dict.homeSkyscoutSection.leadText}</p>
             <div
               className={`d-flex flex-column gap-2 justify-content-center align-items-center`}
             >
@@ -42,7 +40,7 @@ export default function HomeSkyscoutSection() {
                 variant="outline-primary"
                 size="lg"
               >
-                Coming Soon
+                {dict.homeSkyscoutSection.buttonText}
               </Button>
             </div>
           </Container>

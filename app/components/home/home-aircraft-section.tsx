@@ -2,8 +2,11 @@
 import HomeBanner from "./home-banner";
 import HomeAircraftBanner from "./home-aircraft-banner";
 import { Container } from "react-bootstrap";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function HomeAircraftSection() {
+  const dict = getLocalizations();
+
   return (
     <HomeBanner
       background="secondary"
@@ -15,29 +18,19 @@ export default function HomeAircraftSection() {
           fluid
         >
           <Container className="home-hero pt-5">
-            <h2>Terrific Flying Machines</h2>
-            <p className="pb-3">
-              Our goal is a transportation revolution on the cusp of a new
-              technological era, creating an entirely new transportation
-              industry. Full range of AI-controlled aircrafts for in-city
-              use-cases.
-            </p>
+            <h2>{dict.homeAircraftSection.mainTitle}</h2>
+            <p className="pb-3">{dict.homeAircraftSection.description}</p>
             <div className="aircrafts d-flex flex-row gap-3 justify-content-center align-items-center">
-              <HomeAircraftBanner
-                title="Fortuna"
-                lead="Premium Jet Flight"
-                link="/fortuna"
-              />
-              <HomeAircraftBanner
-                title="Beetle One"
-                lead="Passenger Multicopter"
-                link="/beetle"
-              />
-              <HomeAircraftBanner
-                title="Condor One"
-                lead="Passenger Convertiplane"
-                link="/condor"
-              />
+              {dict.homeAircraftSection.aircrafts.map(
+                (aircraft: any, index: number) => (
+                  <HomeAircraftBanner
+                    key={index}
+                    title={aircraft.title}
+                    lead={aircraft.lead}
+                    link={aircraft.link}
+                  />
+                )
+              )}
             </div>
           </Container>
         </Container>

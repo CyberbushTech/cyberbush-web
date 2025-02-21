@@ -3,6 +3,7 @@ import { Container, Image } from "react-bootstrap";
 import ScrollMore from "../common/scroll-more";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function InvestPresentationHero({
   presentationLink,
@@ -11,6 +12,8 @@ export default function InvestPresentationHero({
   presentationLink: string;
   videos: { title: string; link: string }[];
 }>) {
+  const dict = getLocalizations();
+
   return (
     <Container
       className="invest-section scroll-snap-start bg-dark hero scroll-snap-start"
@@ -28,8 +31,8 @@ export default function InvestPresentationHero({
             transition={{ type: "spring", duration: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="lead">INVESTOR RELATIONSHIPS</div>
-            <h1 className="head">GET READY!</h1>
+            <div className="lead">{dict.presentationSection.leadText}</div>
+            <h1 className="head">{dict.presentationSection.mainTitle}</h1>
           </motion.div>
         </Container>
         <motion.div
@@ -44,7 +47,7 @@ export default function InvestPresentationHero({
             target="_new"
             scroll={true}
           >
-            Download Pitch Deck Presentation
+            {dict.presentationSection.downloadButton}
           </Link>
           {videos.map((item) => (
             <Link

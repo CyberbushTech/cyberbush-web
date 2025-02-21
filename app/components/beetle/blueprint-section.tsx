@@ -25,44 +25,51 @@ export default function BeetleBlueprintSection() {
           <Table>
             <tbody>
               <tr>
-                <th>{dict.blueprintSection.specs.height}</th> <td>2000 mm</td>
+                <th>{dict.blueprintSection.specs.height}</th>
+                <td>2000 mm</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.width}</th> <td>5020 mm</td>
+                <th>{dict.blueprintSection.specs.width}</th>
+                <td>5020 mm</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.length}</th> <td>5500 mm</td>
+                <th>{dict.blueprintSection.specs.length}</th>
+                <td>5500 mm</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.weight}</th> <td>500 Kg</td>
+                <th>{dict.blueprintSection.specs.weight}</th>
+                <td>500 Kg</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.range}</th> <td>35 Km</td>
+                <th>{dict.blueprintSection.specs.range}</th>
+                <td>35 Km</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.engines}</th>{" "}
+                <th>{dict.blueprintSection.specs.engines}</th>
                 <td>16 Electric VTOL</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.payload}</th> <td>120 Kg</td>
+                <th>{dict.blueprintSection.specs.payload}</th>
+                <td>120 Kg</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.passengers}</th>{" "}
+                <th>{dict.blueprintSection.specs.passengers}</th>
                 <td>1 or 2</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.flightTime}</th>{" "}
+                <th>{dict.blueprintSection.specs.flightTime}</th>
                 <td>30 min</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.propulsion}</th>{" "}
+                <th>{dict.blueprintSection.specs.propulsion}</th>
                 <td>Electric or HPS</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.speed}</th> <td>70 km/h</td>
+                <th>{dict.blueprintSection.specs.speed}</th>
+                <td>70 km/h</td>
               </tr>
               <tr>
-                <th>{dict.blueprintSection.specs.flightAltitude}</th>{" "}
+                <th>{dict.blueprintSection.specs.flightAltitude}</th>
                 <td>3000 m</td>
               </tr>
             </tbody>

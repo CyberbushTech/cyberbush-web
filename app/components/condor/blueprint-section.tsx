@@ -25,43 +25,51 @@ export default function CondorBlueprintSection() {
           <Table>
             <tbody>
               <tr>
-                <th>{condorBlueprintSection.specs.height}</th> <td>2090 mm</td>
+                <th>{condorBlueprintSection.specs.height}</th>
+                <td>2090 mm</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.width}</th> <td>10000 mm</td>
+                <th>{condorBlueprintSection.specs.width}</th>
+                <td>10000 mm</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.length}</th> <td>7165 mm</td>
+                <th>{condorBlueprintSection.specs.length}</th>
+                <td>7165 mm</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.weight}</th> <td>600 Kg</td>
+                <th>{condorBlueprintSection.specs.weight}</th>
+                <td>600 Kg</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.range}</th> <td>320 Km</td>
+                <th>{condorBlueprintSection.specs.range}</th>
+                <td>320 Km</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.engines}</th>{" "}
+                <th>{condorBlueprintSection.specs.engines}</th>
                 <td>16 Electric VTOL 1 Electric Sustainer</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.payload}</th> <td>120 Kg</td>
+                <th>{condorBlueprintSection.specs.payload}</th>
+                <td>120 Kg</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.passengers}</th>{" "}
+                <th>{condorBlueprintSection.specs.passengers}</th>
                 <td>1 or 2</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.flightTime}</th> <td>2 h</td>
+                <th>{condorBlueprintSection.specs.flightTime}</th>
+                <td>2 h</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.propulsion}</th>{" "}
+                <th>{condorBlueprintSection.specs.propulsion}</th>
                 <td>Electric or HPS</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.speed}</th> <td>180 km/h</td>
+                <th>{condorBlueprintSection.specs.speed}</th>
+                <td>180 km/h</td>
               </tr>
               <tr>
-                <th>{condorBlueprintSection.specs.flightAltitude}</th>{" "}
+                <th>{condorBlueprintSection.specs.flightAltitude}</th>
                 <td>3000 m</td>
               </tr>
             </tbody>

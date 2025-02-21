@@ -182,4 +182,222 @@ export const dict = {
       },
     ],
   },
+  aiHero: {
+    sectionLead: "SMART",
+    sectionTitle: "ARTIFICIAL INTELLIGENCE",
+    description:
+      "Our aircraft utilize both reliable and proven terrain navigation based on a predetermined route and the ability of the aircraft to make independent decisions using Artificial Intelligence.",
+    features: [
+      {
+        icon: "eye",
+        title: "COMPUTER VISION",
+        description: "6 HD cameras for spatial orientation",
+      },
+      {
+        icon: "badge-3d",
+        title: "2 LIDARs AND ALTIMETER",
+        description: "for distance and altitude measurements",
+      },
+      {
+        icon: "vr",
+        title: "GYROSCOPE AND ACCELEROMETER",
+        description: "to measure flight parameters",
+      },
+      {
+        icon: "robot",
+        title: "ON-BOARD COMPUTER WITH AI",
+        description: "to control the flight",
+      },
+      {
+        icon: "broadcast-pin",
+        title: "MCWILL AND 5G CELLULAR",
+        description: "permanent connection for good availability",
+      },
+      {
+        icon: "activity",
+        title: "REAL-TIME OPERATING SYSTEM",
+        description: "for maximum reliability and performance",
+      },
+    ],
+  },
+  technologyHero: {
+    mainTitle: "CYBERBUSH IMPRESSIVE TECHNOLOGIES",
+    description:
+      "More than 15 years of R&D have resulted in many proven technologies that make our flying vehicles different. We care not only about high performance, but also about infrastructure, control and safety.",
+    buttons: {
+      ai: "AI",
+      safety: "Safety",
+      blockchain: "Blockchain",
+      control: "Flight Control",
+      apps: "Apps",
+      ports: "Vertiports",
+    },
+    scrollMoreText: "Scroll For More",
+  },
+  safetyHero: {
+    sectionLead: "TRUSTFUL",
+    sectionTitle: "SAFETY FEATURES",
+    description:
+      "The Artificial intelligence dramatically reduces the chance of emergency situations, but the safety is most important for us.",
+    features: [
+      {
+        heading: "AI-SUPPORTED MONITORING AND CONTROL",
+        description:
+          "Flight telemetry data realtime analysis, storage and transmission via permanent McWill connection",
+        class: "monitoring",
+      },
+      {
+        heading: "UNIQUE PASSENGER ESCAPING SYSTEM",
+        description:
+          "Civil version of 5th gen jet fighter’s catapult seat saving passengers in emergency cases",
+        class: "escape",
+      },
+      {
+        heading: "ALL-AIRCRAFT PARACHUTE SYSTEM",
+        description:
+          "Soft landing of aircraft preserving safety for passengers and ground infrastructure",
+        class: "parachute",
+      },
+    ],
+  },
+  portsHero: {
+    sectionLead: "FULL-FLEDGED",
+    sectionTitle: "THE BEETLE PORTS",
+    description:
+      "Despite the fact that our airplanes do not require any special infrastructure, we build mini-airports for convenient takeoff, landing, charging and boarding.",
+    features: [
+      { icon: "broadcast-pin", text: "McWill Radio Point" },
+      { icon: "lightning-charge", text: "Charging or HPS Fueling" },
+      { icon: "airplane", text: "Takeoff and Landing" },
+    ],
+  },
+  controlHero: {
+    sectionLead: "CLEAR",
+    sectionTitle: "FLIGHT CONTROL",
+    description:
+      "We are developing a complete flight management system that is designed specifically for automated aircraft and takes into account their peculiarities. We ensure integration of drones into the city's transportation life.",
+    features: [
+      {
+        icon: "file-bar-graph",
+        title: "AIRTRAIL",
+        description:
+          "Universal protocol for realtime information exchange from aboard automated aircrafts.",
+      },
+      {
+        icon: "radar",
+        title: "REALTIME MONITORING",
+        description:
+          "Real-time flight tracking of all aircraft, taking into account route and model parameters.",
+      },
+      {
+        icon: "sign-turn-right",
+        title: "SMART ROUTE PLANNING",
+        description:
+          "Automatic terrain-aware planning of non-overlapping routes.",
+      },
+      {
+        icon: "database-check",
+        title: "FULL TELEMENTRY STORAGE",
+        description:
+          "Storage of all flight telemetry and marshrouts for later analysis.",
+      },
+      {
+        icon: "phone",
+        title: "CLIENT APPS",
+        description:
+          "Client applications for aero taxi and drone-assisted delivery in the city and countryside.",
+      },
+      {
+        icon: "megaphone",
+        title: "EMERGENCY PREDICTION",
+        description:
+          "Predicting and solving emergency situations in real time, to maximize safety.",
+      },
+    ],
+  },
+  blockchainHero: {
+    sectionLead: "TOKENIZED",
+    sectionTitle: "PUBLIC BLOCKCHAIN",
+    description:
+      "Following a policy of truth and transparency, all telemetry from the beginning of flight testing and during all operations is stored in a public blockchain and can be examined easily.",
+    items: [
+      [
+        { icon: "clock", title: "Speed" },
+        { icon: "clock", title: "Flight Data" },
+        { icon: "clock", title: "Payload" },
+        { icon: "clock", title: "Engines State" },
+        { icon: "clock", title: "Battery Charge" },
+        { icon: "clock", title: "Passenger Data" },
+        { icon: "clock", title: "Aircraft Route" },
+        { icon: "clock", title: "Aircraft Part Tokens" },
+        { icon: "clock", title: "Fueling" },
+        { icon: "clock", title: "Space" },
+      ],
+      [
+        { icon: "clock", title: "Weather Conditions" },
+        { icon: "clock", title: "Route Points" },
+        { icon: "clock", title: "Route Timing" },
+        { icon: "clock", title: "Energy Consumption" },
+        { icon: "clock", title: "Altitude" },
+        { icon: "clock", title: "Time" },
+        { icon: "clock", title: "Origin Port" },
+        { icon: "clock", title: "Video Recording Hash" },
+        { icon: "clock", title: "Costs" },
+        { icon: "clock", title: "Smart Contract" },
+        { icon: "clock", title: "Acceleration" },
+      ],
+      [
+        { icon: "clock", title: "Performance" },
+        { icon: "clock", title: "Communication Sessions" },
+        { icon: "clock", title: "Propellers Runtime" },
+        { icon: "clock", title: "Parts Certification" },
+        { icon: "clock", title: "Payments" },
+        { icon: "clock", title: "Charge Time" },
+        { icon: "clock", title: "Measurements" },
+        { icon: "clock", title: "Insite Temperature" },
+        { icon: "clock", title: "Components Conditions" },
+        { icon: "clock", title: "Operator" },
+      ],
+    ],
+  },
+  appsHero: {
+    sectionLead: "USER-FRIENDLY",
+    sectionTitle: "AIR TAXI SERVICE",
+    description:
+      "We're creating a convenient service for getting around town and between cities by air taxi. See how it can work. You can use an air taxi to fly between points that are inconvenient or even inaccessible for traditional transportation.",
+    steps: [
+      {
+        icon: "1-circle-fill",
+        text: "Book your Condor or Beetle via mobile app, use elevator to reach the skyscraper’s roof-top Beetle Port.",
+      },
+      {
+        icon: "2-circle-fill",
+        text: "Fly to an available Beetle Port port in the nearest neighborhood, suburb or neighboring city.",
+      },
+      {
+        icon: "3-circle-fill",
+        text: "After landing at the end point of the route, leave the vehicle and take the elevator down to the city.",
+      },
+    ],
+    features: [
+      {
+        icon: "info-circle-fill",
+        title: "CYBERBUSH CONDOR ONE",
+        description:
+          "Convertiplane is used in order to move between the cities or to far away locations.",
+      },
+      {
+        icon: "info-circle-fill",
+        title: "CYBERBUSH BEETLE ONE",
+        description:
+          "Multicopter is used in order to move between city points and airports.",
+      },
+      {
+        icon: "info-circle-fill",
+        title: "CYBERBUSH FORTUNA",
+        description:
+          "Jet flight is personal flying vehicle that can use custom build vertiport.",
+      },
+    ],
+  },
 };

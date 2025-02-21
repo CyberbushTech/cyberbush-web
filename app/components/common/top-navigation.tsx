@@ -24,6 +24,7 @@ export default function TopNavigation({
             width="170"
             height="20"
             loading="eager"
+            priority={false}
             alt={"Cyberbush"}
           />
         </Navbar.Brand>

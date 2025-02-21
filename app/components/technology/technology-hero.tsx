@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import ScrollMore from "../common/scroll-more";
 import Link from "next/link";
 import HomeBanner from "../home/home-banner";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function TechnologyHero() {
+  const dict = getLocalizations();
+
   return (
     <HomeBanner background="dark text-white">
       <motion.div
@@ -41,13 +44,8 @@ export default function TechnologyHero() {
           exit={{ opacity: 0 }}
         >
           <div className="tech-hero-block">
-            <h1 id="main-title-hero">CYBERBUSH IMPRESSIVE TECHNOLOGIES</h1>
-            <p className="pb-3">
-              More than 15 years of R&D have resulted in many proven
-              technologies that make our flying vehicles different. We care not
-              only about high performance, but also about infrastructure,
-              control and safety.
-            </p>
+            <h1 id="main-title-hero">{dict.technologyHero.mainTitle}</h1>
+            <p className="pb-3">{dict.technologyHero.description}</p>
             <motion.div
               initial={{ opacity: 0, y: 0 }}
               animate={{ opacity: 1, y: -10 }}
@@ -62,48 +60,50 @@ export default function TechnologyHero() {
                   href="#ai"
                   scroll={true}
                 >
-                  AI
+                  {dict.technologyHero.buttons.ai}
                 </Link>
                 <Link
                   className="action-button btn btn-outline-primary btn-lg"
                   href="#safety"
                   scroll={true}
                 >
-                  Safety
+                  {dict.technologyHero.buttons.safety}
                 </Link>
                 <Link
                   className="action-button btn btn-outline-primary btn-lg"
                   href="#blockchain"
                   scroll={true}
                 >
-                  Blockchain
+                  {dict.technologyHero.buttons.blockchain}
                 </Link>
                 <Link
                   className="action-button btn btn-outline-primary btn-lg"
                   href="#control"
                   scroll={true}
                 >
-                  Flight Control
+                  {dict.technologyHero.buttons.control}
                 </Link>
                 <Link
                   className="action-button btn btn-outline-primary btn-lg"
                   href="#apps"
                   scroll={true}
                 >
-                  Apps
+                  {dict.technologyHero.buttons.apps}
                 </Link>
                 <Link
                   className="action-button btn btn-outline-primary btn-lg"
                   href="#ports"
                   scroll={true}
                 >
-                  Vertiports
+                  {dict.technologyHero.buttons.ports}
                 </Link>
               </div>
             </motion.div>
           </div>
         </motion.div>
-        <ScrollMore textColor="white">Scroll For More</ScrollMore>
+        <ScrollMore textColor="white">
+          {dict.technologyHero.scrollMoreText}
+        </ScrollMore>
       </Container>
     </HomeBanner>
   );

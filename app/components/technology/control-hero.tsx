@@ -1,9 +1,11 @@
 "use client";
 import { Container } from "react-bootstrap";
-import AIIcon from "./ai-icon";
 import ControlIcon from "./control-icon";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function ControlTechnologyHero() {
+  const dict = getLocalizations();
+
   return (
     <Container
       id="control"
@@ -11,55 +13,18 @@ export default function ControlTechnologyHero() {
       fluid
     >
       <div className="p-5 section-header text-center">
-        <div className="lead">CLEAR</div>
-        <h2>FLIGHT CONTROL</h2>
-        <p className="pb-3">
-          We are developing a complete flight management system that is designed
-          specifically for automated aircraft and takes into account their
-          peculiarities. We ensure integration of drones into the city&apos;s
-          transportation life.
-        </p>
+        <div className="lead">{dict.controlHero.sectionLead}</div>
+        <h2>{dict.controlHero.sectionTitle}</h2>
+        <p className="pb-3">{dict.controlHero.description}</p>
       </div>
       <Container className="ai-container pb-5 d-flex flex-row gap-3 justify-content-center align-items-center flex-wrap">
-        <ControlIcon icon="file-bar-graph">
-          <strong>AIRTRAIL</strong>
-          <br />
-          Universal protocol for realtime information exchange from aboard
-          automated aircrafts.
-        </ControlIcon>
-
-        <ControlIcon icon="radar">
-          <strong>REALTIME MONITORING</strong>
-          <br />
-          Real-time flight tracking of all aircraft, taking into account route
-          and model parameters.
-        </ControlIcon>
-
-        <ControlIcon icon="sign-turn-right">
-          <strong>SMART ROUTE PLANNING</strong>
-          <br />
-          Automatic terrain-aware planning of non-overlapping routes.
-        </ControlIcon>
-
-        <ControlIcon icon="database-check">
-          <strong>FULL TELEMENTRY STORAGE</strong>
-          <br />
-          Storage of all flight telemetry and marshrouts for later analysis.
-        </ControlIcon>
-
-        <ControlIcon icon="phone">
-          <strong>CLIENT APPS</strong>
-          <br />
-          Client applications for aero taxi and drone-assisted delivery in the
-          city and coyntryside.
-        </ControlIcon>
-
-        <ControlIcon icon="megaphone">
-          <strong>EMERGENCY PREDICTION</strong>
-          <br />
-          Predicting and solving emergency situations in real time, to maximize
-          safety.
-        </ControlIcon>
+        {dict.controlHero.features.map((feature: any, index: number) => (
+          <ControlIcon key={index} icon={feature.icon}>
+            <strong>{feature.title}</strong>
+            <br />
+            {feature.description}
+          </ControlIcon>
+        ))}
       </Container>
     </Container>
   );

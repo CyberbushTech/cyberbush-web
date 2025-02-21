@@ -1,8 +1,11 @@
 "use client";
 import { Container } from "react-bootstrap";
 import PortIcon from "./port-icon";
+import { getLocalizations } from "../../dictionaries/dictionaries";
 
 export default function PortsTechnologyHero() {
+  const dict = getLocalizations();
+
   return (
     <Container
       id="ports"
@@ -10,19 +13,17 @@ export default function PortsTechnologyHero() {
       fluid
     >
       <div className="p-5 section-header text-center">
-        <div className="lead">FULL-FLEDGED</div>
-        <h2>THE BEETLE PORTS</h2>
-        <p className="pb-3">
-          Despite the fact that our airplanes do not require any special
-          infrastructure, we build mini-airports for convenient takeoff,
-          landing, charging and boarding.
-        </p>
+        <div className="lead">{dict.portsHero.sectionLead}</div>
+        <h2>{dict.portsHero.sectionTitle}</h2>
+        <p className="pb-3">{dict.portsHero.description}</p>
       </div>
       <Container className="ports-container text-white" fluid>
         <Container className="ports-info-container d-flex flex-row gap-3 justify-content-center align-items-center flex-wrap">
-          <PortIcon icon="broadcast-pin">McWill Radio Point</PortIcon>
-          <PortIcon icon="lightning-charge">Charging or HPS Fueling</PortIcon>
-          <PortIcon icon="airplane">Takeoff and Landing</PortIcon>
+          {dict.portsHero.features.map((feature: any, index: number) => (
+            <PortIcon key={index} icon={feature.icon}>
+              {feature.text}
+            </PortIcon>
+          ))}
         </Container>
       </Container>
     </Container>

@@ -400,6 +400,11 @@ export const dict = {
       },
     ],
   },
+  presentationSection: {
+    leadText: "INVESTOR RELATIONSHIPS",
+    mainTitle: "GET READY!",
+    downloadButton: "Download Pitch Deck Presentation",
+  },
   homeActionBanner: {
     mainTitle: "BUILDING THE NEW WAY OF MOVING",
     description:

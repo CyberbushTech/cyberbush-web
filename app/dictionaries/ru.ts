@@ -441,4 +441,9 @@ export const dict = {
     },
     copyright: "Copyright © 2024 CYBERBUSH FZCO.",
   },
+  presentationSection: {
+    leadText: "ИНВЕСТИЦИИ В БУДУЩЕЕ",
+    mainTitle: "СЕГОДНЯ!",
+    downloadButton: "Скачать презентацию",
+  },
 };

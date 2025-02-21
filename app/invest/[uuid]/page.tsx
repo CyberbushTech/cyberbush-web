@@ -37,6 +37,29 @@ export default async function InvestPage({
         },
       ],
     },
+    {
+      id: "9845ec69-23f4-4ee3-9253-47508006f98d",
+      presentation:
+        "https://drive.google.com/file/d/1rSO2esbxo-dzZwpj5WahugcsODZLljtH/view?usp=share_link",
+      items: [
+        {
+          title: "Презентационное Видео",
+          link: "https://vimeo.com/cyberbush/presentation-10-2024",
+        },
+        {
+          title: "Cyberbush Beetle в Дубае",
+          link: "https://vimeo.com/cyberbush/dubai",
+        },
+        {
+          title: "БК-140 Видео",
+          link: "https://vimeo.com/cyberbush/bk-140-ru",
+        },
+        {
+          title: "БК-300 Видео",
+          link: "https://vimeo.com/cyberbush/bk-300-ru",
+        },
+      ],
+    },
   ];
 
   const foundConfig = config.find((e) => {

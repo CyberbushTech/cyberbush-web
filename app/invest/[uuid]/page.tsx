@@ -40,7 +40,7 @@ export default async function InvestPage({
     {
       id: "9845ec69-23f4-4ee3-9253-47508006f98d",
       presentation:
-        "https://drive.google.com/file/d/1rSO2esbxo-dzZwpj5WahugcsODZLljtH/view?usp=share_link",
+        "https://drive.google.com/file/d/1hbJoos1yodyPVE6rNe5ak_iGfY4s5FhD/view?usp=sharing",
       items: [
         {
           title: "Презентационное Видео",

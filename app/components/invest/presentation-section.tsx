@@ -54,8 +54,7 @@ export default function InvestPresentationHero({
               key={item.title}
               className="d-flex action-button btn btn-outline-primary btn-lg m-2 flex-column"
               href={item.link}
-              target="_new"
-              scroll={true}
+              target="_blank"
             >
               {item.title}
             </Link>

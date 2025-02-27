@@ -60,6 +60,29 @@ export default async function InvestPage({
         },
       ],
     },
+    {
+      id: "04a24334-f8b2-4053-aad9-3862682c217f",
+      presentation:
+        "https://drive.google.com/file/d/1Z_KMR7SQZBV_0ijZTjpT0KPmVQDytqka/view",
+      items: [
+        {
+          title: "Cyberbush Beetle in Dubai",
+          link: "https://vimeo.com/cyberbush/dubai",
+        },
+        {
+          title: "CD-600 Cargo Flight",
+          link: "https://vimeo.com/cyberbush/cd-600-flight-1",
+        },
+        {
+          title: "BK-140 Video",
+          link: "https://vimeo.com/cyberbush/bk140",
+        },
+        {
+          title: "BK-300 Video",
+          link: "https://vimeo.com/cyberbush/bk-300-en",
+        },
+      ],
+    },
   ];
 
   const foundConfig = config.find((e) => {

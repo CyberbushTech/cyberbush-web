@@ -17,7 +17,7 @@ export default async function InvestPage({
     {
       id: "1c108201-9605-4d02-937a-8c5daf21c831",
       presentation:
-        "https://drive.google.com/file/d/1rSO2esbxo-dzZwpj5WahugcsODZLljtH/view?usp=share_link",
+        "https://n7h6rncncjn4ongd.public.blob.vercel-storage.com/presentations/Cyberbush%20Pitch%20Deck%20v8-5-tVURza9z4Ec7AZjOLMaMKGIZxMmMW8.pdf",
       items: [
         {
           title: "Presentation Video",
@@ -40,7 +40,7 @@ export default async function InvestPage({
     {
       id: "9845ec69-23f4-4ee3-9253-47508006f98d",
       presentation:
-        "https://drive.google.com/file/d/1hbJoos1yodyPVE6rNe5ak_iGfY4s5FhD/view?usp=sharing",
+        "https://n7h6rncncjn4ongd.public.blob.vercel-storage.com/presentations/Cyberbush%20Pitch%20Deck%20v8-2%20RU%20Flat-9steTDb0BzDZzLTDboqUtOtBe8YdZj.pdf",
       items: [
         {
           title: "Презентационное Видео",
@@ -63,7 +63,7 @@ export default async function InvestPage({
     {
       id: "04a24334-f8b2-4053-aad9-3862682c217f",
       presentation:
-        "https://drive.google.com/file/d/1Z_KMR7SQZBV_0ijZTjpT0KPmVQDytqka/view",
+        "https://n7h6rncncjn4ongd.public.blob.vercel-storage.com/presentations/Cyberbush%20Pitch%20Deck%20v8-5%20Flat-0GklQd5y8Pb1KFUx7eMEyVZoYeiITz.pdf",
       items: [
         {
           title: "Cyberbush Beetle in Dubai",

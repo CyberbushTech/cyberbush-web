@@ -83,6 +83,54 @@ export default async function InvestPage({
         },
       ],
     },
+    {
+      // English no founders
+      id: "43cdac07-95fa-4b7c-a21f-e5bcb271c3ac",
+      presentation:
+        "https://n7h6rncncjn4ongd.public.blob.vercel-storage.com/presentations/Cyberbush%20Pitch%20Deck%20v8-5%20Flat%20U-ZJISudKP7UZUKqksXF6qcWb7og3aWV.pdf",
+      items: [
+        {
+          title: "Cyberbush Beetle in Dubai",
+          link: "https://vimeo.com/cyberbush/dubai",
+        },
+        {
+          title: "CD-600 Cargo Flight",
+          link: "https://vimeo.com/cyberbush/cd-600-flight-1",
+        },
+        {
+          title: "BK-140 Video",
+          link: "https://vimeo.com/cyberbush/bk140",
+        },
+        {
+          title: "BK-300 Video",
+          link: "https://vimeo.com/cyberbush/bk-300-en",
+        },
+      ],
+    },
+    {
+      // Russian no founders
+      id: "604836e3-c85f-4a0e-b8a0-53cc3d4ab0ff",
+      presentation:
+        "https://n7h6rncncjn4ongd.public.blob.vercel-storage.com/presentations/Cyberbush%20Pitch%20Deck%20v8-2%20RU%20Flat%20U-qX4CNfSz9U32kvCz6mMM55LYnUNDdI.pdf",
+      items: [
+        {
+          title: "Презентационное Видео",
+          link: "https://vimeo.com/cyberbush/presentation-10-2024",
+        },
+        {
+          title: "Cyberbush Beetle в Дубае",
+          link: "https://vimeo.com/cyberbush/dubai",
+        },
+        {
+          title: "БК-140 Видео",
+          link: "https://vimeo.com/cyberbush/bk-140-ru",
+        },
+        {
+          title: "БК-300 Видео",
+          link: "https://vimeo.com/cyberbush/bk-300-ru",
+        },
+      ],
+    },
   ];
 
   const foundConfig = config.find((e) => {

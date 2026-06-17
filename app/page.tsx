@@ -15,12 +15,11 @@ const Home: NextPage = () => {
       setIsActionBannerInView(window.scrollY > window.innerHeight / 2);
     };
     handleScroll();
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isActionBannerInView]);
+  }, []);
   return (
     <div className="page-container scroll-snap-man">
       <Container className="bg-secondary" fluid>

@@ -1,18 +1,13 @@
 import { Container } from "react-bootstrap";
-import { NextPage } from "next";
 import TopNavigation from "../../components/common/top-navigation";
 import Footer from "../../components/common/footer";
 import InvestPresentationHero from "../../components/invest/presentation-section";
 import { redirect } from "next/navigation";
-import InvestVideosSection from "@/app/components/invest/videos-section";
 
-export default async function InvestPage({
-  params,
-}: {
-  params: Promise<{ uuid: string }>;
-}) {
-  const uuid = (await params).uuid;
-  const config = [
+// Only the UUIDs listed here are built as static pages; anything else 404s.
+export const dynamicParams = false;
+
+const config = [
     // Full
     {
       id: "1c108201-9605-4d02-937a-8c5daf21c831",
@@ -132,6 +127,17 @@ export default async function InvestPage({
       ],
     },
   ];
+
+export async function generateStaticParams() {
+  return config.map((e) => ({ uuid: e.id }));
+}
+
+export default async function InvestPage({
+  params,
+}: {
+  params: Promise<{ uuid: string }>;
+}) {
+  const uuid = (await params).uuid;
 
   const foundConfig = config.find((e) => {
     return e.id == uuid;

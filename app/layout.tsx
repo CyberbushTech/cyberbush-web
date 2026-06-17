@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Lato, Poppins } from "next/font/google";
 import "./globals.scss";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { SITE_LOCALE, SITES } from "./site-config";
+import { getLocalizations } from "./dictionaries/dictionaries";
 
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
@@ -17,10 +17,19 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const dict = getLocalizations();
+
 export const metadata: Metadata = {
-  title: "Cyberbush",
-  description:
-    "AI-controlled aircrafts producer for air taxi, entertainment and delivery",
+  metadataBase: new URL(SITES[SITE_LOCALE].origin),
+  title: dict.meta.title,
+  description: dict.meta.description,
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: SITES.en.origin,
+      ru: SITES.ru.origin,
+    },
+  },
   icons: {
     icon: ["/icon.png"],
     apple: ["/icon-apple.png"],
@@ -34,11 +43,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang={SITE_LOCALE}>
       <body>
         {children}
-        <Analytics />
-        <SpeedInsights />
         <GoogleAnalytics gaId="G-71XESJX2YN" />
       </body>
     </html>

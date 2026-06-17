@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cyberbush website
 
-## Getting Started
+Static marketing site for Cyberbush (eVTOL aircraft). Built with Next.js (App
+Router) and exported to fully static HTML for hosting on GitHub Pages.
 
-First, run the development server:
+## Internationalization
+
+The site is bilingual. Instead of runtime locale routing, the language is fixed
+**at build time** and each language is deployed to its own domain:
+
+| Locale | Domain          | Build env                  |
+| ------ | --------------- | -------------------------- |
+| en     | cyberbush.tech  | `NEXT_PUBLIC_SITE_LOCALE=en` |
+| ru     | cyberbush.ru    | `NEXT_PUBLIC_SITE_LOCALE=ru` |
+
+Translations live in `app/dictionaries/{en,ru}.ts`. `app/site-config.ts` holds
+the locale list and per-language domains. The language switcher in the navbar
+links across domains, preserving the current path; SEO `hreflang` alternates are
+emitted from `app/layout.tsx`.
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+NEXT_PUBLIC_SITE_LOCALE=en npm run dev   # or ru
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Static build
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+NEXT_PUBLIC_SITE_LOCALE=en npm run build   # outputs ./out
+```
 
-## Learn More
+`next.config.mjs` sets `output: "export"`, `trailingSlash: true`, and
+`images.unoptimized` so the result is a plain static bundle.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site
+twice (en/ru) and publishes each build to a separate GitHub Pages repository.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Required repository configuration (Settings → Secrets and variables → Actions):
 
-## Deploy on Vercel
+- Variables: `PAGES_ORG`, `PAGES_REPO_EN`, `PAGES_REPO_RU`
+- Secret: `DEPLOY_TOKEN` (PAT with write access to the target repos)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Each target repo must have GitHub Pages enabled (branch `gh-pages`) with its
+custom domain set. The workflow writes the `CNAME` and `.nojekyll` files.

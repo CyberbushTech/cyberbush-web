@@ -1,0 +1,72 @@
+name: Deploy to GitHub Pages
+
+# One source repo -> two static builds -> two GitHub Pages sites:
+#   en -> cyberbush.tech
+#   ru -> cyberbush.ru
+#
+# Required GitHub configuration (Settings -> Secrets and variables -> Actions):
+#   Variables:
+#     PAGES_ORG       e.g. "cyberbush"           (org/user that owns the target repos)
+#     PAGES_REPO_EN   e.g. "cyberbush-tech"      (target repo for the EN site)
+#     PAGES_REPO_RU   e.g. "cyberbush-ru"        (target repo for the RU site)
+#   Secrets:
+#     DEPLOY_TOKEN    a Personal Access Token (classic: repo scope, or fine-grained
+#                     with Contents: read/write on both target repos) used to push
+#                     the built output to the target repositories.
+#
+# Each target repo must have Pages enabled (Deploy from branch: gh-pages / root)
+# and its custom domain set. The CNAME file is written by this workflow.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - locale: en
+            domain: cyberbush.tech
+            repo_var: PAGES_REPO_EN
+          - locale: ru
+            domain: cyberbush.ru
+            repo_var: PAGES_REPO_RU
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site (${{ matrix.locale }})
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_LOCALE: ${{ matrix.locale }}
+
+      - name: Add Pages files (CNAME + .nojekyll)
+        run: |
+          echo "${{ matrix.domain }}" > out/CNAME
+          touch out/.nojekyll
+
+      - name: Deploy to ${{ matrix.domain }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
+          external_repository: ${{ vars.PAGES_ORG }}/${{ vars[matrix.repo_var] }}
+          publish_branch: gh-pages
+          publish_dir: ./out
+          cname: ${{ matrix.domain }}

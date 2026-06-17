@@ -5,8 +5,10 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import global from "../../globals";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import { getLocalizations } from "@/app/dictionaries/dictionaries";
+import { LOCALES, SITE_LOCALE, SITES } from "@/app/site-config";
 
 export default function TopNavigation({
   inverted,
@@ -14,9 +16,10 @@ export default function TopNavigation({
   inverted: boolean;
 }>) {
   const dict = getLocalizations();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  var predefinedNavbarClass = inverted ? "nav-regular" : "nav-inverted";
-  var navbarClass = isOpen ? "nav-inverted" : predefinedNavbarClass;
+  const predefinedNavbarClass = inverted ? "nav-regular" : "nav-inverted";
+  const navbarClass = isOpen ? "nav-inverted" : predefinedNavbarClass;
   return (
     <Navbar expand="lg" className={`${navbarClass} fixed-top top-navigation`}>
       <Container className="top-navigation-container">
@@ -36,17 +39,34 @@ export default function TopNavigation({
         <Navbar.Collapse className={`float-end ${isOpen ? "show" : ""}`}>
           <div className="mobile-menu-container ms-auto">
             <Nav>
-              {dict.menu.map((item: any) => (
+              {dict.menu.map((item: { title: string; id: string }) => (
                 <Nav.Link
                   key={item.id}
                   id={item.id}
-                  href={item.id}
+                  href={`/${item.id}`}
                   className={`link me-2`}
                 >
                   {item.title}
                 </Nav.Link>
               ))}
             </Nav>
+            <div className="lang-switch">
+              {LOCALES.map((loc) =>
+                loc === SITE_LOCALE ? (
+                  <span key={loc} className="lang-item lang-current">
+                    {SITES[loc].label}
+                  </span>
+                ) : (
+                  <a
+                    key={loc}
+                    className="lang-item lang-link"
+                    href={`${SITES[loc].origin}${pathname}`}
+                  >
+                    {SITES[loc].label}
+                  </a>
+                )
+              )}
+            </div>
           </div>
         </Navbar.Collapse>
       </Container>

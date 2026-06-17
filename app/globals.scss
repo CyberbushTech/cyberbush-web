@@ -145,6 +145,33 @@ h1,
 	}
 }
 
+.lang-switch {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	margin-left: 0.75rem;
+
+	.lang-item {
+		font-size: 0.85rem;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #cfd6da;
+		text-decoration: none;
+		padding: 0.1rem 0.35rem;
+		border-radius: 0.2rem;
+		transition: color 0.15s ease-in, background-color 0.15s ease-in;
+	}
+
+	.lang-link:hover {
+		color: #ffffff;
+	}
+
+	.lang-current {
+		color: #ffffff;
+		font-weight: 700;
+	}
+}
+
 .navbar-collapse.collapse.show,
 .navbar-collapse.collapsing {
 	.nav-link {

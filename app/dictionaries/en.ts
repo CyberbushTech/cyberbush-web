@@ -1,4 +1,9 @@
 export const dict = {
+  meta: {
+    title: "Cyberbush",
+    description:
+      "AI-controlled aircraft producer for air taxi, entertainment and delivery",
+  },
   beetleHero: {
     imageAlt: "Cyberbush",
     leadText: "PASSENGER AI-CONTROLLED MULTICOPTER",

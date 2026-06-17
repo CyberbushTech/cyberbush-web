@@ -12,8 +12,8 @@ export default function HomeAircraftSection() {
       <Container className={`p-4 small`} fluid>
         <Container className="d-flex flex-column justify-content-center align-items-center ps-2 pe-2 flex-wrap">
           <Nav className="menu pb-3 d-flex justify-content-center align-items-center">
-            {dict.menu.map((item: any) => (
-              <NavLink key={item.title} href={item.id}>
+            {dict.menu.map((item: { title: string; id: string }) => (
+              <NavLink key={item.title} href={`/${item.id}`}>
                 {item.title}
               </NavLink>
             ))}

@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
-import TopNavigation from "../../components/common/top-navigation";
-import Footer from "../../components/common/footer";
-import InvestPresentationHero from "../../components/invest/presentation-section";
+import TopNavigation from "@/app/components/common/top-navigation";
+import Footer from "@/app/components/common/footer";
+import InvestPresentationHero from "@/app/components/invest/presentation-section";
 import { redirect } from "next/navigation";
 
 // Only the UUIDs listed here are built as static pages; anything else 404s.

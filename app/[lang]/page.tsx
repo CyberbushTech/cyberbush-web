@@ -1,12 +1,12 @@
 "use client";
 import { Container } from "react-bootstrap";
 import { NextPage } from "next";
-import TopNavigation from "./components/common/top-navigation";
-import HomeActionBanner from "./components/home/home-action-banner";
-import HomeAircraftSection from "./components/home/home-aircraft-section";
-import HomeSkyscoutSection from "./components/home/home-skyscout-section";
+import TopNavigation from "@/app/components/common/top-navigation";
+import HomeActionBanner from "@/app/components/home/home-action-banner";
+import HomeAircraftSection from "@/app/components/home/home-aircraft-section";
+import HomeSkyscoutSection from "@/app/components/home/home-skyscout-section";
 import { useEffect, useState } from "react";
-import Footer from "./components/common/footer";
+import Footer from "@/app/components/common/footer";
 
 const Home: NextPage = () => {
   const [isActionBannerInView, setIsActionBannerInView] = useState(false);

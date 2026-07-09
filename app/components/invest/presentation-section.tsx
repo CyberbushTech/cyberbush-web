@@ -3,7 +3,7 @@ import { Container, Image } from "react-bootstrap";
 import ScrollMore from "../common/scroll-more";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function InvestPresentationHero({
   presentationLink,
@@ -12,7 +12,7 @@ export default function InvestPresentationHero({
   presentationLink: string;
   videos: { title: string; link: string }[];
 }>) {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
 
   return (
     <Container

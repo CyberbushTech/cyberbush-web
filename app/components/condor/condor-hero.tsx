@@ -2,10 +2,10 @@
 import { Container, Image } from "react-bootstrap";
 import ScrollMore from "../common/scroll-more";
 import { motion } from "framer-motion";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function CondorHero() {
-  const { condorHero } = getLocalizations();
+  const { condorHero } = useLocalizations();
 
   return (
     <Container className="scroll-snap-start bg-dark hero" fluid>
@@ -21,7 +21,7 @@ export default function CondorHero() {
             exit={{ opacity: 0 }}
           >
             <Image
-              src="images/condor-top.jpg"
+              src="/images/condor-top.jpg"
               className="head-image content-fit-cover"
               loading="eager"
               alt={condorHero.imageAlt}

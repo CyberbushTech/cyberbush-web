@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import ScrollMore from "../common/scroll-more";
 import Link from "next/link";
 import HomeBanner from "../home/home-banner";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function TechnologyHero() {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
 
   return (
     <HomeBanner background="dark text-white">

@@ -1,8 +1,9 @@
+"use client";
 import { Container, Image, Table } from "react-bootstrap";
-import { getLocalizations } from "@/app/dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function BeetleBlueprintSection() {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
 
   return (
     <Container className="scroll-snap-start bg-white d-flex flex-column" fluid>
@@ -15,7 +16,7 @@ export default function BeetleBlueprintSection() {
       <Container className="d-flex flex-column justify-content-center pb-5 pt-3">
         <div className="blueprint">
           <Image
-            src="images/beetle/blueprints/perspective.png"
+            src="/images/beetle/blueprints/perspective.png"
             className="object-fit-contain blueprint-image"
             loading="eager"
             alt={dict.blueprintSection.imageAlt}

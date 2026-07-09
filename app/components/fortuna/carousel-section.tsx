@@ -5,11 +5,11 @@ import ImageCarousel from "../common/image-carousel";
 
 export default function FortunaCarouselSection() {
   const images = [
-    "images/fortuna/Fortuna-Perspective.png",
-    "images/fortuna/Fortuna-Top.png",
-    "images/fortuna/Fortuna-Back.png",
-    "images/fortuna/Fortuna-Front.png",
-    "images/fortuna/Fortuna-Perspective-Back.png",
+    "/images/fortuna/Fortuna-Perspective.png",
+    "/images/fortuna/Fortuna-Top.png",
+    "/images/fortuna/Fortuna-Back.png",
+    "/images/fortuna/Fortuna-Front.png",
+    "/images/fortuna/Fortuna-Perspective-Back.png",
   ];
 
   return (

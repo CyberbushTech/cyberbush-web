@@ -1,10 +1,10 @@
 "use client";
 import { Container, Image, Row } from "react-bootstrap";
 import AppIcon from "./app-icon";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function AppsTechnologyHero() {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
 
   return (
     <Container
@@ -28,7 +28,7 @@ export default function AppsTechnologyHero() {
           </div>
           <div className="head-image flex-column align-items-center">
             <Image
-              src="images/technology/app-alone.png"
+              src="/images/technology/app-alone.png"
               className="head-image content-fit-cover"
               loading="eager"
               alt={"Cyberbush"}

@@ -2,10 +2,10 @@
 import Container from "react-bootstrap/Container";
 import HomeBanner from "./home-banner";
 import { Button } from "react-bootstrap";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function HomeSkyscoutSection() {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
 
   return (
     <HomeBanner background="secondary" className="text-white scroll-snap-start">

@@ -1,9 +1,10 @@
+"use client";
 import { Container } from "react-bootstrap";
 import ParamBlock from "../common/param-block";
-import { getLocalizations } from "@/app/dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function CondorSpecsSection() {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
   const items = [
     {
       text: dict.condorSpecsSection.items[0].text,

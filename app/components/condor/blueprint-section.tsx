@@ -1,8 +1,9 @@
+"use client";
 import { Container, Image, Table } from "react-bootstrap";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function CondorBlueprintSection() {
-  const { condorBlueprintSection } = getLocalizations();
+  const { condorBlueprintSection } = useLocalizations();
 
   return (
     <Container className="scroll-snap-start bg-white d-flex flex-column" fluid>
@@ -15,7 +16,7 @@ export default function CondorBlueprintSection() {
       <Container className="d-flex flex-column justify-content-center pb-5">
         <div className="blueprint">
           <Image
-            src="images/condor/blueprints/perspective.png"
+            src="/images/condor/blueprints/perspective.png"
             className="object-fit-contain blueprint-image"
             loading="eager"
             alt={condorBlueprintSection.imageAlt}

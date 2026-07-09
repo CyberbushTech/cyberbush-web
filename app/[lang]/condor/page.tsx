@@ -1,12 +1,12 @@
 import { Container } from "react-bootstrap";
 import { NextPage } from "next";
-import TopNavigation from "../components/common/top-navigation";
-import Footer from "../components/common/footer";
-import CondorHero from "../components/condor/condor-hero";
-import CondorBlueprintSection from "../components/condor/blueprint-section";
-import CondorCarouselSection from "../components/condor/carousel-section";
-import CondorSpecsSection from "../components/condor/specs-section";
-import HomeSkyscoutSection from "../components/home/home-skyscout-section";
+import TopNavigation from "@/app/components/common/top-navigation";
+import Footer from "@/app/components/common/footer";
+import CondorHero from "@/app/components/condor/condor-hero";
+import CondorBlueprintSection from "@/app/components/condor/blueprint-section";
+import CondorCarouselSection from "@/app/components/condor/carousel-section";
+import CondorSpecsSection from "@/app/components/condor/specs-section";
+import HomeSkyscoutSection from "@/app/components/home/home-skyscout-section";
 
 const CondorPage: NextPage = () => {
   return (

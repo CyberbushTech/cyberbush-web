@@ -1,9 +1,9 @@
 "use client";
 import { Container, Image } from "react-bootstrap";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function SafetyTechnologyHero() {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
 
   return (
     <Container

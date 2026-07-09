@@ -1,10 +1,11 @@
+"use client";
 import { Container, Image } from "react-bootstrap";
 import ScrollMore from "../common/scroll-more";
 import { motion } from "framer-motion";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function BeetleHero() {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
   return (
     <Container
       className="scroll-snap-start bg-dark hero scroll-snap-start"
@@ -22,7 +23,7 @@ export default function BeetleHero() {
             exit={{ opacity: 0 }}
           >
             <Image
-              src="images/beetle-right.jpg"
+              src="/images/beetle-right.jpg"
               className="head-image content-fit-cover"
               loading="eager"
               alt={dict.beetleHero.imageAlt}

@@ -2,10 +2,11 @@
 import HomeBanner from "./home-banner";
 import HomeAircraftBanner from "./home-aircraft-banner";
 import { Container } from "react-bootstrap";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations, useLocale, localePath } from "@/app/i18n/locale-context";
 
 export default function HomeAircraftSection() {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
+  const locale = useLocale();
 
   return (
     <HomeBanner
@@ -27,7 +28,7 @@ export default function HomeAircraftSection() {
                     key={index}
                     title={aircraft.title}
                     lead={aircraft.lead}
-                    link={aircraft.link}
+                    link={localePath(aircraft.link, locale)}
                   />
                 )
               )}

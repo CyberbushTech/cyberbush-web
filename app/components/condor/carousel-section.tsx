@@ -4,10 +4,10 @@ import ImageCarousel from "../common/image-carousel";
 
 export default function CondorCarouselSection() {
   const images = [
-    "images/condor/Condor-Perspective-Back.png",
-    "images/condor/Condor-Right.png",
-    "images/condor/Condor-Back.png",
-    "images/condor/Condor-Front.png",
+    "/images/condor/Condor-Perspective-Back.png",
+    "/images/condor/Condor-Right.png",
+    "/images/condor/Condor-Back.png",
+    "/images/condor/Condor-Front.png",
   ];
 
   return (

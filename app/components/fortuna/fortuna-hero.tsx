@@ -2,10 +2,10 @@
 import { Container, Image } from "react-bootstrap";
 import ScrollMore from "../common/scroll-more";
 import { motion } from "framer-motion";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function FortunaHero() {
-  const { fortunaHero } = getLocalizations();
+  const { fortunaHero } = useLocalizations();
   return (
     <Container
       id="fortuna-hero"
@@ -24,7 +24,7 @@ export default function FortunaHero() {
             exit={{ opacity: 0 }}
           >
             <Image
-              src="images/fortuna-right.jpg"
+              src="/images/fortuna-right.jpg"
               className="head-image content-fit-cover"
               loading="eager"
               alt={fortunaHero.imageAlt}

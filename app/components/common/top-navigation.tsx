@@ -7,23 +7,25 @@ import global from "../../globals";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
-import { getLocalizations } from "@/app/dictionaries/dictionaries";
-import { LOCALES, SITE_LOCALE, SITES } from "@/app/site-config";
+import { useLocalizations, useLocale, localePath } from "@/app/i18n/locale-context";
+import { LOCALES, LOCALE_LABELS } from "@/app/site-config";
 
 export default function TopNavigation({
   inverted,
 }: Readonly<{
   inverted: boolean;
 }>) {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
+  const locale = useLocale();
   const pathname = usePathname();
+  const restPath = pathname.replace(/^\/(en|ru)/, "") || "/";
   const [isOpen, setIsOpen] = useState(false);
   const predefinedNavbarClass = inverted ? "nav-regular" : "nav-inverted";
   const navbarClass = isOpen ? "nav-inverted" : predefinedNavbarClass;
   return (
     <Navbar expand="lg" className={`${navbarClass} fixed-top top-navigation`}>
       <Container className="top-navigation-container">
-        <Navbar.Brand href="/" className="ms-3 mb-1 brand">
+        <Navbar.Brand href={localePath("/", locale)} className="ms-3 mb-1 brand">
           <Image
             src="/images/logo.svg"
             width="170"
@@ -43,7 +45,7 @@ export default function TopNavigation({
                 <Nav.Link
                   key={item.id}
                   id={item.id}
-                  href={`/${item.id}`}
+                  href={localePath(`/${item.id}`, locale)}
                   className={`link me-2`}
                 >
                   {item.title}
@@ -52,17 +54,17 @@ export default function TopNavigation({
             </Nav>
             <div className="lang-switch">
               {LOCALES.map((loc) =>
-                loc === SITE_LOCALE ? (
+                loc === locale ? (
                   <span key={loc} className="lang-item lang-current">
-                    {SITES[loc].label}
+                    {LOCALE_LABELS[loc]}
                   </span>
                 ) : (
                   <a
                     key={loc}
                     className="lang-item lang-link"
-                    href={`${SITES[loc].origin}${pathname}`}
+                    href={`/${loc}${restPath === "/" ? "" : restPath}`}
                   >
-                    {SITES[loc].label}
+                    {LOCALE_LABELS[loc]}
                   </a>
                 )
               )}

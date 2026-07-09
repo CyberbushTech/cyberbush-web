@@ -4,11 +4,11 @@ import ImageCarousel from "../common/image-carousel";
 
 export default function BeetleCarouselSection() {
   const images = [
-    "images/beetle/Beetle-Perspective.png",
-    "images/beetle/Beetle-Top.png",
-    "images/beetle/Beetle-Back.png",
-    "images/beetle/Beetle-Front.png",
-    "images/beetle/Beetle-Perspective-Back.png",
+    "/images/beetle/Beetle-Perspective.png",
+    "/images/beetle/Beetle-Top.png",
+    "/images/beetle/Beetle-Back.png",
+    "/images/beetle/Beetle-Front.png",
+    "/images/beetle/Beetle-Perspective-Back.png",
   ];
 
   return (

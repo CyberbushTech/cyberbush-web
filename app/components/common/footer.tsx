@@ -2,10 +2,11 @@
 import { Container, Image, Nav, NavLink } from "react-bootstrap";
 import HomeBanner from "../home/home-banner";
 import Link from "next/link";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations, useLocale, localePath } from "@/app/i18n/locale-context";
 
 export default function HomeAircraftSection() {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
+  const locale = useLocale();
 
   return (
     <HomeBanner background="scroll-snap-end dark text-white footer">
@@ -13,7 +14,7 @@ export default function HomeAircraftSection() {
         <Container className="d-flex flex-column justify-content-center align-items-center ps-2 pe-2 flex-wrap">
           <Nav className="menu pb-3 d-flex justify-content-center align-items-center">
             {dict.menu.map((item: { title: string; id: string }) => (
-              <NavLink key={item.title} href={`/${item.id}`}>
+              <NavLink key={item.title} href={localePath(`/${item.id}`, locale)}>
                 {item.title}
               </NavLink>
             ))}

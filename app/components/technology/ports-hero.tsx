@@ -1,10 +1,10 @@
 "use client";
 import { Container } from "react-bootstrap";
 import PortIcon from "./port-icon";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function PortsTechnologyHero() {
-  const dict = getLocalizations();
+  const dict = useLocalizations();
 
   return (
     <Container

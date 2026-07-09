@@ -1,9 +1,9 @@
 "use client";
 import { Container, Image, Table } from "react-bootstrap";
-import { getLocalizations } from "../../dictionaries/dictionaries";
+import { useLocalizations } from "@/app/i18n/locale-context";
 
 export default function FortunaBlueprintSection() {
-  const { fortunaBlueprintSection } = getLocalizations();
+  const { fortunaBlueprintSection } = useLocalizations();
   return (
     <Container
       className="scroll-snap-start bg-white d-flex flex-column pt-3"
@@ -20,7 +20,7 @@ export default function FortunaBlueprintSection() {
       <Container className="d-flex flex-column justify-content-center pb-5 pt-3">
         <div className="blueprint">
           <Image
-            src="images/fortuna/blueprints/perspective.jpg"
+            src="/images/fortuna/blueprints/perspective.jpg"
             className="object-fit-contain blueprint-image"
             loading="eager"
             alt={fortunaBlueprintSection.imageAlt}

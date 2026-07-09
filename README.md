@@ -1,50 +1,44 @@
 # Cyberbush website
 
-Static marketing site for Cyberbush (eVTOL aircraft). Built with Next.js (App
-Router) and exported to fully static HTML for hosting on GitHub Pages.
+Static marketing site for Cyberbush (eVTOL aircraft). Next.js (App Router)
+exported to static HTML and hosted on GitHub Pages at **cyberbush.info**.
 
 ## Internationalization
 
-The site is bilingual. Instead of runtime locale routing, the language is fixed
-**at build time** and each language is deployed to its own domain:
+Bilingual (English / Russian) as sub-paths on one domain:
 
-| Locale | Domain          | Build env                  |
-| ------ | --------------- | -------------------------- |
-| en     | cyberbush.tech  | `NEXT_PUBLIC_SITE_LOCALE=en` |
-| ru     | cyberbush.ru    | `NEXT_PUBLIC_SITE_LOCALE=ru` |
+- `cyberbush.info/en/…` — English
+- `cyberbush.info/ru/…` — Russian
+- `cyberbush.info/` — redirects to the visitor's language (default `/en`)
 
-Translations live in `app/dictionaries/{en,ru}.ts`. `app/site-config.ts` holds
-the locale list and per-language domains. The language switcher in the navbar
-links across domains, preserving the current path; SEO `hreflang` alternates are
-emitted from `app/layout.tsx`.
+Routes live under `app/[lang]/`. The `[lang]` layout is the root layout
+(`generateStaticParams` builds `en` and `ru`). Translations are in
+`app/dictionaries/{en,ru}.ts`; the active locale reaches client components via
+`app/i18n/locale-context.tsx` (`useLocalizations()` / `useLocale()`). Internal
+links are locale-prefixed with `localePath()`. The language switcher in the
+navbar swaps the locale prefix, preserving the current path.
 
 ## Local development
 
 ```bash
 npm install
-NEXT_PUBLIC_SITE_LOCALE=en npm run dev   # or ru
+npm run dev        # http://localhost:3000  (redirects to /en)
 ```
-
-Open http://localhost:3000.
 
 ## Static build
 
 ```bash
-NEXT_PUBLIC_SITE_LOCALE=en npm run build   # outputs ./out
+npm run build      # outputs ./out (both locales + root redirect)
+npx http-server out   # or: python3 -m http.server 3000 --directory out
 ```
 
 `next.config.mjs` sets `output: "export"`, `trailingSlash: true`, and
-`images.unoptimized` so the result is a plain static bundle.
+`images.unoptimized`. `scripts/root-redirect.mjs` writes `out/index.html`.
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site
-twice (en/ru) and publishes each build to a separate GitHub Pages repository.
-
-Required repository configuration (Settings → Secrets and variables → Actions):
-
-- Variables: `PAGES_ORG`, `PAGES_REPO_EN`, `PAGES_REPO_RU`
-- Secret: `DEPLOY_TOKEN` (PAT with write access to the target repos)
-
-Each target repo must have GitHub Pages enabled (branch `gh-pages`) with its
-custom domain set. The workflow writes the `CNAME` and `.nojekyll` files.
+Pushing to `main` runs `.github/workflows/deploy.yml`: one build, published to
+this repo's own GitHub Pages via the native `deploy-pages` action (no secrets).
+The custom domain `cyberbush.info` is configured in the repo's Pages settings;
+DNS must point the apex at GitHub Pages (A `185.199.108–111.153`, AAAA
+`2606:50c0:8000–8003::153`).

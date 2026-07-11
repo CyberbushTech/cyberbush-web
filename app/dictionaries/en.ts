@@ -10,6 +10,7 @@ export const dict = {
     beetle: "Beetle One",
     technology: "Technology",
     invest: "Investor Presentation",
+    experience: "Experience",
   },
   beetleHero: {
     imageAlt: "Cyberbush",
@@ -499,7 +500,58 @@ export const dict = {
     { title: "Condor", id: "condor" },
     { title: "Beetle", id: "beetle" },
     { title: "Technology", id: "technology" },
+    { title: "Experience", id: "experience" },
   ],
+  experience: {
+    lead: "THE DECADES OF HISTORY",
+    title: "15+ years of building UAVs",
+    description:
+      "For over 15 years our team has been developing and deploying drones across monitoring, agriculture and passenger transport — experience no competitor has. Everything below has been designed, built and flight-tested.",
+    milestones: [
+      {
+        year: "2008",
+        title: "First unmanned electric helicopter",
+        description:
+          "The team builds its first unmanned electric helicopter — the starting point of over 15 years of UAV development.",
+      },
+      {
+        year: "2010",
+        title: "Electric unmanned airship",
+        description:
+          "An electric unmanned airship extends the platform toward long-endurance flight.",
+      },
+      {
+        year: "2014",
+        title: "Electric cargo & agro copters",
+        description:
+          "Electric copters for aerial logistics, agriculture, and relaying cellular and other communication signals.",
+      },
+      {
+        year: "2017",
+        title: "BK-150 agrodrone & first air-taxi",
+        description:
+          "The BK-150 agrodrone (150 kg take-off weight, 70 kg payload, 30 min flight), the first air-taxi prototype and the G-3 convertiplane (3 m wingspan, up to 300 km range) take to the sky.",
+      },
+      {
+        year: "2018",
+        title: "G-10 convertoplane & BK-400 air-taxi",
+        description:
+          "The G-10 convertoplane — 10 m wingspan, 600 kg take-off weight, 200 kg payload, 700 km range, 5 h flight. The BK-400 copter-type air-taxi prototype flies (400 kg TOW, 120 kg payload).",
+      },
+      {
+        year: "2019",
+        title: "Serial agrodrone L-25",
+        description:
+          "Serial production of the L-25 agrodrone (30 kg take-off weight, 10 kg spraying payload) begins.",
+      },
+      {
+        year: "Today",
+        title: "Prototype stage completed",
+        description:
+          "The CD-600, BK-400 and BK-140 prototypes have been built and flight-tested, confirming their declared parameters — the foundation of the Cyberbush aircraft line.",
+      },
+    ],
+  },
   footer: {
     contacts: {
       phone: "+971502567503",

@@ -44,9 +44,9 @@ export default function CondorSpecsSection() {
     <Container className="scroll-snap-start p-4 bg-white" fluid>
       <Container className="d-flex flex-column justify-content-center align-items-center">
         <div className="p-5 section-header text-center">
-          <div className="lead">{dict.specsSection.headerLead}</div>
-          <h2>{dict.specsSection.headerTitle}</h2>
-          <p className="pb-3">{dict.specsSection.description}</p>
+          <div className="lead">{dict.condorSpecsSection.headerLead}</div>
+          <h2>{dict.condorSpecsSection.headerTitle}</h2>
+          <p className="pb-3">{dict.condorSpecsSection.description}</p>
         </div>
       </Container>
       <Container className="specs-row d-flex flex-row align-items-center text-center gap-5 pb-5">

@@ -22,9 +22,9 @@ export default function CondorHero() {
           >
             <Image
               src="/images/condor-top.jpg"
-              className="head-image content-fit-cover"
+              className="head-image object-fit-cover"
               loading="eager"
-              alt={condorHero.imageAlt}
+              alt={`Cyberbush ${condorHero.headTitle} eVTOL`}
             />
           </motion.div>
         </Container>

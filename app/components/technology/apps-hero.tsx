@@ -29,7 +29,7 @@ export default function AppsTechnologyHero() {
           <div className="head-image flex-column align-items-center">
             <Image
               src="/images/technology/app-alone.png"
-              className="head-image content-fit-cover"
+              className="head-image object-fit-cover"
               loading="eager"
               alt={"Cyberbush"}
             />

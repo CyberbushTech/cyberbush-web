@@ -25,9 +25,9 @@ export default function FortunaHero() {
           >
             <Image
               src="/images/fortuna-right.jpg"
-              className="head-image content-fit-cover"
+              className="head-image object-fit-cover"
               loading="eager"
-              alt={fortunaHero.imageAlt}
+              alt={`Cyberbush ${fortunaHero.headTitle}`}
             />
           </motion.div>
         </Container>

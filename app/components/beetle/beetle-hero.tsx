@@ -24,9 +24,9 @@ export default function BeetleHero() {
           >
             <Image
               src="/images/beetle-right.jpg"
-              className="head-image content-fit-cover"
+              className="head-image object-fit-cover"
               loading="eager"
-              alt={dict.beetleHero.imageAlt}
+              alt={`Cyberbush ${dict.beetleHero.headTitle}`}
             />
           </motion.div>
         </Container>

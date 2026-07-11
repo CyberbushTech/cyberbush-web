@@ -513,42 +513,99 @@ export const dict = {
         title: "First unmanned electric helicopter",
         description:
           "The team builds its first unmanned electric helicopter — the starting point of over 15 years of UAV development.",
+        points: [
+          { icon: "lightning-charge-fill", text: "Fully electric propulsion" },
+          { icon: "robot", text: "Unmanned flight control" },
+        ],
       },
       {
         year: "2010",
         title: "Electric unmanned airship",
         description:
           "An electric unmanned airship extends the platform toward long-endurance flight.",
+        points: [
+          { icon: "clock-history", text: "Long-endurance flight platform" },
+          { icon: "battery-charging", text: "All-electric power" },
+        ],
       },
       {
         year: "2014",
         title: "Electric cargo & agro copters",
         description:
           "Electric copters for aerial logistics, agriculture, and relaying cellular and other communication signals.",
+        points: [
+          { icon: "box-seam-fill", text: "Aerial logistics & cargo" },
+          { icon: "flower1", text: "Agricultural spraying" },
+          { icon: "broadcast-pin", text: "Communication signal relay" },
+        ],
+      },
+      {
+        year: "2016",
+        title: "G-0 convertiplane",
+        description:
+          "The compact G-0 convertiplane proves out the convertiplane concept at small scale.",
+        points: [
+          { icon: "airplane-fill", text: "5 kg take-off weight, 0.5 kg payload" },
+          { icon: "battery-charging", text: "All-electric, 80 min flight" },
+          { icon: "geo-alt-fill", text: "100 km range at 80 km/h" },
+        ],
       },
       {
         year: "2017",
-        title: "BK-150 agrodrone & first air-taxi",
+        title: "BK-150 agrodrone, first air-taxi & convertiplanes",
         description:
-          "The BK-150 agrodrone (150 kg take-off weight, 70 kg payload, 30 min flight), the first air-taxi prototype and the G-3 convertiplane (3 m wingspan, up to 300 km range) take to the sky.",
+          "The BK-150 agrodrone, the first 'Flying Seat' air-taxi prototype, and the G-3 and G-6 convertiplanes take to the sky.",
+        points: [
+          { icon: "flower1", text: "BK-150 agrodrone — 150 kg TOW, 70 kg payload" },
+          { icon: "person-fill", text: "First air-taxi prototype — 'Flying Seat'" },
+          { icon: "airplane-fill", text: "G-3 (3 m): 140 km electric / 300 km hybrid, 4 built" },
+          { icon: "airplane-engines-fill", text: "G-6 (6 m): 200 kg TOW, 400 km range" },
+        ],
       },
       {
         year: "2018",
         title: "G-10 convertoplane & BK-400 air-taxi",
         description:
-          "The G-10 convertoplane — 10 m wingspan, 600 kg take-off weight, 200 kg payload, 700 km range, 5 h flight. The BK-400 copter-type air-taxi prototype flies (400 kg TOW, 120 kg payload).",
+          "The 10-metre G-10 convertoplane and the BK-400 copter-type air-taxi prototype take flight.",
+        points: [
+          { icon: "airplane-fill", text: "G-10 — 10 m wingspan, 600 kg TOW, 200 kg payload" },
+          { icon: "clock-history", text: "G-10 — 700 km range, 5 h flight" },
+          { icon: "rocket-takeoff-fill", text: "BK-400 air-taxi — 400 kg TOW, 120 kg payload" },
+          { icon: "check-circle-fill", text: "BK-400 — 20 flight hours logged" },
+        ],
       },
       {
         year: "2019",
         title: "Serial agrodrone L-25",
         description:
-          "Serial production of the L-25 agrodrone (30 kg take-off weight, 10 kg spraying payload) begins.",
+          "Serial production of the L-25 agrodrone begins.",
+        points: [
+          { icon: "flower1", text: "30 kg TOW, 10 kg spraying payload" },
+          { icon: "clock-history", text: "Up to 40 min in spraying mode" },
+          { icon: "graph-up-arrow", text: "50+ produced, 5000+ flight hours" },
+        ],
+      },
+      {
+        year: "2020",
+        title: "T-90 agrodrone & M-8 electric motor",
+        description:
+          "The heavier T-90 agrodrone enters pre-production, alongside an in-house high-power electric motor.",
+        points: [
+          { icon: "flower1", text: "T-90 — 120 kg TOW, 40 kg payload (pre-production)" },
+          { icon: "lightning-charge-fill", text: "M-8 motor — 100 kW, gearless 2 m propeller" },
+          { icon: "gear-fill", text: "In-house motor & ESC controller" },
+        ],
       },
       {
         year: "Today",
         title: "Prototype stage completed",
         description:
           "The CD-600, BK-400 and BK-140 prototypes have been built and flight-tested, confirming their declared parameters — the foundation of the Cyberbush aircraft line.",
+        points: [
+          { icon: "check-circle-fill", text: "CD-600 → Condor Cargo G-10" },
+          { icon: "check-circle-fill", text: "BK-400 → Beetle Cargo A-150" },
+          { icon: "check-circle-fill", text: "BK-140 cargo multicopter" },
+        ],
       },
     ],
   },

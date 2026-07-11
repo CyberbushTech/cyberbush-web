@@ -1,9 +1,24 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { useLocalizations } from "@/app/i18n/locale-context";
 
-type Milestone = { year: string; title: string; description: string };
+type Point = { icon: string; text: string };
+type Milestone = {
+  year: string;
+  title: string;
+  description: string;
+  points: Point[];
+};
+
+const container: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+};
+const item: Variants = {
+  hidden: { opacity: 0, y: 22 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
 export default function ExperienceTimeline() {
   const dict = useLocalizations();
@@ -69,14 +84,26 @@ export default function ExperienceTimeline() {
             >
               <motion.div
                 className="exp-content text-white"
-                initial={{ opacity: 0, y: 42 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                variants={container}
+                initial="hidden"
+                whileInView="show"
                 viewport={{ once: false, amount: 0.4 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
               >
-                <div className="exp-year-big">{m.year}</div>
-                <h2>{m.title}</h2>
-                <p>{m.description}</p>
+                <motion.div className="exp-year-big" variants={item}>
+                  {m.year}
+                </motion.div>
+                <motion.h2 variants={item}>{m.title}</motion.h2>
+                <motion.p className="exp-lead" variants={item}>
+                  {m.description}
+                </motion.p>
+                <ul className="exp-points">
+                  {m.points.map((pt, j) => (
+                    <motion.li key={j} className="exp-point" variants={item}>
+                      <span className={`icon bi-${pt.icon}`} aria-hidden="true" />
+                      <span>{pt.text}</span>
+                    </motion.li>
+                  ))}
+                </ul>
               </motion.div>
             </section>
           ))}

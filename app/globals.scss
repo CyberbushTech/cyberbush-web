@@ -642,22 +642,44 @@ h1,
 }
 
 .hydrogen-section {
-	background-color: #000;
+	position: relative;
+	min-height: 100vh;
+	padding: 0;
+	overflow: hidden;
+	background: radial-gradient(circle at 50% 45%, #10141c 0%, #05070b 78%);
+
+	.hydrogen-bg {
+		position: absolute;
+		inset: 0;
+		background: url("../public/images/technology/hydrogen.png") center / contain
+			no-repeat;
+		pointer-events: none;
+	}
+
+	.hydrogen-content {
+		position: relative;
+		z-index: 1;
+		min-height: 100vh;
+		padding: 5.5rem 1rem 2.5rem;
+	}
 
 	.section-header {
 		max-width: 52rem;
+		text-shadow: 0 2px 18px rgba(0, 0, 0, 0.7);
 	}
 
-	.hydrogen-image-wrap {
-		width: 100%;
-		max-width: 1080px;
-		margin: 0 auto;
+	.hydrogen-features {
+		.control-icon-item {
+			background-color: rgba(0, 0, 0, 0.45);
+			backdrop-filter: blur(4px);
+		}
 	}
+}
 
-	.hydrogen-image {
-		width: 100%;
-		height: auto;
-		filter: drop-shadow(0 0 55px rgba(64, 156, 224, 0.22));
+@include media-breakpoint-down(lg) {
+	.hydrogen-section .hydrogen-bg {
+		background-size: 150% auto;
+		background-position: center 34%;
 	}
 }
 

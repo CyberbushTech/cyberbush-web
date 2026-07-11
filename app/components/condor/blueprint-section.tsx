@@ -43,7 +43,7 @@ export default function CondorBlueprintSection() {
               </tr>
               <tr>
                 <th>{condorBlueprintSection.specs.range}</th>
-                <td>320 Km</td>
+                <td>500 Km</td>
               </tr>
               <tr>
                 <th>{condorBlueprintSection.specs.rangeHydrogen}</th>
@@ -55,7 +55,7 @@ export default function CondorBlueprintSection() {
               </tr>
               <tr>
                 <th>{condorBlueprintSection.specs.payload}</th>
-                <td>120 Kg</td>
+                <td>180 Kg</td>
               </tr>
               <tr>
                 <th>{condorBlueprintSection.specs.passengers}</th>

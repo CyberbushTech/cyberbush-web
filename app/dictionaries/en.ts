@@ -55,13 +55,13 @@ export const dict = {
     description:
       "Fully AI-controlled electric passenger aircraft for comfortable short-range flights. It can be used in urban and suburban areas providing new transportation experience.",
     items: [
-      { text: "120 Kg of Payload, Single or Two Passenger" },
-      { text: "Full Flight Automation" },
-      { text: "Safety System" },
+      { text: "180 Kg Payload, Single or Two Passenger" },
+      { text: "Full AI Flight Automation" },
+      { text: "Catapult Seat & Parachute Safety System" },
     ],
     items2: [
-      { text: "16 Electric Motors" },
-      { text: "150 km Range on HPS" },
+      { text: "16×11 electric engines, 20000 A·h batteries" },
+      { text: "35 km Electric / 300 km Hydrogen range" },
       { text: "Vertical Takeoff and Landing" },
     ],
   },
@@ -109,14 +109,14 @@ export const dict = {
     description:
       "Fully AI-controlled electric passenger aircraft for comfortable medium-range flights. It can be used in urban, suburban and intercity areas.",
     items: [
-      { text: "120 Kg of Payload, Single or Two Passenger" },
-      { text: "Full Flight Automation" },
-      { text: "Safety System" },
+      { text: "180 Kg Payload, Single or Two Passenger" },
+      { text: "Full AI Flight Automation" },
+      { text: "Catapult Seat & Parachute Safety System" },
     ],
     items2: [
-      { text: "Effective traction motor" },
-      { text: "320 km Range Electric" },
-      { text: "Vertical Takeoff and Landing" },
+      { text: "Thrust motor for horizontal flight, 10 m wing" },
+      { text: "500 km Electric / 1500 km Hydrogen range" },
+      { text: "16×11 electric engines, Vertical Takeoff & Landing" },
     ],
   },
   fortunaHero: {
@@ -164,7 +164,7 @@ export const dict = {
       "The unique flying machine for transportation and entertainment. Controlled by AI, but will allow for prescriptive flight adjustments by the user providing more fun and impressions.",
     items: [
       {
-        text: "8 Jet Engines with Thrust Vector Control",
+        text: "8 × JetCat P1000-PRO with Thrust Vector Control",
         image: "fortuna-engines",
         icon: "slash-circle",
       },
@@ -174,7 +174,7 @@ export const dict = {
         icon: "speedometer",
       },
       {
-        text: "120 Kg of Payload, Single Passenger",
+        text: "120 Kg Payload, Single Passenger, wing-tip doors",
         image: "fortuna-seats",
         icon: "people",
       },
@@ -186,12 +186,12 @@ export const dict = {
         icon: "robot",
       },
       {
-        text: "300 km Range, 25 min of flight",
+        text: "300 km Range, 25 min, 400 Kg fuel tanks",
         image: "fortuna-top-part",
         icon: "stopwatch",
       },
       {
-        text: "Vertical Takeoff and Landing",
+        text: "Vertical Takeoff & Landing, wing stabilizers",
         image: "fortuna-take-off",
         icon: "h-circle",
       },

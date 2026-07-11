@@ -55,7 +55,7 @@ export default function BeetleBlueprintSection() {
               </tr>
               <tr>
                 <th>{dict.blueprintSection.specs.payload}</th>
-                <td>120 Kg</td>
+                <td>180 Kg</td>
               </tr>
               <tr>
                 <th>{dict.blueprintSection.specs.passengers}</th>

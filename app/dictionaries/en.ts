@@ -4,6 +4,13 @@ export const dict = {
     description:
       "AI-controlled aircraft producer for air taxi, entertainment and delivery",
   },
+  seo: {
+    fortuna: "Fortuna",
+    condor: "Condor One",
+    beetle: "Beetle One",
+    technology: "Technology",
+    invest: "Investor Presentation",
+  },
   beetleHero: {
     imageAlt: "Cyberbush",
     leadText: "PASSENGER AI-CONTROLLED MULTICOPTER",

@@ -1,11 +1,24 @@
 import { Container } from "react-bootstrap";
+import type { Metadata } from "next";
 import TopNavigation from "@/app/components/common/top-navigation";
 import Footer from "@/app/components/common/footer";
 import InvestPresentationHero from "@/app/components/invest/presentation-section";
 import { redirect } from "next/navigation";
+import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { isLocale } from "@/app/site-config";
 
 // Only the UUIDs listed here are built as static pages; anything else 404s.
 export const dynamicParams = false;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; uuid: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = getDictionary(isLocale(lang) ? lang : "en");
+  return { title: dict.seo.invest, robots: { index: false, follow: false } };
+}
 
 const config = [
     // Full

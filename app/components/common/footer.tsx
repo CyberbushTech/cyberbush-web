@@ -1,7 +1,6 @@
 "use client";
 import { Container, Image, Nav, NavLink } from "react-bootstrap";
 import HomeBanner from "../home/home-banner";
-import Link from "next/link";
 import { useLocalizations, useLocale, localePath } from "@/app/i18n/locale-context";
 
 export default function HomeAircraftSection() {
@@ -36,13 +35,7 @@ export default function HomeAircraftSection() {
                 {dict.footer.contacts.address}
               </p>
             </div>
-            <div className="terms small">
-              <Link href="#">{dict.footer.terms.privacyPolicy}</Link> |{" "}
-              <Link href="#">{dict.footer.terms.legalInformation}</Link> |{" "}
-              <Link href="#">{dict.footer.terms.termsOfUse}</Link>
-              <br />
-              {dict.footer.copyright}
-            </div>
+            <div className="terms small">{dict.footer.copyright}</div>
           </Container>
         </Container>
       </Container>

@@ -1,5 +1,7 @@
 import { Container } from "react-bootstrap";
-import { NextPage } from "next";
+import type { Metadata, NextPage } from "next";
+import { getDictionary } from "@/app/dictionaries/dictionaries";
+import { isLocale } from "@/app/site-config";
 import TopNavigation from "@/app/components/common/top-navigation";
 import Footer from "@/app/components/common/footer";
 import CondorHero from "@/app/components/condor/condor-hero";
@@ -7,6 +9,16 @@ import CondorBlueprintSection from "@/app/components/condor/blueprint-section";
 import CondorCarouselSection from "@/app/components/condor/carousel-section";
 import CondorSpecsSection from "@/app/components/condor/specs-section";
 import HomeSkyscoutSection from "@/app/components/home/home-skyscout-section";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  const dict = getDictionary(isLocale(lang) ? lang : "en");
+  return { title: dict.seo.condor };
+}
 
 const CondorPage: NextPage = () => {
   return (

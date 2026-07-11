@@ -4,6 +4,13 @@ export const dict = {
     description:
       "Производитель летательных аппаратов с ИИ-управлением для аэротакси, развлечений и доставки",
   },
+  seo: {
+    fortuna: "Fortuna",
+    condor: "Condor One",
+    beetle: "Beetle One",
+    technology: "Технологии",
+    invest: "Презентация для инвесторов",
+  },
   beetleHero: {
     imageAlt: "Кибербуш",
     leadText: "ПАССАЖИРСКИЙ МУЛЬТИКОПТЕР С ИИ УПРАВЛЕНИЕМ",

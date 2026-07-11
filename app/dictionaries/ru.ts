@@ -215,12 +215,47 @@ export const dict = {
     buttons: {
       ai: "ИИ",
       safety: "Безопасность",
+      hydrogen: "Водород",
       blockchain: "Блокчейн",
       control: "Управление полетом",
       apps: "Приложения",
       ports: "Вертопорты",
     },
     scrollMoreText: "Прокрутите для подробностей",
+  },
+  hydrogenHero: {
+    sectionLead: "МИРОВАЯ ПРЕМЬЕРА",
+    sectionTitle: "ГИБРИДНЫЙ ВОДОРОДНЫЙ ДВИГАТЕЛЬ",
+    description:
+      "Мы разрабатываем собственную силовую установку на базе двигателя внутреннего сгорания на водороде — она обеспечивает реальные потребительские характеристики, востребованные транспортным рынком, и при этом экологична.",
+    imageAlt: "Аппарат Cyberbush с гибридной водородной силовой установкой",
+    features: [
+      {
+        icon: "lightning-charge-fill",
+        title: "110 кВт·ч",
+        description: "Бортовой генератор энергии",
+      },
+      {
+        icon: "fuel-pump-fill",
+        title: "Водородный ДВС",
+        description: "Двигатель внутреннего сгорания на водороде",
+      },
+      {
+        icon: "clock-history",
+        title: "До 3 часов",
+        description: "Увеличенное время полёта",
+      },
+      {
+        icon: "geo-alt-fill",
+        title: "Дальность",
+        description: "Condor до 1500 км, Beetle до 300 км",
+      },
+      {
+        icon: "wind",
+        title: "Экологично",
+        description: "Нулевые выбросы, забота о планете",
+      },
+    ],
   },
   safetyHero: {
     sectionLead: "НАДЕЖНЫЙ",

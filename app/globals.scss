@@ -641,6 +641,26 @@ h1,
 	background-size: cover;
 }
 
+.hydrogen-section {
+	background-color: #000;
+
+	.section-header {
+		max-width: 52rem;
+	}
+
+	.hydrogen-image-wrap {
+		width: 100%;
+		max-width: 1080px;
+		margin: 0 auto;
+	}
+
+	.hydrogen-image {
+		width: 100%;
+		height: auto;
+		filter: drop-shadow(0 0 55px rgba(64, 156, 224, 0.22));
+	}
+}
+
 .ai-icon-item {
 	display: flex;
 	flex-direction: row;

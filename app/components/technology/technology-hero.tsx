@@ -71,6 +71,13 @@ export default function TechnologyHero() {
                 </Link>
                 <Link
                   className="action-button btn btn-outline-primary btn-lg"
+                  href="#hydrogen"
+                  scroll={true}
+                >
+                  {dict.technologyHero.buttons.hydrogen}
+                </Link>
+                <Link
+                  className="action-button btn btn-outline-primary btn-lg"
                   href="#blockchain"
                   scroll={true}
                 >

@@ -239,12 +239,47 @@ export const dict = {
     buttons: {
       ai: "AI",
       safety: "Safety",
+      hydrogen: "Hydrogen",
       blockchain: "Blockchain",
       control: "Flight Control",
       apps: "Apps",
       ports: "Vertiports",
     },
     scrollMoreText: "Scroll For More",
+  },
+  hydrogenHero: {
+    sectionLead: "THE WORLD FIRST",
+    sectionTitle: "HYBRID HYDROGEN POWER",
+    description:
+      "We are developing our own propulsion system based on an internal combustion engine running on hydrogen — delivering the real-world consumer specifications the transportation market demands, in an environmentally friendly way.",
+    imageAlt: "Cyberbush aircraft with its hybrid hydrogen powertrain",
+    features: [
+      {
+        icon: "lightning-charge-fill",
+        title: "110 kW·h",
+        description: "On-board power generator",
+      },
+      {
+        icon: "fuel-pump-fill",
+        title: "Hydrogen ICE",
+        description: "Combustion engine running on hydrogen",
+      },
+      {
+        icon: "clock-history",
+        title: "Up to 3 hours",
+        description: "Increased maximum flight time",
+      },
+      {
+        icon: "geo-alt-fill",
+        title: "Extended range",
+        description: "Condor up to 1500 km, Beetle up to 300 km",
+      },
+      {
+        icon: "wind",
+        title: "Eco-friendly",
+        description: "Zero-emission, environmentally responsible",
+      },
+    ],
   },
   safetyHero: {
     sectionLead: "TRUSTFUL",

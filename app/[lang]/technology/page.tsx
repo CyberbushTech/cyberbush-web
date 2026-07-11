@@ -8,6 +8,7 @@ import HomeSkyscoutSection from "@/app/components/home/home-skyscout-section";
 import TechnologyHero from "@/app/components/technology/technology-hero";
 import AITechnologyHero from "@/app/components/technology/ai-hero";
 import SafetyTechnologyHero from "@/app/components/technology/safety-hero";
+import HydrogenTechnologyHero from "@/app/components/technology/hydrogen-hero";
 import ControlTechnologyHero from "@/app/components/technology/control-hero";
 import BlockchainTechnologyHero from "@/app/components/technology/blockchain-hero";
 import PortsTechnologyHero from "@/app/components/technology/ports-hero";
@@ -31,6 +32,7 @@ const TechnologyPage: NextPage = () => {
         <TechnologyHero />
         <AITechnologyHero />
         <SafetyTechnologyHero />
+        <HydrogenTechnologyHero />
         <ControlTechnologyHero />
         <BlockchainTechnologyHero />
         <AppsTechnologyHero />

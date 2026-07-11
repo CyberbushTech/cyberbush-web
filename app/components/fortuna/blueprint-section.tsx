@@ -51,7 +51,7 @@ export default function FortunaBlueprintSection() {
               </tr>
               <tr>
                 <th>{fortunaBlueprintSection.specs.engines}</th>
-                <td>8 jet engines</td>
+                <td>8 × JetCat P1000-PRO (thrust vectoring)</td>
               </tr>
               <tr>
                 <th>{fortunaBlueprintSection.specs.payload}</th>

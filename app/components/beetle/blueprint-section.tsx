@@ -46,6 +46,10 @@ export default function BeetleBlueprintSection() {
                 <td>35 Km</td>
               </tr>
               <tr>
+                <th>{dict.blueprintSection.specs.rangeHydrogen}</th>
+                <td>300 Km</td>
+              </tr>
+              <tr>
                 <th>{dict.blueprintSection.specs.engines}</th>
                 <td>16 Electric VTOL</td>
               </tr>

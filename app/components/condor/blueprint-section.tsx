@@ -46,6 +46,10 @@ export default function CondorBlueprintSection() {
                 <td>320 Km</td>
               </tr>
               <tr>
+                <th>{condorBlueprintSection.specs.rangeHydrogen}</th>
+                <td>1500 Km</td>
+              </tr>
+              <tr>
                 <th>{condorBlueprintSection.specs.engines}</th>
                 <td>16 Electric VTOL 1 Electric Sustainer</td>
               </tr>

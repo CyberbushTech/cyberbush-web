@@ -11,6 +11,7 @@ export const dict = {
     technology: "Технологии",
     invest: "Презентация для инвесторов",
     experience: "Опыт",
+    airtaxi: "Аэротакси",
   },
   beetleHero: {
     imageAlt: "Кибербуш",
@@ -472,6 +473,7 @@ export const dict = {
     { title: "Beetle", id: "beetle" },
     { title: "Технологии", id: "technology" },
     { title: "Опыт", id: "experience" },
+    { title: "Аэротакси", id: "air-taxi" },
   ],
   experience: {
     lead: "ДЕСЯТИЛЕТИЯ ИСТОРИИ",
@@ -579,6 +581,44 @@ export const dict = {
         ],
       },
     ],
+  },
+  airtaxi: {
+    heroLead: "ГОРОДСКАЯ АЭРОМОБИЛЬНОСТЬ",
+    heroTitle: "АЭРОТАКСИ",
+    heroDescription:
+      "Закажи аппарат, лети с крыши на крышу — и никаких городских пробок.",
+    stepsLead: "КАК ЭТО РАБОТАЕТ",
+    stepsTitle: "Три шага до полёта",
+    steps: [
+      {
+        icon: "phone-fill",
+        title: "Закажи в приложении",
+        text: "Забронируй Condor или Beetle в мобильном приложении и поднимись на лифте на крышу к Beetle Port.",
+      },
+      {
+        icon: "rocket-takeoff-fill",
+        title: "Лети через город",
+        text: "Лети до свободного Beetle Port в нужном районе, пригороде или соседнем городе.",
+      },
+      {
+        icon: "box-arrow-in-down",
+        title: "Прибыл — вниз",
+        text: "После посадки выходишь из аппарата и спускаешься на лифте прямо в город.",
+      },
+    ],
+    portLead: "BEETLE PORT",
+    portTitle: "Городская точка посадки",
+    portDescription:
+      "Мини-аэропорты для взлёта, посадки, зарядки и посадки пассажиров. Подходит любая крыша или площадка — спец-инфраструктура не нужна.",
+    portFeatures: [
+      { icon: "lightning-charge-fill", text: "Зарядка или заправка водородом" },
+      { icon: "robot", text: "Полностью автоматизирован" },
+      { icon: "cup-hot-fill", text: "Опциональная зона лаунжа" },
+      { icon: "truck", text: "Робот развозит и заряжает аппараты" },
+      { icon: "building-fill", text: "Крыша или земля — любая площадка" },
+    ],
+    portNote:
+      "Condor One связывает города, а личный Beetle Port помещается рядом с виллами и малоэтажными домами.",
   },
   footer: {
     menu: [

@@ -11,6 +11,7 @@ export const dict = {
     technology: "Technology",
     invest: "Investor Presentation",
     experience: "Experience",
+    airtaxi: "Air Taxi",
   },
   beetleHero: {
     imageAlt: "Cyberbush",
@@ -501,6 +502,7 @@ export const dict = {
     { title: "Beetle", id: "beetle" },
     { title: "Technology", id: "technology" },
     { title: "Experience", id: "experience" },
+    { title: "Air Taxi", id: "air-taxi" },
   ],
   experience: {
     lead: "THE DECADES OF HISTORY",
@@ -608,6 +610,44 @@ export const dict = {
         ],
       },
     ],
+  },
+  airtaxi: {
+    heroLead: "URBAN AIR MOBILITY",
+    heroTitle: "AIR TAXI SERVICE",
+    heroDescription:
+      "Book your aircraft, fly rooftop to rooftop and skip the city traffic entirely.",
+    stepsLead: "HOW IT WORKS",
+    stepsTitle: "Three steps to fly",
+    steps: [
+      {
+        icon: "phone-fill",
+        title: "Book in the app",
+        text: "Book your Condor or Beetle in the mobile app and take the elevator up to the rooftop Beetle Port.",
+      },
+      {
+        icon: "rocket-takeoff-fill",
+        title: "Fly across the city",
+        text: "Fly to an available Beetle Port in the nearest neighbourhood, suburb or neighbouring city.",
+      },
+      {
+        icon: "box-arrow-in-down",
+        title: "Arrive & step down",
+        text: "After landing, leave the vehicle and take the elevator straight down into the city.",
+      },
+    ],
+    portLead: "THE BEETLE PORT",
+    portTitle: "In-city boarding point",
+    portDescription:
+      "Mini-airports for takeoff, landing, charging and boarding. Any rooftop or ground site works — no special infrastructure required.",
+    portFeatures: [
+      { icon: "lightning-charge-fill", text: "Charging or hydrogen fueling" },
+      { icon: "robot", text: "Fully automated" },
+      { icon: "cup-hot-fill", text: "Optional lounge area" },
+      { icon: "truck", text: "Robot-guided parking & charging" },
+      { icon: "building-fill", text: "Rooftop or ground — any site" },
+    ],
+    portNote:
+      "Condor One connects cities, while a personal Beetle Port fits right next to villas and low-rise homes.",
   },
   footer: {
     contacts: {

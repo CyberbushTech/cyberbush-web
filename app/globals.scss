@@ -62,9 +62,8 @@ h2,
 .h2,
 h1,
 .h1 {
-	font-family: var(--font-poppins), "Poppins", sans-serif;
-	// Poppins ships Latin only (loaded at weight 700). For Cyrillic the browser
-	// falls back to a system font, so force 700 to keep RU headings bold too.
+	font-family: var(--font-heading), "Montserrat", sans-serif;
+	// Montserrat (Latin + Cyrillic) keeps headings consistent across EN/RU.
 	font-weight: 700;
 }
 
@@ -761,7 +760,7 @@ h1,
 		max-width: 40rem;
 
 		.exp-year-big {
-			font-family: var(--font-poppins), "Poppins", sans-serif;
+			font-family: var(--font-heading), "Montserrat", sans-serif;
 			font-size: clamp(3.5rem, 8vw, 6rem);
 			font-weight: 700;
 			line-height: 1;
@@ -932,7 +931,7 @@ h1,
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			font-family: var(--font-poppins), "Poppins", sans-serif;
+			font-family: var(--font-heading), "Montserrat", sans-serif;
 			font-weight: 700;
 		}
 

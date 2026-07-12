@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lato, Poppins } from "next/font/google";
+import { Lato, Montserrat } from "next/font/google";
 import "../globals.scss";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { notFound } from "next/navigation";
@@ -14,11 +14,11 @@ const lato = Lato({
   variable: "--font-lato",
 });
 
-const poppins = Poppins({
-  weight: "700",
-  subsets: ["latin"],
+const montserrat = Montserrat({
+  weight: ["600", "700"],
+  subsets: ["latin", "cyrillic"],
   display: "swap",
-  variable: "--font-poppins",
+  variable: "--font-heading",
 });
 
 const OG_IMAGE = "/images/home-aircrafts.jpg";
@@ -78,7 +78,7 @@ export default async function RootLayout({
   const dict = getDictionary(lang);
 
   return (
-    <html lang={lang} className={`${lato.variable} ${poppins.variable}`}>
+    <html lang={lang} className={`${lato.variable} ${montserrat.variable}`}>
       <body>
         <LocaleProvider locale={lang} dict={dict}>
           {children}

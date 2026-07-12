@@ -63,6 +63,9 @@ h2,
 h1,
 .h1 {
 	font-family: var(--font-poppins), "Poppins", sans-serif;
+	// Poppins ships Latin only (loaded at weight 700). For Cyrillic the browser
+	// falls back to a system font, so force 700 to keep RU headings bold too.
+	font-weight: 700;
 }
 
 .container-fluid {

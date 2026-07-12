@@ -875,14 +875,29 @@ h1,
 }
 
 .at-steps {
+	position: relative;
 	min-height: 100vh;
-	padding: 5rem 1.5rem;
+	padding: 5rem clamp(1.5rem, 6vw, 6rem);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	overflow: hidden;
+	background-color: #05070b;
+	background-image: url("../public/images/airtaxi/app-phone.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: auto min(86%, 700px);
+
+	.at-steps-content {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		max-width: 34rem;
+		margin-left: auto;
+	}
 
 	.section-header {
-		margin-bottom: 3rem;
+		margin-bottom: 2.5rem;
 
 		.lead {
 			color: $primary;
@@ -891,31 +906,10 @@ h1,
 		}
 	}
 
-	.at-steps-body {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: clamp(2rem, 6vw, 6rem);
-		max-width: 1100px;
-		margin: 0 auto;
-		flex-wrap: wrap;
-	}
-
-	.at-phone {
-		flex: 0 0 auto;
-
-		img {
-			width: clamp(220px, 26vw, 340px);
-			height: auto;
-			filter: drop-shadow(0 20px 55px rgba(0, 0, 0, 0.55));
-		}
-	}
-
 	.at-steps-list {
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		max-width: 30rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1.7rem;
@@ -958,27 +952,55 @@ h1,
 	}
 }
 
+@include media-breakpoint-down(lg) {
+	.at-steps {
+		justify-content: flex-start;
+		padding-top: 6rem;
+		padding-bottom: 40vh;
+		background-position: right bottom;
+		background-size: auto 40%;
+
+		.at-steps-content {
+			margin-left: 0;
+			max-width: none;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.at-steps {
+		padding-bottom: 32vh;
+		background-size: auto 30%;
+		background-position: right -8% bottom;
+	}
+}
+
 .at-port {
+	position: relative;
 	min-height: 100vh;
 	display: flex;
-	align-items: stretch;
-	flex-wrap: wrap;
+	align-items: center;
+	overflow: hidden;
+	background: url("../public/images/airtaxi/port.jpg") 62% center / cover
+		no-repeat;
 
-	.at-port-media {
-		flex: 1 1 45%;
-		min-height: 45vh;
-		background-size: cover;
-		background-position: center;
+	.at-port-scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			90deg,
+			rgba(5, 7, 11, 0) 0%,
+			rgba(5, 7, 11, 0.35) 40%,
+			rgba(5, 7, 11, 0.9) 68%
+		);
 	}
 
 	.at-port-content {
-		flex: 1 1 45%;
-		min-width: 300px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		position: relative;
+		z-index: 1;
+		margin-left: auto;
+		max-width: 36rem;
 		padding: clamp(2rem, 5vw, 5rem);
-		background: #05070b;
 
 		.lead {
 			color: $primary;
@@ -1019,7 +1041,7 @@ h1,
 		}
 
 		.at-port-note {
-			color: #8b97a1;
+			color: #b9c3cb;
 			font-style: italic;
 			max-width: 34rem;
 			margin: 0;
@@ -1029,13 +1051,22 @@ h1,
 
 @include media-breakpoint-down(md) {
 	.at-port {
-		.at-port-media {
-			flex-basis: 100%;
-			min-height: 48vh;
+		align-items: flex-end;
+		background-position: 60% top;
+
+		.at-port-scrim {
+			background: linear-gradient(
+				180deg,
+				rgba(5, 7, 11, 0.15) 0%,
+				rgba(5, 7, 11, 0.6) 42%,
+				rgba(5, 7, 11, 0.96) 72%
+			);
 		}
 
 		.at-port-content {
-			flex-basis: 100%;
+			margin-left: 0;
+			max-width: none;
+			padding-top: 38vh;
 		}
 	}
 }

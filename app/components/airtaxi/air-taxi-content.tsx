@@ -1,5 +1,4 @@
 "use client";
-import { Image } from "react-bootstrap";
 import { motion, type Variants } from "framer-motion";
 import { useLocalizations } from "@/app/i18n/locale-context";
 
@@ -65,24 +64,11 @@ export default function AirTaxiContent() {
       </section>
 
       <section className="at-steps scroll-snap-start bg-dark text-white">
-        <div className="section-header text-center">
-          <div className="lead">{at.stepsLead}</div>
-          <h2>{at.stepsTitle}</h2>
-        </div>
-        <div className="at-steps-body">
-          <motion.div
-            className="at-phone"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-          >
-            <Image
-              src="/images/airtaxi/app-phone.png"
-              alt="Cyberbush air-taxi booking app"
-              fluid
-            />
-          </motion.div>
+        <div className="at-steps-content">
+          <div className="section-header">
+            <div className="lead">{at.stepsLead}</div>
+            <h2>{at.stepsTitle}</h2>
+          </div>
 
           <motion.ol
             className="at-steps-list"
@@ -106,11 +92,7 @@ export default function AirTaxiContent() {
       </section>
 
       <section className="at-port scroll-snap-start text-white">
-        <div
-          className="at-port-media"
-          style={{ backgroundImage: "url(/images/airtaxi/port.jpg)" }}
-          aria-hidden="true"
-        />
+        <div className="at-port-scrim" aria-hidden="true" />
         <motion.div
           className="at-port-content"
           variants={container}

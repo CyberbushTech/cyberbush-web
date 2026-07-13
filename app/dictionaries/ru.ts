@@ -468,9 +468,15 @@ export const dict = {
     buttonText: "Скоро",
   },
   menu: [
-    { title: "Fortuna", id: "fortuna" },
-    { title: "Condor", id: "condor" },
-    { title: "Beetle", id: "beetle" },
+    {
+      title: "Аппараты",
+      id: "aircrafts",
+      children: [
+        { title: "Fortuna", id: "fortuna" },
+        { title: "Condor", id: "condor" },
+        { title: "Beetle", id: "beetle" },
+      ],
+    },
     { title: "Технологии", id: "technology" },
     { title: "Опыт", id: "experience" },
     { title: "Аэротакси", id: "air-taxi" },

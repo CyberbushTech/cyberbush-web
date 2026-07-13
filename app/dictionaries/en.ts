@@ -497,9 +497,15 @@ export const dict = {
     buttonText: "Coming Soon",
   },
   menu: [
-    { title: "Fortuna", id: "fortuna" },
-    { title: "Condor", id: "condor" },
-    { title: "Beetle", id: "beetle" },
+    {
+      title: "Aircrafts",
+      id: "aircrafts",
+      children: [
+        { title: "Fortuna", id: "fortuna" },
+        { title: "Condor", id: "condor" },
+        { title: "Beetle", id: "beetle" },
+      ],
+    },
     { title: "Technology", id: "technology" },
     { title: "Experience", id: "experience" },
     { title: "Air Taxi", id: "air-taxi" },

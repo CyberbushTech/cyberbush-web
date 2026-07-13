@@ -12,11 +12,22 @@ export default function HomeAircraftSection() {
       <Container className={`p-4 small`} fluid>
         <Container className="d-flex flex-column justify-content-center align-items-center ps-2 pe-2 flex-wrap">
           <Nav className="menu pb-3 d-flex justify-content-center align-items-center">
-            {dict.menu.map((item: { title: string; id: string }) => (
-              <NavLink key={item.title} href={localePath(`/${item.id}`, locale)}>
-                {item.title}
-              </NavLink>
-            ))}
+            {dict.menu
+              .flatMap(
+                (item: {
+                  title: string;
+                  id: string;
+                  children?: { title: string; id: string }[];
+                }) => item.children ?? [item]
+              )
+              .map((leaf: { title: string; id: string }) => (
+                <NavLink
+                  key={leaf.id}
+                  href={localePath(`/${leaf.id}`, locale)}
+                >
+                  {leaf.title}
+                </NavLink>
+              ))}
           </Nav>
           <Container className="small">
             <div className="image pb-1">

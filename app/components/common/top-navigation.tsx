@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Navbar from "react-bootstrap/Navbar";
 import global from "../../globals";
 import { useState } from "react";
@@ -9,6 +10,12 @@ import { usePathname } from "next/navigation";
 import { Sling as Hamburger } from "hamburger-react";
 import { useLocalizations, useLocale, localePath } from "@/app/i18n/locale-context";
 import { LOCALES, LOCALE_LABELS } from "@/app/site-config";
+
+type MenuItem = {
+  title: string;
+  id: string;
+  children?: { title: string; id: string }[];
+};
 
 export default function TopNavigation({
   inverted,
@@ -41,16 +48,34 @@ export default function TopNavigation({
         <Navbar.Collapse className={`float-end ${isOpen ? "show" : ""}`}>
           <div className="mobile-menu-container ms-auto">
             <Nav>
-              {dict.menu.map((item: { title: string; id: string }) => (
-                <Nav.Link
-                  key={item.id}
-                  id={item.id}
-                  href={localePath(`/${item.id}`, locale)}
-                  className={`link me-2`}
-                >
-                  {item.title}
-                </Nav.Link>
-              ))}
+              {dict.menu.map((item: MenuItem) =>
+                item.children ? (
+                  <NavDropdown
+                    key={item.id}
+                    id={`nav-${item.id}`}
+                    title={item.title}
+                    className="link nav-group me-2"
+                  >
+                    {item.children.map((child) => (
+                      <NavDropdown.Item
+                        key={child.id}
+                        href={localePath(`/${child.id}`, locale)}
+                      >
+                        {child.title}
+                      </NavDropdown.Item>
+                    ))}
+                  </NavDropdown>
+                ) : (
+                  <Nav.Link
+                    key={item.id}
+                    id={item.id}
+                    href={localePath(`/${item.id}`, locale)}
+                    className={`link me-2`}
+                  >
+                    {item.title}
+                  </Nav.Link>
+                )
+              )}
             </Nav>
             <div className="lang-switch">
               {LOCALES.map((loc) =>

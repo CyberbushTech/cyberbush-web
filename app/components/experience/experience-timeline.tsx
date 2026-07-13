@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { Container } from "react-bootstrap";
 import { motion, type Variants } from "framer-motion";
 import { useLocalizations } from "@/app/i18n/locale-context";
 
@@ -48,27 +49,29 @@ export default function ExperienceTimeline() {
 
   return (
     <div className="experience">
-      <div className="exp-intro text-white text-center">
+      <Container className="exp-intro text-white text-center">
         <div className="lead">{exp.lead}</div>
         <h1>{exp.title}</h1>
         <p>{exp.description}</p>
-      </div>
+      </Container>
 
       <div className="exp-body">
-        <div className="exp-rail" aria-hidden="true">
-          <div className="exp-rail-years">
-            {milestones.map((m, i) => (
-              <button
-                key={i}
-                type="button"
-                className={`exp-year-tick ${i === active ? "active" : ""}`}
-                onClick={() => goTo(i)}
-              >
-                <span className="dot" />
-                <span className="label">{m.year}</span>
-              </button>
-            ))}
-          </div>
+        <div className="exp-rail">
+          <Container className="exp-rail-inner">
+            <div className="exp-rail-years">
+              {milestones.map((m, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  className={`exp-year-tick ${i === active ? "active" : ""}`}
+                  onClick={() => goTo(i)}
+                >
+                  <span className="dot" />
+                  <span className="label">{m.year}</span>
+                </button>
+              ))}
+            </div>
+          </Container>
         </div>
 
         <div className="exp-panels">
@@ -82,29 +85,35 @@ export default function ExperienceTimeline() {
               className="exp-panel scroll-snap-start"
               style={{ backgroundImage: `url(/images/experience/bg-${i}.jpg)` }}
             >
-              <motion.div
-                className="exp-content text-white"
-                variants={container}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.4 }}
-              >
-                <motion.div className="exp-year-big" variants={item}>
-                  {m.year}
+              <div className="exp-panel-scrim" aria-hidden="true" />
+              <Container className="exp-panel-inner">
+                <motion.div
+                  className="exp-content text-white"
+                  variants={container}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: false, amount: 0.4 }}
+                >
+                  <motion.div className="exp-year-big" variants={item}>
+                    {m.year}
+                  </motion.div>
+                  <motion.h2 variants={item}>{m.title}</motion.h2>
+                  <motion.p className="exp-lead" variants={item}>
+                    {m.description}
+                  </motion.p>
+                  <ul className="exp-points">
+                    {m.points.map((pt, j) => (
+                      <motion.li key={j} className="exp-point" variants={item}>
+                        <span
+                          className={`icon bi-${pt.icon}`}
+                          aria-hidden="true"
+                        />
+                        <span>{pt.text}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
                 </motion.div>
-                <motion.h2 variants={item}>{m.title}</motion.h2>
-                <motion.p className="exp-lead" variants={item}>
-                  {m.description}
-                </motion.p>
-                <ul className="exp-points">
-                  {m.points.map((pt, j) => (
-                    <motion.li key={j} className="exp-point" variants={item}>
-                      <span className={`icon bi-${pt.icon}`} aria-hidden="true" />
-                      <span>{pt.text}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
+              </Container>
             </section>
           ))}
         </div>

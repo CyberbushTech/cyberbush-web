@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 import type { Metadata, NextPage } from "next";
 import TopNavigation from "@/app/components/common/top-navigation";
 import Footer from "@/app/components/common/footer";
-import AirTaxiContent from "@/app/components/airtaxi/air-taxi-content";
+import CargoContent from "@/app/components/cargo/cargo-content";
 import { getDictionary } from "@/app/dictionaries/dictionaries";
 import { isLocale } from "@/app/site-config";
 
@@ -13,18 +13,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const dict = getDictionary(isLocale(lang) ? lang : "en");
-  return { title: dict.seo.airtaxi };
+  return { title: dict.seo.cargo };
 }
 
-const AirTaxiPage: NextPage = () => {
+const CargoPage: NextPage = () => {
   return (
     <div className="page-container">
-      <Container className="page-airtaxi bg-dark" fluid>
+      <Container className="page-cargo bg-dark" fluid>
         <TopNavigation inverted={false} />
-        <AirTaxiContent />
+        <CargoContent />
         <Footer />
       </Container>
     </div>
   );
 };
-export default AirTaxiPage;
+export default CargoPage;

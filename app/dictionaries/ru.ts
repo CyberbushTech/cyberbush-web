@@ -11,7 +11,7 @@ export const dict = {
     technology: "Технологии",
     invest: "Презентация для инвесторов",
     experience: "Опыт",
-    airtaxi: "Аэротакси",
+    cargo: "Грузовые",
   },
   beetleHero: {
     imageAlt: "Кибербуш",
@@ -475,11 +475,11 @@ export const dict = {
         { title: "Fortuna", id: "fortuna" },
         { title: "Condor", id: "condor" },
         { title: "Beetle", id: "beetle" },
+        { title: "Грузовые", id: "cargo" },
       ],
     },
     { title: "Технологии", id: "technology" },
     { title: "Опыт", id: "experience" },
-    { title: "Аэротакси", id: "air-taxi" },
   ],
   experience: {
     lead: "ДЕСЯТИЛЕТИЯ ИСТОРИИ",
@@ -588,43 +588,92 @@ export const dict = {
       },
     ],
   },
-  airtaxi: {
-    heroLead: "ГОРОДСКАЯ АЭРОМОБИЛЬНОСТЬ",
-    heroTitle: "АЭРОТАКСИ",
-    heroDescription:
-      "Закажи аппарат, лети с крыши на крышу — и никаких городских пробок.",
-    stepsLead: "КАК ЭТО РАБОТАЕТ",
-    stepsTitle: "Три шага до полёта",
-    steps: [
+  cargo: {
+    drones: [
       {
-        icon: "phone-fill",
-        title: "Закажи в приложении",
-        text: "Забронируй Condor или Beetle в мобильном приложении и поднимись на лифте на крышу к Beetle Port.",
+        image: "strannik",
+        cls: "ЛЁГКИЙ VTOL",
+        name: "Странник-3",
+        description:
+          "Гибрид самолёта и мультикоптера: вертикальный взлёт без полосы, затем экономичный полёт на крыле. Уже сегодня доставляет 8 кг на 150 км.",
+        specs: [
+          { icon: "box-seam-fill", text: "10 кг нагрузки" },
+          { icon: "signpost-2-fill", text: "300 км дальность" },
+          { icon: "clock-history", text: "4 ч в воздухе" },
+          { icon: "speedometer2", text: "100 км/ч" },
+          { icon: "arrow-down-up", text: "Вертикальный взлёт и посадка" },
+        ],
       },
       {
-        icon: "rocket-takeoff-fill",
-        title: "Лети через город",
-        text: "Лети до свободного Beetle Port в нужном районе, пригороде или соседнем городе.",
+        image: "bk140",
+        cls: "ТЯЖЁЛЫЙ КВАДРОКОПТЕР",
+        name: "БК-140",
+        description:
+          "Облётанный тяжёлый грузовой квадрокоптер. Поднимает коммерческий груз с любой ровной площадки — без аэродрома и полосы. В полёте подтверждено 80 кг.",
+        specs: [
+          { icon: "box-seam-fill", text: "40–80 кг нагрузки" },
+          { icon: "box", text: "140 кг взлётная масса" },
+          { icon: "clock-history", text: "60 мин с 40 кг" },
+          { icon: "graph-up-arrow", text: "57% весовая отдача" },
+          { icon: "arrow-down-up", text: "Взлёт с любой площадки" },
+        ],
       },
       {
-        icon: "box-arrow-in-down",
-        title: "Прибыл — вниз",
-        text: "После посадки выходишь из аппарата и спускаешься на лифте прямо в город.",
+        image: "bk140-arctic",
+        cls: "АРКТИЧЕСКОЕ ИСПОЛНЕНИЕ",
+        name: "БК-140 Арктика",
+        description:
+          "Платформа БК-140 в арктическом исполнении: грузовая логистика, ледовая разведка и поиск-спасение вдоль Северного морского пути.",
+        specs: [
+          { icon: "thermometer-snow", text: "До −30 °C" },
+          { icon: "box-seam-fill", text: "40 кг на 27 км" },
+          { icon: "battery-charging", text: "Термозащита АКБ" },
+          { icon: "droplet-fill", text: "Поплавки для посадки на воду" },
+          { icon: "broadcast-pin", text: "Ледовая разведка" },
+        ],
+      },
+      {
+        image: "bk300",
+        cls: "СООСНЫЙ МУЛЬТИКОПТЕР",
+        name: "БК-300",
+        description:
+          "Тяжёлый грузовой мультикоптер соосной схемы — ступень между БК-140 и БК-400. Четыре луча с соосными парами роторов, грузовая рама и полозковое шасси.",
+        specs: [
+          { icon: "box-seam-fill", text: "класс 300 кг взлётной" },
+          { icon: "signpost-2-fill", text: "до 30 км дальность" },
+          { icon: "fan", text: "4×2 соосных — 8 роторов" },
+          { icon: "arrow-down-up", text: "Взлёт с любой площадки" },
+        ],
+      },
+      {
+        image: "a150",
+        cls: "СВЕРХТЯЖЁЛЫЙ МУЛЬТИКОПТЕР",
+        name: "A-150 Cargo",
+        description:
+          "Полностью автоматический мультикоптер большой грузоподъёмности для доставки на короткие дистанции между городскими точками и объектами — и как воздушный кран.",
+        specs: [
+          { icon: "box-seam-fill", text: "150 кг нагрузки" },
+          { icon: "signpost-2-fill", text: "25 км дальность" },
+          { icon: "box", text: "400 кг взлётная масса" },
+          { icon: "fan", text: "16 электродвигателей" },
+          { icon: "speedometer2", text: "70 км/ч" },
+        ],
+      },
+      {
+        image: "bk600",
+        cls: "СВЕРХТЯЖЁЛЫЙ VTOL-САМОЛЁТ",
+        name: "БК-600",
+        description:
+          "Наш флагманский беспилотный грузовой VTOL-самолёт. Не нужна полоса — доставляет 350 кг и больше на 1000+ км, дотягиваясь до посёлков, отрезанных от дорог на полгода.",
+        specs: [
+          { icon: "box-seam-fill", text: "350+ кг нагрузки" },
+          { icon: "signpost-2-fill", text: "1000+ км дальность" },
+          { icon: "clock-history", text: "до 20 ч в воздухе" },
+          { icon: "box2-fill", text: "грузоотсек 4 м³" },
+          { icon: "speedometer2", text: "круиз 130 км/ч" },
+        ],
       },
     ],
-    portLead: "BEETLE PORT",
-    portTitle: "Городская точка посадки",
-    portDescription:
-      "Мини-аэропорты для взлёта, посадки, зарядки и посадки пассажиров. Подходит любая крыша или площадка — спец-инфраструктура не нужна.",
-    portFeatures: [
-      { icon: "lightning-charge-fill", text: "Зарядка или заправка водородом" },
-      { icon: "robot", text: "Полностью автоматизирован" },
-      { icon: "cup-hot-fill", text: "Опциональная зона лаунжа" },
-      { icon: "truck", text: "Робот развозит и заряжает аппараты" },
-      { icon: "building-fill", text: "Крыша или земля — любая площадка" },
-    ],
-    portNote:
-      "Condor One связывает города, а личный Beetle Port помещается рядом с виллами и малоэтажными домами.",
   },
   footer: {
     menu: [

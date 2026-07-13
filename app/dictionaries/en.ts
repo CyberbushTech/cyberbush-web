@@ -11,7 +11,7 @@ export const dict = {
     technology: "Technology",
     invest: "Investor Presentation",
     experience: "Experience",
-    airtaxi: "Air Taxi",
+    cargo: "Cargo",
   },
   beetleHero: {
     imageAlt: "Cyberbush",
@@ -504,11 +504,11 @@ export const dict = {
         { title: "Fortuna", id: "fortuna" },
         { title: "Condor", id: "condor" },
         { title: "Beetle", id: "beetle" },
+        { title: "Cargo", id: "cargo" },
       ],
     },
     { title: "Technology", id: "technology" },
     { title: "Experience", id: "experience" },
-    { title: "Air Taxi", id: "air-taxi" },
   ],
   experience: {
     lead: "THE DECADES OF HISTORY",
@@ -617,43 +617,92 @@ export const dict = {
       },
     ],
   },
-  airtaxi: {
-    heroLead: "URBAN AIR MOBILITY",
-    heroTitle: "AIR TAXI SERVICE",
-    heroDescription:
-      "Book your aircraft, fly rooftop to rooftop and skip the city traffic entirely.",
-    stepsLead: "HOW IT WORKS",
-    stepsTitle: "Three steps to fly",
-    steps: [
+  cargo: {
+    drones: [
       {
-        icon: "phone-fill",
-        title: "Book in the app",
-        text: "Book your Condor or Beetle in the mobile app and take the elevator up to the rooftop Beetle Port.",
+        image: "strannik",
+        cls: "LIGHT VTOL",
+        name: "Strannik-3",
+        description:
+          "A fixed-wing and multicopter hybrid: vertical take-off with no runway, then efficient winged cruise. Delivers 8 kg to 150 km today.",
+        specs: [
+          { icon: "box-seam-fill", text: "10 kg payload" },
+          { icon: "signpost-2-fill", text: "300 km range" },
+          { icon: "clock-history", text: "4 h endurance" },
+          { icon: "speedometer2", text: "100 km/h" },
+          { icon: "arrow-down-up", text: "Vertical take-off & landing" },
+        ],
       },
       {
-        icon: "rocket-takeoff-fill",
-        title: "Fly across the city",
-        text: "Fly to an available Beetle Port in the nearest neighbourhood, suburb or neighbouring city.",
+        image: "bk140",
+        cls: "HEAVY QUADCOPTER",
+        name: "BK-140",
+        description:
+          "Flight-tested heavy cargo quadcopter. Lifts commercial payloads from any flat surface — no airfield, no runway. Demonstrated 80 kg in flight.",
+        specs: [
+          { icon: "box-seam-fill", text: "40–80 kg payload" },
+          { icon: "box", text: "140 kg take-off weight" },
+          { icon: "clock-history", text: "60 min with 40 kg" },
+          { icon: "graph-up-arrow", text: "57% payload fraction" },
+          { icon: "arrow-down-up", text: "VTOL from any flat pad" },
+        ],
       },
       {
-        icon: "box-arrow-in-down",
-        title: "Arrive & step down",
-        text: "After landing, leave the vehicle and take the elevator straight down into the city.",
+        image: "bk140-arctic",
+        cls: "ARCTIC VARIANT",
+        name: "BK-140 Arctic",
+        description:
+          "The BK-140 platform hardened for the Arctic: cargo logistics, ice reconnaissance and search & rescue across the Northern Sea Route.",
+        specs: [
+          { icon: "thermometer-snow", text: "Down to −30 °C" },
+          { icon: "box-seam-fill", text: "40 kg to 27 km" },
+          { icon: "battery-charging", text: "Thermally-protected batteries" },
+          { icon: "droplet-fill", text: "Water-landing floats" },
+          { icon: "broadcast-pin", text: "Ice reconnaissance" },
+        ],
+      },
+      {
+        image: "bk300",
+        cls: "COAXIAL MULTICOPTER",
+        name: "BK-300",
+        description:
+          "Heavy coaxial cargo multicopter — the step between the BK-140 and BK-400. Four arms with coaxial rotor pairs, a cargo frame and skid gear.",
+        specs: [
+          { icon: "box-seam-fill", text: "300 kg take-off class" },
+          { icon: "signpost-2-fill", text: "Up to 30 km range" },
+          { icon: "fan", text: "4×2 coaxial — 8 rotors" },
+          { icon: "arrow-down-up", text: "VTOL from any flat pad" },
+        ],
+      },
+      {
+        image: "a150",
+        cls: "SUPER-HEAVY MULTICOPTER",
+        name: "A-150 Cargo",
+        description:
+          "Fully automated heavy-lift multicopter for short-range delivery between city points and industrial sites — and as an aerial crane. Rooftop-capable.",
+        specs: [
+          { icon: "box-seam-fill", text: "150 kg payload" },
+          { icon: "signpost-2-fill", text: "25 km range" },
+          { icon: "box", text: "400 kg take-off weight" },
+          { icon: "fan", text: "16 electric motors" },
+          { icon: "speedometer2", text: "70 km/h" },
+        ],
+      },
+      {
+        image: "bk600",
+        cls: "SUPER-HEAVY VTOL AIRCRAFT",
+        name: "BK-600",
+        description:
+          "Our flagship unmanned VTOL cargo aircraft. No runway required — it delivers 350 kg and more over 1000+ km, reaching towns cut off from roads for months.",
+        specs: [
+          { icon: "box-seam-fill", text: "350+ kg payload" },
+          { icon: "signpost-2-fill", text: "1000+ km range" },
+          { icon: "clock-history", text: "Up to 20 h aloft" },
+          { icon: "box2-fill", text: "4 m³ cargo bay" },
+          { icon: "speedometer2", text: "130 km/h cruise" },
+        ],
       },
     ],
-    portLead: "THE BEETLE PORT",
-    portTitle: "In-city boarding point",
-    portDescription:
-      "Mini-airports for takeoff, landing, charging and boarding. Any rooftop or ground site works — no special infrastructure required.",
-    portFeatures: [
-      { icon: "lightning-charge-fill", text: "Charging or hydrogen fueling" },
-      { icon: "robot", text: "Fully automated" },
-      { icon: "cup-hot-fill", text: "Optional lounge area" },
-      { icon: "truck", text: "Robot-guided parking & charging" },
-      { icon: "building-fill", text: "Rooftop or ground — any site" },
-    ],
-    portNote:
-      "Condor One connects cities, while a personal Beetle Port fits right next to villas and low-rise homes.",
   },
   footer: {
     contacts: {
